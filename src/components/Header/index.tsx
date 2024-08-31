@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import GlobeIcon from "../../../public/images/logo/language.svg";
 
 const Header = () => {
   // Navbar toggle
@@ -38,6 +39,21 @@ const Header = () => {
 
   const usePathName = usePathname();
 
+  // Language dropdown
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("English");
+
+  const toggleLanguageDropdown = () => {
+    setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
+  };
+
+  const selectLanguage = (language) => {
+    setSelectedLanguage(language);
+    setIsLanguageDropdownOpen(false);
+  };
+
+  const languages = ["EN", "Spanish", "French", "German", "Chinese"];
+
   return (
     <>
       <header
@@ -45,26 +61,25 @@ const Header = () => {
           sticky
             ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
             : "absolute bg-transparent"
-        }`}
+          }`}
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
-                className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
+                className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "py-8"
+                  } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
+                  src="/images/logo/new-logo.png"
                   alt="logo"
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/logo.svg"
+                  src="/images/logo/new-logo.png"
                   alt="logo"
                   width={140}
                   height={30}
@@ -83,17 +98,17 @@ const Header = () => {
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
                       navbarOpen ? " top-[7px] rotate-45" : " "
-                    }`}
+                      }`}
                   />
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
                       navbarOpen ? "opacity-0 " : " "
-                    }`}
+                      }`}
                   />
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
                       navbarOpen ? " top-[-8px] -rotate-45" : " "
-                    }`}
+                      }`}
                   />
                 </button>
                 <nav
@@ -102,7 +117,7 @@ const Header = () => {
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
-                  }`}
+                    }`}
                 >
                   <ul className="block lg:flex lg:space-x-12">
                     {menuData.map((menuItem, index) => (
@@ -114,7 +129,7 @@ const Header = () => {
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
-                            }`}
+                              }`}
                           >
                             {menuItem.title}
                           </Link>
@@ -139,7 +154,7 @@ const Header = () => {
                             <div
                               className={`submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                                 openIndex === index ? "block" : "hidden"
-                              }`}
+                                }`}
                             >
                               {menuItem.submenu.map((submenuItem, index) => (
                                 <Link
@@ -159,12 +174,29 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link>
+                <div className="relative">
+                  <button
+                    onClick={toggleLanguageDropdown}
+                    className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
+                  >
+                    <Image src={GlobeIcon} alt="Globe icon" width={20} height={20} className="mr-2" />
+                    {selectedLanguage}
+                  </button>
+                  {isLanguageDropdownOpen && (
+                    <ul className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg dark:bg-dark dark:border-gray-700">
+                      {languages.map((language) => (
+                        <li key={language}>
+                          <button
+                            onClick={() => selectLanguage(language)}
+                            className="block w-full px-4 py-2 text-left text-dark hover:bg-gray-200 dark:text-white dark:hover:bg-gray-600"
+                          >
+                            {language}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
                 <Link
                   href="/signup"
                   className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
