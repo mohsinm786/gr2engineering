@@ -7,7 +7,7 @@ import SectionTitle from "../Common/SectionTitle";
 import ModalVideo from "react-modal-video";
 
 const Video = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false); 
 
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
