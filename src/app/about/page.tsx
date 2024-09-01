@@ -1,6 +1,6 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
+import AboutSectionOne from "@/components/AboutCopy/AboutSectionOne";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import FeaturesCopy from "@/components/FeaturesCopy";
 
 import { Metadata } from "next";
 
@@ -14,13 +14,14 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="CORPORATE SOCIAL RESPONSIBILITY"
+        description="At GR2 Engineering, we believe that true success is measured not only by financial performance but also by our commitment to social and environmental responsibility. Guided by our core values of integrity, sustainability, and community, we are dedicated to making a positive impact on the world around us."
       />
       <AboutSectionOne />
-      <AboutSectionTwo />
+      {/* <AboutSectionTwo /> */}
+      <FeaturesCopy />
     </>
-  );
+  );  
 };
 
 export default AboutPage;
