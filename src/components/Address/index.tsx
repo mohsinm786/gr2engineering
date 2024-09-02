@@ -1,6 +1,6 @@
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
-import SingleTestimonial from "./SingleTestimonial";
+import SingleAddress from "./SingleAddress";
 
 const testimonialData: Testimonial[] = [
   {
@@ -44,7 +44,7 @@ const Testimonials = () => {
 
         <div className="flex flex-col gap-y-10">
           {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+            <SingleAddress key={testimonial.id} testimonial={testimonial} />
           ))}
         </div>
       </div>

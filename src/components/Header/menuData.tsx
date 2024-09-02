@@ -22,7 +22,7 @@ const menuData: Menu[] = [
       {
         id: 22,
         title: "History",
-        path: "/contact",
+        path: "/history",
         newTab: false,
       },
       {
@@ -34,7 +34,7 @@ const menuData: Menu[] = [
       {
         id: 24,
         title: "Leadership",
-        path: "/blog-sidebar",
+        path: "/leadership",
         newTab: false,
       },
     ],
