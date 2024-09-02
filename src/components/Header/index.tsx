@@ -41,7 +41,7 @@ const Header = () => {
 
   // Language dropdown
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("English");
+  const [selectedLanguage, setSelectedLanguage] = useState("EN");
 
   const toggleLanguageDropdown = () => {
     setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
@@ -52,7 +52,7 @@ const Header = () => {
     setIsLanguageDropdownOpen(false);
   };
 
-  const languages = ["EN", "Spanish", "French", "German", "Chinese"];
+  const languages = ["EN", "ES", "AR", "DE", "ZH"];
 
   return (
     <>
@@ -174,7 +174,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <div className="relative">
+                <div className="relative flex">
                   <button
                     onClick={toggleLanguageDropdown}
                     className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
@@ -203,9 +203,9 @@ const Header = () => {
                 >
                   Sign Up
                 </Link>
-                <div>
+                {/* <div>
                   <ThemeToggler />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
