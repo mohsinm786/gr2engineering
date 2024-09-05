@@ -1,42 +1,21 @@
+import React from 'react';
 import { Testimonial } from "@/types/testimonial";
-import Image from "next/image";
-const starIcon = (
-  <svg width="18" height="16" viewBox="0 0 18 16" className="fill-current">
-    <path d="M9.09815 0.361679L11.1054 6.06601H17.601L12.3459 9.59149L14.3532 15.2958L9.09815 11.7703L3.84309 15.2958L5.85035 9.59149L0.595291 6.06601H7.0909L9.09815 0.361679Z" />
-  </svg>
-);
 
-const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
-  const { star, name, image, content, designation } = testimonial;
+type SingleTestimonialProps = {
+  testimonial: Testimonial;
+};
 
-  let ratingIcons = [];
-  for (let index = 0; index < star; index++) {
-    ratingIcons.push(
-      <span key={index} className="text-yellow">
-        {starIcon}
-      </span>,
-    );
-  }
-
+const SingleTestimonial: React.FC<SingleTestimonialProps> = ({ testimonial }) => {
   return (
-    <div className="w-full">
-      <div className="rounded-sm bg-white p-8 shadow-two duration-300 hover:shadow-one dark:bg-dark dark:shadow-three dark:hover:shadow-gray-dark lg:px-5 xl:px-10">
-        <div className="mb-5 flex items-center space-x-1">{ratingIcons}</div>
-        <p className="mb-8 border-b border-body-color border-opacity-10 pb-8 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-10 dark:text-white">
-          “{content}
-        </p>
-        <div className="flex items-center">
-          <div className="relative mr-4 h-[50px] w-full max-w-[50px] overflow-hidden rounded-full">
-            <Image src={image} alt={name} fill />
-          </div>
-          <div className="w-full">
-            <h3 className="mb-1 text-lg font-semibold text-dark dark:text-white lg:text-base xl:text-lg">
-              {name}
-            </h3>
-            <p className="text-sm text-body-color">{designation}</p>
-          </div>
-        </div>
-      </div>
+    <div className="bg-white dark:bg-bg-color-dark shadow-md rounded-lg p-6 w-full lg:w-1/3 transform transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+      <h2 className="text-xl font-semibold dark:text-white mb-4"> {/* Inline styling for the title */}
+        {testimonial.name}
+      </h2>
+      <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
+        {testimonial.points?.map((point, index) => (
+          <li key={index}>{point}</li>
+        ))}
+      </ul>
     </div>
   );
 };

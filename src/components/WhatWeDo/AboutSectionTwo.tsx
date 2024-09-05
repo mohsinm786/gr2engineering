@@ -1,57 +1,57 @@
 import Image from "next/image";
+import SectionTitle from "../Common/SectionTitle";
 
 const AboutSectionTwo = () => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
-        <div className="-mx-4 flex flex-wrap items-center">
-          <div className="w-full px-4 lg:w-1/2">
-            <div
-              className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
-              data-wow-delay=".15s"
-            >
+        <div className="flex flex-wrap items-center">
+          {/* Left Side: Titles and Image */}
+          <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+            <div className="mb-15">
+              <SectionTitle
+                title="OUR TOOLS"
+                paragraph=""
+                mb="16px"
+                titleClassName="text-2xl font-bold text-black dark:text-white"
+              />
+              <SectionTitle
+                title="Integrated project Management system"
+                paragraph=""
+                mb="32px"
+                titleClassName="text-xl font-semibold text-gray-700 dark:text-gray-300"
+              />
+            </div>
+            <div className="relative mx-auto aspect-[25/24] max-w-[500px] text-center lg:text-left">
               <Image
-                src="/images/about/about-image-2.svg"
+                src="/images/addedImg/integrated-project-management.png"
                 alt="about image"
                 fill
                 className="drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
-              <Image
+              {/* <Image
                 src="/images/about/about-image-2-dark.svg"
                 alt="about image"
                 fill
                 className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
-              />
+              /> */}
             </div>
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+
+          {/* Right Side: Bullet Points with Margin */}
+          <div className="w-full lg:w-1/2 px-4 lg:pl-12">
             <div className="max-w-[470px]">
               <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bug free code
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-              <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Premier support
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
-                </p>
-              </div>
-              <div className="mb-1">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Next.js
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
-                  consectetur adipiscing elit setim.
-                </p>
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
+                  <li>Intelligent intuitive project management software platform</li>
+                  <li>Project Integration among client, PMC, contractors, subcontractors, and vendors</li>
+                  <li>No changes required to contractor and vendor systems, tools, and procedures</li>
+                  <li>AWP based</li>
+                  <li>Cloud based</li>
+                  <li>Scalable</li>
+                  <li>Mobile App</li>
+                  <li>Cost effective</li>
+                </ul>
               </div>
             </div>
           </div>

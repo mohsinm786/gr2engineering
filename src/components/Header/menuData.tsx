@@ -47,19 +47,19 @@ const menuData: Menu[] = [
       {
         id: 34,
         title: "Capital Project Services",
-        path: "/about",
+        path: "/capital-project-services",
         newTab: false,
       },
       {
         id: 35,
         title: "Water",
-        path: "/contact",
+        path: "/water",
         newTab: false,
       },
       {
         id: 36,
         title: "Modular",
-        path: "/blog",
+        path: "/modular",
         newTab: false,
       },
     ],
@@ -67,7 +67,7 @@ const menuData: Menu[] = [
   {
     id: 3,
     title: "News",
-    path: "/contact",
+    path: "/blog",
     newTab: false,
   },
   {
