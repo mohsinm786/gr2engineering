@@ -2,7 +2,7 @@ import React from 'react';
 
 const Address = () => {
   return (
-    <div className="p-8 bg-white shadow-md rounded-md">
+    <div className="p-8 bg-white">
       <h3 className="text-xl font-semibold text-gray-800">OUR CONTACT INFORMATION</h3>
       <div className="mt-4 text-gray-600">
         <p>
