@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import FlippingCardsSection from "@/components/FlippingCards/FlippingCardsSection";
 import { Metadata } from "next";
+import Solutions from "@/components/Solutions";
 
 export const metadata: Metadata = {
   title: "Home - GR2 Engineering",
@@ -23,15 +24,17 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
-      <Features />
-      <FlippingCardsSection/>
-      <Video />
+      {/* <Features /> */}
+      {/* <Video /> */}
       {/* <Brands /> */}
       <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
+      {/* <AboutSectionTwo /> */}
+      <FlippingCardsSection/>
+      <Solutions />
+
+      {/* <Testimonials /> */}
       {/* <Pricing /> */}
-      <Blog />
+      {/* <Blog /> */}
       <Contact />
     </>
   );
