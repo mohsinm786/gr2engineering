@@ -53,7 +53,7 @@ const menuData: Menu[] = [
       {
         id: 35,
         title: "Water",
-        path: "/contact",
+        path: "/water",
         newTab: false,
       },
       {
