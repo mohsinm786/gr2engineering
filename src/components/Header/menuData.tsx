@@ -1,5 +1,6 @@
 import { Menu } from "@/types/menu";
 
+
 const menuData: Menu[] = [
   {
     id: 1,
@@ -9,76 +10,83 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "About",
-    path: "/about",
+    title: "About Us",
     newTab: false,
+    submenu: [
+      {
+        id: 21,
+        title: "History",
+        path: "/history",
+        newTab: false,
+      },
+      {
+        id: 22,
+        title: "Our Experience",
+        path: "/our-experience",
+        newTab: false,
+      },
+      {
+        id: 23,
+        title: "Leadership",
+        path: "/leadership",
+        newTab: false,
+      },
+      {
+        id: 24,
+        title: "Corporate Social Responsibility",
+        path: "/corporate-social-responsibility",
+        newTab: false,
+      },
+    ],
   },
   {
     id: 33,
-    title: "Blog",
-    path: "/blog",
+    title: "What We Do",
     newTab: false,
+    submenu: [
+      {
+        id: 34,
+        title: "Engineering",
+        path: "/engineering",
+        newTab: false,
+      },
+      {
+        id: 35,
+        title: "Modular",
+        path: "/modular",
+        newTab: false,
+      },
+      {
+        id: 36,
+        title: "Capital Project Services",
+        path: "/capital-project-services",
+        newTab: false,
+      },
+      {
+        id: 37,
+        title: "Water",
+        path: "/water",
+        newTab: false,
+      },
+    ],
   },
   {
     id: 3,
-    title: "Support",
-    path: "/contact",
+    title: "News",
+    path: "/news",
     newTab: false,
   },
   {
     id: 4,
-    title: "Pages",
+    title: "Careers",
+    path: "/careers",
     newTab: false,
-    submenu: [
-      {
-        id: 41,
-        title: "About Page",
-        path: "/about",
-        newTab: false,
-      },
-      {
-        id: 42,
-        title: "Contact Page",
-        path: "/contact",
-        newTab: false,
-      },
-      {
-        id: 43,
-        title: "Blog Grid Page",
-        path: "/blog",
-        newTab: false,
-      },
-      {
-        id: 44,
-        title: "Blog Sidebar Page",
-        path: "/blog-sidebar",
-        newTab: false,
-      },
-      {
-        id: 45,
-        title: "Blog Details Page",
-        path: "/blog-details",
-        newTab: false,
-      },
-      {
-        id: 46,
-        title: "Sign In Page",
-        path: "/signin",
-        newTab: false,
-      },
-      {
-        id: 47,
-        title: "Sign Up Page",
-        path: "/signup",
-        newTab: false,
-      },
-      {
-        id: 48,
-        title: "Error Page",
-        path: "/error",
-        newTab: false,
-      },
-    ],
+  },
+  {
+    id: 5,
+    title: "Contact Us",
+    path: "/contact",
+    newTab: false,
   },
 ];
 export default menuData;

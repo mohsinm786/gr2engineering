@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+ 
 const Hero = () => {
   return (
     <>
@@ -7,38 +7,44 @@ const Hero = () => {
         id="home"
         className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
-        <div className="container">
+
+      {/* Background Image */}
+      <img
+          src="\images\addedImg\Homepage-banner.jpg"
+          alt="Background"
+          className="absolute inset-0 h-full w-full object-cover opacity-50"
+        />
+
+        <div className="container relative z-20">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
-              <div className="mx-auto max-w-[800px] text-center">
+            <div className="w-full px-4 lg:w-1/2">
+              <div className="mx-0 ml-0 max-w-[400px] text-left">
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Free and Open-Source Next.js Template for Startup & SaaS
+                Experience and innovation
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Startup is free Next.js template for startups and SaaS
-                  business websites comes with all the essential pages,
-                  components, and sections you need to launch a complete
-                  business website, built-with Next 13.x and Tailwind CSS.
+                Project and technology services in energy and infrastructure from the industry experts.
                 </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <div className="flex items-start justify-start space-y-4 sm:space-x-4 sm:space-y-0 text-left">
                   <Link
                     href="https://nextjstemplates.com/templates/saas-starter-startup"
-                    className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                    className="text-blue-600 hover:text-blue-800 font-semibold"
                   >
-                    🔥 Get Pro
+                    View services
                   </Link>
-                  <Link
+                
+                  {/* <Link
                     href="https://github.com/NextJSTemplates/startup-nextjs"
                     className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
                     Star on GitHub
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
+        {/* <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
             width="450"
             height="556"
@@ -175,8 +181,8 @@ const Hero = () => {
               </linearGradient>
             </defs>
           </svg>
-        </div>
-        <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
+        </div> */}
+        <div className="absolute bottom-0 left-0 z-[-1] opacity-90 lg:opacity-100">
           <svg
             width="364"
             height="201"
