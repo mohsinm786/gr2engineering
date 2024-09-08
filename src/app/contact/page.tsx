@@ -17,9 +17,7 @@ const ContactPage = () => {
         pageName="CONTACT US"
         description=""
       />
-
       <Contact />
-      <NetworkMap/>
     </>
   );
 };
