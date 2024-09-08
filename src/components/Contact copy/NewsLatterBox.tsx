@@ -6,7 +6,14 @@ const NewsLatterBox = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="relative z-10 rounded-sm bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
+    <div className="relative z-10 flex flex-col items-center justify-center rounded-sm bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
+      <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25 text-center">
+        Lorem ipsum dolor sit amet, Sed ullamcorper consectetur adipiscing elit. Mauris ornare massa quis lectus.
+      </p>
+      <p className="text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
+        No spam guaranteed, so please don’t send any spam mail.
+      </p>
+
       <div>
         <span className="absolute left-2 top-7">
           <svg

@@ -29,7 +29,7 @@ const AboutSectionOne = () => {
               paragraph={`GR2 Engineering is committed to ensuring that our projects and clients are guided by the most recent environmental, social, and governance standards so that we all play a role in ensuring a safe and sustainable future for all.\n\nWe strive to improve energy management and environmental sustainability through a holistic approach utilizing our collective wisdom and painstakingly developed technology in order to contribute to the sustainable development of a society as an integrated engineering company.`}
               mb="44px"
             />
-          </div>
+            </div>
 
 
               {/* <div
