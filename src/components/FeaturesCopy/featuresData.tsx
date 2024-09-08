@@ -4,7 +4,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <img src="\images\addedImg\save-the-planet.png" width="40" height="41" alt="Icon" />
+      <img src="\images\addedImg\save-the-planet.png" width="100" height="100" alt="Icon" />
 
     ),
     title: "Environmental",
@@ -14,7 +14,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <img src="\images\addedImg\feedback.png" width="40" height="41" alt="Icon" />
+      <img src="\images\addedImg\feedback.png" width="100" height="100" alt="Icon" />
     ),
     title: "Social",
     paragraph:
@@ -23,7 +23,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <img src="\images\addedImg\government.png" width="40" height="41" alt="Icon" />
+      <img src="\images\addedImg\government.png" width="100" height="100" alt="Icon" />
     ),
     title: "Governance",
     paragraph:

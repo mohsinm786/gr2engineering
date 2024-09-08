@@ -1,11 +1,10 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import Contact from "@/components/Contact";
-import NetworkMap from "@/components/Address/NetworkMap";
+import FullWidthSection from "@/components/WhatWeDo/TwoTitleWithPara";
 
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact - GR2 Engineering",
+  title: "Career - GR2 Engineering",
   // description: "This is Contact Page for Startup Nextjs Template",
   // other metadata
 };
@@ -14,12 +13,12 @@ const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="CONTACT US"
+        pageName="JOB OPPORTUNITIES"
         description=""
       />
+      <FullWidthSection/>
 
-      <Contact />
-      <NetworkMap/>
+      
     </>
   );
 };

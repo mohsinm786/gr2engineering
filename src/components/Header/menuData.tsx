@@ -16,7 +16,7 @@ const menuData: Menu[] = [
       {
         id: 21,
         title: "Corporate Social Responsibility",
-        path: "/about",
+        path: "/corporate-social-responsibility",
         newTab: false,
       },
       {
@@ -67,7 +67,7 @@ const menuData: Menu[] = [
   {
     id: 3,
     title: "News",
-    path: "/blog",
+    path: "/news",
     newTab: false,
   },
   {
