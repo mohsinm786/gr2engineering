@@ -13,6 +13,7 @@ const LeadershipPage = () => {
   return (
     <>
       <Breadcrumb
+        subpageName="About Us"
         pageName="Leadership"
         description=""
       />

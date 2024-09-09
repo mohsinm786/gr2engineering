@@ -41,7 +41,7 @@ const Header = () => {
 
   // Language dropdown
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("EN");
+  const [selectedLanguage, setSelectedLanguage] = useState("English");
 
   const toggleLanguageDropdown = () => {
     setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
@@ -52,7 +52,7 @@ const Header = () => {
     setIsLanguageDropdownOpen(false);
   };
 
-  const languages = ["EN", "ES", "AR", "DE", "ZH"];
+  const languages = ["English", "Spanish", "Arabic", "German", "Chinese"];
 
   return (
     <>
