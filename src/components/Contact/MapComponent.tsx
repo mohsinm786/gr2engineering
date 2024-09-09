@@ -28,28 +28,57 @@ const MapComponent = () => {
     const initializeMap = async () => {
       try {
         // Load Google Maps API with your key
-        await loadGoogleMapsApi('AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries'); 
+        await loadGoogleMapsApi('AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries'); // Replace with your actual API key
 
         if (mapRef.current && window.google) {
-          // Initialize the map with a zoom level and centered at India
+          // Center the map over Africa
           const map = new window.google.maps.Map(mapRef.current, {
-            zoom: 2,
-            center: { lat: 20.5937, lng: 78.9629 },
+            zoom: 1.5, // Adjusted zoom level to fit all markers
+            center: { lat: 1.3733, lng: 17.7294 }, // Center on Africa
           });
 
           // Locations to be marked on the map
           const locations = [
-            { lat: 29.7604, lng: -95.3698, title: 'USA - Houston, Texas' },
-            { lat: 4.710989, lng: -74.0721, title: 'Colombia - Bogotá' },
-            { lat: 19.2183, lng: 72.9781, title: 'India - Maharashtra, Thane' },
+            {
+              lat: 29.7604,
+              lng: -95.3698,
+              title: 'GR2 USA — 2900 Wilcrest Drive #455, Houston Texas 77042',
+              address: '2900 Wilcrest Drive #455, Houston Texas 77042, USA',
+            },
+            {
+              lat: 4.710989,
+              lng: -74.0721,
+              title: 'Colombia - Bogotá',
+              address: 'Bogotá, Colombia',
+            },
+            {
+              lat: 19.2183,
+              lng: 72.9781,
+              title: 'India - Maharashtra, Thane',
+              address: 'Maharashtra, Thane, India',
+            },
           ];
+
+          // InfoWindow to show the address when hovering
+          const infoWindow = new window.google.maps.InfoWindow();
 
           // Add a marker for each location
           locations.forEach((location) => {
-            new window.google.maps.Marker({
+            const marker = new window.google.maps.Marker({
               position: { lat: location.lat, lng: location.lng },
               map: map,
               title: location.title,
+            });
+
+            // Add event listeners for hover to show the InfoWindow
+            marker.addListener('mouseover', () => {
+              infoWindow.setContent(`<div><strong>${location.title}</strong><br />${location.address}</div>`);
+              infoWindow.open(map, marker);
+            });
+
+            // Close the InfoWindow when the mouse leaves
+            marker.addListener('mouseout', () => {
+              infoWindow.close();
             });
           });
         }
@@ -62,7 +91,7 @@ const MapComponent = () => {
     initializeMap();
   }, []);
 
-  // Render the map container with a smaller size
+  // Render the map container
   return (
     <div
       ref={mapRef}
