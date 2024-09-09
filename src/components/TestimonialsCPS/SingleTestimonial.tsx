@@ -2,7 +2,7 @@ import React from 'react';
 import { Testimonial } from "@/types/testimonial";
 
 type SingleTestimonialProps = {
-  testimonial: Testimonial;
+  testimonial: any;
 };
 
 const SingleTestimonial: React.FC<SingleTestimonialProps> = ({ testimonial }) => {

@@ -10,8 +10,8 @@ const TitleWithImage = ({
   imageAlt = "Project lifecycle support", // Default value for alt text
   mb = "100px",
 }: {
-  title: string;
-  imageSrc: string;
+  title?: string;
+  imageSrc?: string;
   imageAlt?: string; // Optional alt text
   mb?: string;
 }) => {
