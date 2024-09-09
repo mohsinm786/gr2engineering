@@ -3,7 +3,7 @@ import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
 import { Testimonial } from "@/types/testimonial";
 
-const testimonialData: Testimonial[] = [
+const testimonialData = [
   {
     id: 1,
     name: "Technical and Advisory Services",
