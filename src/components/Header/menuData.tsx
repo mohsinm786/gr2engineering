@@ -15,26 +15,26 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 21,
-        title: "Corporate Social Responsibility",
-        path: "/corporate-social-responsibility",
-        newTab: false,
-      },
-      {
-        id: 22,
         title: "History",
         path: "/history",
         newTab: false,
       },
       {
-        id: 23,
+        id: 22,
         title: "Our Experience",
         path: "/our-experience",
         newTab: false,
       },
       {
-        id: 24,
+        id: 23,
         title: "Leadership",
         path: "/leadership",
+        newTab: false,
+      },
+      {
+        id: 24,
+        title: "Corporate Social Responsibility",
+        path: "/corporate-social-responsibility",
         newTab: false,
       },
     ],
@@ -46,20 +46,26 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 34,
+        title: "Engineering",
+        path: "/engineering",
+        newTab: false,
+      },
+      {
+        id: 35,
+        title: "Modular",
+        path: "/modular",
+        newTab: false,
+      },
+      {
+        id: 36,
         title: "Capital Project Services",
         path: "/capital-project-services",
         newTab: false,
       },
       {
-        id: 35,
+        id: 37,
         title: "Water",
         path: "/water",
-        newTab: false,
-      },
-      {
-        id: 36,
-        title: "Modular",
-        path: "/modular",
         newTab: false,
       },
     ],
