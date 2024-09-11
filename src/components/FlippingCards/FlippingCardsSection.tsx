@@ -52,7 +52,7 @@ const FlippingCardsSection = () => {
               key={card.id}
               className="relative w-64 h-64 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600 shadow-lg perspective"
             >
-              <div className="flip-card-inner">
+              <div className="flip-card-inner h-full flex flex-col justify-center items-center">
                 <div className="flip-card-front p-6 text-center">
                   <h4 className="text-lg font-semibold text-black dark:text-white">{card.title}</h4>
                   <p className="mt-2 text-gray-600 dark:text-gray-400">{card.frontContent}</p>

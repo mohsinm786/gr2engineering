@@ -1,9 +1,11 @@
 import Link from "next/link";
 
 const Breadcrumb = ({
+  subpageName,
   pageName,
   description,
 }: {
+  subpageName: string;
   pageName: string;
   description: string;
 }) => {
@@ -30,7 +32,7 @@ const Breadcrumb = ({
                       href="/"
                       className="pr-1 text-base font-medium text-body-color hover:text-primary"
                     >
-                      Home
+                      {subpageName}
                     </Link>
                     <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
                   </li>
