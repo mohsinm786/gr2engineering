@@ -14,6 +14,7 @@ const HistoryPage = () => {
   return (
     <>
       <Breadcrumb
+        subpageName="About Us"
         pageName="History"
         description=""
       />

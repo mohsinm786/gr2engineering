@@ -41,7 +41,7 @@ const Header = () => {
 
   // Language dropdown
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("EN");
+  const [selectedLanguage, setSelectedLanguage] = useState("English");
 
   const toggleLanguageDropdown = () => {
     setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
@@ -52,7 +52,7 @@ const Header = () => {
     setIsLanguageDropdownOpen(false);
   };
 
-  const languages = ["EN", "ES", "AR", "DE", "ZH"];
+  const languages = ["English", "Spanish", "Arabic", "German", "Chinese"];
 
   return (
     <>
@@ -65,26 +65,25 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
+            <div className="w-auto max-w-full">
               <Link
                 href="/"
-                className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "py-8"
-                  } `}
+                className={`header-logo block w-full ${sticky ? "py-0 lg:py-0" : "py-0"}`}
               >
                 <Image
                   src="/images/logo/new-logo.png"
                   alt="logo"
-                  width={140}
-                  height={30}
+                  width={200}
+                  height={50}
                   className="w-full dark:hidden"
                 />
-                <Image
+                {/* <Image
                   src="/images/logo/new-logo.png"
                   alt="logo"
                   width={140}
                   height={30}
                   className="hidden w-full dark:block"
-                />
+                /> */}
               </Link>
             </div>
             <div className="flex w-full items-center justify-end px-4">
