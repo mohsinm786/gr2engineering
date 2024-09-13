@@ -48,27 +48,20 @@ const FlippingCardsSection = () => {
             GR2 ENGINEERING’S UNIQUE APPROACH
           </h3>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 justify-items-center">
+        <div className="flex flex-wrap grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6  justify-center">
           {cardData.map((card) => (
-            <div
-              key={card.id}
-              className="relative w-60 h-64 bg-gray-100 dark:bg-gray-100 rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600 shadow-lg perspective"
-            >
-              <div className="flip-card-inner h-full flex flex-col justify-center items-center">
-                <div className="flip-card-front p-6 text-center">
-                  <h4 className="text-lg font-semibold text-black dark:text-white">{card.title}</h4>
-                  <p className="mt-2 text-gray-600 dark:text-gray-400">{card.frontContent}</p>
-                </div>
-                <div className="flip-card-back p-6 text-center">
-                  <h4 className="text-lg font-semibold text-black dark:text-white">{card.title}</h4>
-                  <p className="mt-2 text-gray-600 dark:text-gray-400">
-                    {card.backContent}
-                  </p>
-                </div>
+            /* From Uiverse.io by gharsh11032000 */
+            <div key={card.id} className="card">
+              <h3>{card.title}</h3>
+              <div className="card__content">
+                <h3 className="card__title">{card.title}</h3>
+                <p className="card__description">{card.backContent}</p>
               </div>
             </div>
           ))}
+
         </div>
+
       </div>
     </section>
   );
