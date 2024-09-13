@@ -2,6 +2,8 @@ import React from 'react';
 import './FlippingCardsSection.css'; // Import the CSS file
 
 const FlippingCardsSection = () => {
+
+  // home page card data
   const cardData = [
     {
       id: 1,
@@ -50,7 +52,7 @@ const FlippingCardsSection = () => {
           {cardData.map((card) => (
             <div
               key={card.id}
-              className="relative w-64 h-64 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600 shadow-lg perspective"
+              className="relative w-60 h-64 bg-gray-100 dark:bg-gray-100 rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600 shadow-lg perspective"
             >
               <div className="flip-card-inner h-full flex flex-col justify-center items-center">
                 <div className="flip-card-front p-6 text-center">
