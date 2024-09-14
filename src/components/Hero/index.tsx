@@ -1,5 +1,6 @@
 import Link from "next/link";
- 
+import "./index.css"
+
 const Hero = () => {
   return (
     <>
@@ -8,39 +9,35 @@ const Hero = () => {
         className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px] mt-[80px]"
       >
 
-      {/* Background Image */}
-      <img
+        {/* Background Image */}
+        <img
           src="\images\addedImg\Homepage-banner.jpg"
           alt="Background"
-          className="absolute inset-0 h-full w-full object-cover opacity-50"
+          className="absolute inset-0 h-full w-full object-cover opacity-50 transition-transform transform hover:scale-105 hover:rotate-3 hover:opacity-80 duration-700 animate-slideInRight"
         />
+
 
         <div className="container relative z-20">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-1/2">
-              <div className="mx-0 ml-0 max-w-[400px] text-left">
+              <div className="mx-0 ml-0 max-w-[400px] text-left animate-slideInLeft">
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                Experience and innovation
+                  Experience and innovation
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                Project and technology services in energy and infrastructure from the industry experts.
+                  Project and technology services in energy and infrastructure from the industry experts.
                 </p>
                 <div className="flex items-start justify-start space-y-4 sm:space-x-4 sm:space-y-0 text-left">
                   <Link
+                    style={{ border: "3px solid #3B71CA" }}
                     href="https://nextjstemplates.com/templates/saas-starter-startup"
-                    className="text-blue-600 hover:text-blue-800 font-semibold"
+                    className="view_service_btn text-blue-600 hover:text-blue-800 font-semibold p-2"
                   >
                     View services
                   </Link>
-                
-                  {/* <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
-                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                  >
-                    Star on GitHub
-                  </Link> */}
                 </div>
               </div>
+
             </div>
           </div>
         </div>
