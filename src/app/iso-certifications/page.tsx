@@ -9,14 +9,15 @@ const IsoCertificate = () => {
   return (
     <>
       <Breadcrumb
-        pageName="ISO Certificate"
+        pageName="ISO Certifications"
+        subpageName="About Us"
         description="Below you can find our ISO certification documents."
       />
 
       <section className="py-16 md:py-20 lg:py-28">
         <div className="container">
           {/* GR2 Inc ISO Certificate */}
-          <div className="mb-10">
+          <div className="mb-10 w-10/12 mx-auto">
             <h2 className="text-3xl font-bold text-black dark:text-white mb-6">
               GR2 Inc ISO Certificate
             </h2>
@@ -32,7 +33,7 @@ const IsoCertificate = () => {
           </div>
 
           {/* GR2 India ISO Certificate */}
-          <div>
+          <div className="w-10/12 mx-auto">
             <h2 className="text-3xl font-bold text-black dark:text-white mb-6">
               GR2 India ISO Certificate
             </h2>
