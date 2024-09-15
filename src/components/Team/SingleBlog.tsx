@@ -1,9 +1,9 @@
-import { Team } from "@/types/team";
+import { TeamMember } from "@/types/team";
 import Image from "next/image";
 import Link from "next/link";
 
-const SingleBlog = ({ member }: { member: Team }) => {
-  const { title, image, jobRole, description1, description2 } = member;
+const SingleBlog = ({ member }: { member: TeamMember }) => {
+  const { title, image, jobRole } = member;
   return (
     <>
       <div className="group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark">
