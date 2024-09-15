@@ -18,6 +18,11 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <div>
+                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  At GR2 Engineering, we believe that true success is measured not only by financial performance but also by our commitment to social and environmental responsibility. Guided by our core values of integrity, sustainability, and community, we are dedicated to making a positive impact on the world around us.
+                  </p>
+              </div>
+              <div>
                 <SectionTitle
                   title="OUR COMMITMENT"
                   paragraph={`GR2 Engineering is committed to ensuring that our projects and clients are guided by the most recent environmental, social, and governance standards so that we all play a role in ensuring a safe and sustainable future for all.\n\nWe strive to improve energy management and environmental sustainability through a holistic approach utilizing our collective wisdom and painstakingly developed technology in order to contribute to the sustainable development of a society as an integrated engineering company.`}
