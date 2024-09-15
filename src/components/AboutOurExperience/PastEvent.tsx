@@ -8,10 +8,10 @@ const PastEvents = () => {
         <div className="w-10/12 mx-auto">
           <div className="px-4">
             <div className="mb-9">
-              <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              <h3 className="mb-4 text-xl font-bold text-blue-900 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                 UPCOMING EVENTS
               </h3>
-              <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              <h3 className="mb-4 text-xl font-bold text-blue-900 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                 MEET US AT THESE UPCOMING EVENTS
               </h3>
               <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
