@@ -34,6 +34,20 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
+      keyframes: {
+        slideInRight: {
+          '0%': { opacity: 0, transform: 'translateX(100%)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+        slideInLeft: {
+          '0%': { opacity: 0, transform: 'translateX(-100%)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        slideInRight: 'slideInRight 1.5s ease-out',
+        slideInLeft: 'slideInLeft 1.5s ease-out',
+      },
       colors: {
         current: "currentColor",
         transparent: "transparent",

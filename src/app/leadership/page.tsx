@@ -1,11 +1,15 @@
 import Team from "@/components/Team";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
+import teamData from "@/components/Team/teamData";
+import teamDataIndia from "@/components/Team/teamDataIndia";
+import teamDataColumbia from "@/components/Team/teamDataColumbia";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
+  title: "Leadership - GR2 Engineering",
+  // description: "This is About Page for Startup Nextjs Template",
   // other metadata
 };
 
@@ -35,7 +39,15 @@ const LeadershipPage = () => {
                     GR2 Engineering is established by a team of executives bringing a cumulative 150 years of global experience in project execution, process technologies, engineering, and design developed working for major international companies: KBR, Jacobs, Fluor, CH2M Hill, Parsons, Black & Veatch, Chiyoda for major IOCs, NOCs and Independents, among them ExxonMobil, Qatar Petroleum, ADNOC, Petronas, CNPC (PetroChina), SINOPEC, Shell, Cheniere, Energy Transfer, Kinder Morgan. As well as technology companies such as Honeywell, Emerson, ABB, Yokogawa, and others.
                   </p>
                 </div>
-                <Team />
+                <Team teamData={teamData} />
+                <h2 className="mt-12 mb-8 text-3xl text-primary font-bold leading-tight dark:text-white sm:text-4xl sm:leading-tight">
+                  MANAGEMENT TEAM - INDIA
+                </h2>
+                <Team teamData={teamDataIndia} />
+                <h2 className="mt-12 mb-8 text-3xl text-primary font-bold leading-tight dark:text-white sm:text-4xl sm:leading-tight">
+                  MANAGEMENT TEAM - COLUMBIA
+                </h2>
+                {/* <Team teamData={teamDataColumbia} /> */}
               </div>
             </div>
           </div>
