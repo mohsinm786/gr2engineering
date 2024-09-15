@@ -17,7 +17,7 @@ const AboutPage = () => {
       <Breadcrumb
         subpageName="About Us"
         pageName="OUR EXPERIENCE"
-        description="At GR2 Engineering, our extensive experience sets us apart as a trusted leader in the energy, infrastructure, and chemicals industries. With decades of collective expertise and a proven track record of success, we have the knowledge, skills, and resources to tackle even the most complex challenges and deliver superior results for our clients."
+        description=""
       />
       <AboutSectionOne />
       <Whitepapers />

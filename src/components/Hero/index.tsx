@@ -21,10 +21,10 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-1/2">
               <div className="mx-0 ml-0 max-w-[400px] text-left animate-slideInLeft">
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="mb-5 text-3xl font-bold leading-tight text-blue-900 dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   Experience and innovation
                 </h1>
-                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                <p style={{color:"#5fc352"}} className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                   Project and technology services in energy and infrastructure from the industry experts.
                 </p>
                 <div className="flex items-start justify-start space-y-4 sm:space-x-4 sm:space-y-0 text-left">

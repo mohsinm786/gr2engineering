@@ -28,6 +28,11 @@ const AboutSectionOne = () => {
           <div className="flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-2/3">
               <div>
+                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  At GR2 Engineering, our extensive experience sets us apart as a trusted leader in the energy, infrastructure, and chemicals industries. With decades of collective expertise and a proven track record of success, we have the knowledge, skills, and resources to tackle even the most complex challenges and deliver superior results for our clients.
+                  </p>
+              </div>
+              <div>
                 <SectionTitle
                   title="GR2 ENGINEERING TEAM FOOTPRINT"
                   paragraph={`The team that makes up our organization has a cumulative 150 years of experience across the world, leading and managing large-scale projects with industry giants. Each team member has a unique set of skills that help us deliver a 360-degree project management service.\n\nOur team has worked across 12 countries, designing more than 50 different projects with large industry leaders. Below is a breakdown of our team’s experience with various types of projects over the years.`}
@@ -36,18 +41,14 @@ const AboutSectionOne = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-1/3">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
+              <div className="relative mx-auto max-w-[500px] lg:mr-0">
                 <Image
-                  src="/images/addedImg/word-map.png" // Update the image path to a relevant CSR image
+                  src="/images/addedImg/word-map.png"  // Update the image path to a relevant CSR image
                   alt="csr-image"
-                  fill
+                  layout="intrinsic"  // Ensures the image maintains its aspect ratio
+                  width={500}  // Set the image's natural width
+                  height={480}  // Set the image's natural height
                   className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/addedImg/word-map.png"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
                 />
               </div>
             </div>

@@ -18,7 +18,7 @@ const IsoCertificate = () => {
         <div className="container">
           {/* GR2 Inc ISO Certificate */}
           <div className="mb-10 w-10/12 mx-auto">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-6">
+            <h2 className="text-3xl font-bold text-blue-900 dark:text-white mb-6">
               GR2 Inc ISO Certificate
             </h2>
             <div className="w-full h-[600px] border border-gray-300 dark:border-gray-700 shadow-lg">
@@ -34,7 +34,7 @@ const IsoCertificate = () => {
 
           {/* GR2 India ISO Certificate */}
           <div className="w-10/12 mx-auto">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-6">
+            <h2 className="text-3xl font-bold text-blue-900 dark:text-white mb-6">
               GR2 India ISO Certificate
             </h2>
             <div className="w-full h-[600px] border border-gray-300 dark:border-gray-700 shadow-lg">
