@@ -27,6 +27,13 @@ const Testimonials = () => {
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="w-10/12 mx-auto">
+          <div className="flex justify-center">
+            <div>
+              <p className="text-base font-medium leading-relaxed text-body-color md:text-lg max-w-full text-left mb-8">
+                At GR2 Engineering, our Capital Project Services division is dedicated to providing comprehensive solutions for all stages of your project lifecycle. From initial concept development to final commissioning and beyond, we offer a wide range of services tailored to meet your specific needs and objectives. With a focus on innovation, efficiency, and cost-effectiveness, our team of experts is committed to delivering superior results that maximize value and minimize risk. Whether you’re embarking on a new capital project or seeking support for an existing initiative, trust GR2 Engineering to be your partner every step of the way.
+              </p>
+            </div>
+          </div>
           <div>
             <SectionTitle
               title="CAPABILITIES"
