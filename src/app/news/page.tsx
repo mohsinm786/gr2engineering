@@ -13,10 +13,6 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <>
-      <Breadcrumb
-        pageName="NEWS"
-        description="We’ve had the opportunity to attend various conferences in the past"
-      />
       <PastEvents/>
     </>
   );  

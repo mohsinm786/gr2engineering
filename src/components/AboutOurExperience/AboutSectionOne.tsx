@@ -24,16 +24,10 @@ const AboutSectionOne = () => {
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-2/3">
               <div>
-                <SectionTitle
-                  title="OUR EXPERIENCE"
-                  paragraph=""
-                  mb="20px"
-                />
-
                 <SectionTitle
                   title="GR2 ENGINEERING TEAM FOOTPRINT"
                   paragraph={`The team that makes up our organization has a cumulative 150 years of experience across the world, leading and managing large-scale projects with industry giants. Each team member has a unique set of skills that help us deliver a 360-degree project management service.\n\nOur team has worked across 12 countries, designing more than 50 different projects with large industry leaders. Below is a breakdown of our team’s experience with various types of projects over the years.`}

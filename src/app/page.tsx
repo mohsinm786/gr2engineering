@@ -30,12 +30,12 @@ export default function Home() {
       <AboutSectionOne />
       {/* <AboutSectionTwo /> */}
       <FlippingCardsSection/>
-      <Solutions />
+      {/* <Solutions /> */}
 
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
       {/* <Blog /> */}
-      <Contact />
+      {/* <Contact /> */}
     </>
   );
 }

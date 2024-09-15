@@ -12,10 +12,6 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <>
-      <Breadcrumb
-        pageName="JOB OPPORTUNITIES"
-        description=""
-      />
       <FullWidthSection/>
 
       

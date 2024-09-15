@@ -94,5 +94,43 @@ const menuData: Menu[] = [
     path: "/contact",
     newTab: false,
   },
+  {
+    id: 6,
+    title: "Language",
+    newTab: false,
+    isLanguageMenu: true,
+    submenu: [
+      {
+        id: 61,
+        title: "English",
+        path: "#",
+        newTab: false,
+      },
+      {
+        id: 62,
+        title: "Spanish",
+        path: "#",
+        newTab: false,
+      },
+      {
+        id: 63,
+        title: "Arabic",
+        path: "#",
+        newTab: false,
+      },
+      {
+        id: 64,
+        title: "German",
+        path: "#",
+        newTab: false,
+      },
+      {
+        id: 65,
+        title: "Chinese",
+        path: "#",
+        newTab: false,
+      },
+    ],
+  },
 ];
 export default menuData;
