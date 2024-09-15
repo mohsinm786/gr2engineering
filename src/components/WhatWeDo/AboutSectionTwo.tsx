@@ -2,6 +2,23 @@ import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 
 const AboutSectionTwo = () => {
+  const List = ({ text }: { text: string }) => (
+    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
+      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+        {/* Custom bullet point (circle icon) */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <circle cx="10" cy="10" r="3" />
+        </svg>
+      </span>
+      {text}
+    </p>
+  );
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -17,7 +34,7 @@ const AboutSectionTwo = () => {
                   titleClassName="text-2xl font-bold text-black dark:text-white"
                 />
                 <SectionTitle
-                  title="Integrated project Management system"
+                  title="INTEGRATED PROJECT MANAGEMENT SYSTEM"
                   paragraph=""
                   mb="32px"
                   titleClassName="text-xl font-semibold text-gray-700 dark:text-gray-300"
@@ -43,16 +60,14 @@ const AboutSectionTwo = () => {
             <div className="w-full lg:w-1/2 px-4 lg:pl-12">
               <div className="max-w-[470px]">
                 <div className="mb-9">
-                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-                    <li>Intelligent intuitive project management software platform</li>
-                    <li>Project Integration among client, PMC, contractors, subcontractors, and vendors</li>
-                    <li>No changes required to contractor and vendor systems, tools, and procedures</li>
-                    <li>AWP based</li>
-                    <li>Cloud based</li>
-                    <li>Scalable</li>
-                    <li>Mobile App</li>
-                    <li>Cost effective</li>
-                  </ul>
+                  <List text="Intelligent intuitive project management software platform" />
+                  <List text="Project Integration among client, PMC, contractors, subcontractors, and vendors" />
+                  <List text="No changes required to contractor and vendor systems, tools, and procedures" />
+                  <List text="AWP based" />
+                  <List text="Cloud based" />
+                  <List text="Scalable" />
+                  <List text="Mobile App" />
+                  <List text="Cost effective" />
                 </div>
               </div>
             </div>
