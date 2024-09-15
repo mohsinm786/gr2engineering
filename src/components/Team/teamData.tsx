@@ -1,6 +1,6 @@
-import { Team } from "@/types/team";
+import { TeamMember } from "@/types/team";
 
-const teamData: Team[] = [
+const teamData: TeamMember[] = [
   {
     id: 1,
     title: "Romolo Raciti",
@@ -24,6 +24,22 @@ const teamData: Team[] = [
     image: "/images/team/PA.jpg",
     description1: "Pamir has more than 25 years of experience in midstream and downstream EPC projects. Pamir successfully executed various projects for Dow, BASF, Eastman, BP, Exxon, Blue Racer, Enterprise, Lone Star, Marathon and Phillips 66 working with Worley, Bechtel, Audubon, HED and S&B.  Prior joining to GR2, he was the Lead Process Engineer at S&B for P66 Sweeney Project.",
     description2: "Pamir has a B.S. in Chemical Engineering and M.S. in Polymer Science from METU Ankara, and M.B.A. in Environmental Management from University of Houston.",
+  },
+  {
+    id: 4,
+    title: "David Branch",
+    jobRole: "VP Midstream",
+    image: "/images/team/DB.png",
+    description1: "David Branch has more than 30 years of energy industry experience with a focus on EPC and operations management. David started his career at Haliburton before moving into midstream projects. He co-founded multiple midstream companies developing surface processing and subsurface storage assets. David has executed several EPC pipelines, gathering and compression, storage and loading terminal projects. He has been providing senior consulting services to various major midstream energy companies.",
+    description2: "David has a B.S. in Engineering from Texas A&M and an M.S. in Mechanical Engineering from the University of Houston",
+  },
+  {
+    id: 5,
+    title: "Norman Beveridge",
+    jobRole: "Principal Engineer",
+    image: "/images/team/NB.png",
+    description1: "Norman has more than 40 years of EPC projects experience in LNG, pipelines, refineries, and petrochemical plants. Norm gained his experience working for major EPC contractors in the US including KBR, Foster Wheeler, and Linde. Norm has hands-on experience in project execution, engineering, operations, maintenance, construction, commissioning, start-up, and troubleshooting.",
+    description2: "Norm has an MSc. In Mechanical Engineering from Rice University and he is a registered Texas Professional Engineer.",
   },
 ];
 export default teamData;

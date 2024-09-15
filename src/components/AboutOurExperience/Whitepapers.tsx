@@ -4,7 +4,7 @@ const Whitepapers = () => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
-        <div className="w-full">
+        <div className="w-10/12 mx-auto">
           <div className="px-4">
             <h3 className="mb-6 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
               WHITEPAPERS

@@ -26,27 +26,30 @@ const Testimonials = () => {
   return (
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
-        <div>
-          <SectionTitle
-            title="CAPABILITIES"
-            paragraph=""
-            mb="30px"
-          />
+        <div className="w-10/12 mx-auto">
+          <div>
+            <SectionTitle
+              title="CAPABILITIES"
+              paragraph=""
+              mb="30px"
+            />
 
-          <SectionTitle
-            title="ENERGY AND INFRASTRUCTURE"
-            paragraph=""
-            mb="44px"
-          />
-        </div>
+            <SectionTitle
+              title="ENERGY AND INFRASTRUCTURE"
+              paragraph=""
+              mb="44px"
+            />
+          </div>
 
-        <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-x-6">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
-          ))}
+          <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-x-6">
+            {testimonialData.map((testimonial) => (
+              <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+            ))}
+          </div>
         </div>
+        {/* SVG backgrounds and other design elements remain the same */}
       </div>
-      {/* SVG backgrounds and other design elements remain the same */}
+
     </section>
   );
 };
