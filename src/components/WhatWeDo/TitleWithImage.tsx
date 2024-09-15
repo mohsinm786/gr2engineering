@@ -42,61 +42,64 @@ const TitleWithImage = ({
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
-        <div className="flex flex-wrap items-center -mx-4">
-          {/* Title Section */}
-          <div className="w-full px-4 lg:w-1/2">
-            <div className="max-w-[470px] mb-12" style={{ marginBottom: mb }}>
-              <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
-                {title}
-              </h2>
+        <div className="w-10/12 mx-auto">
+
+          <div className="flex flex-wrap items-center -mx-4">
+            {/* Title Section */}
+            <div className="w-full px-4 lg:w-1/2">
+              <div className="max-w-[470px] mb-12" style={{ marginBottom: mb }}>
+                <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
+                  {title}
+                </h2>
+              </div>
+            </div>
+
+            {/* Image Section */}
+            <div className="w-full px-4 lg:w-1/2">
+              <div
+                className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] lg:m-0 cursor-pointer"
+                onClick={toggleModal} // Open modal on click
+              >
+                <Image
+                  src={imageSrc}
+                  alt={imageAlt}
+                  fill
+                  className="drop-shadow-three dark:drop-shadow-none"
+                />
+              </div>
             </div>
           </div>
+        </div>
 
-          {/* Image Section */}
-          <div className="w-full px-4 lg:w-1/2">
-            <div
-              className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] lg:m-0 cursor-pointer"
-              onClick={toggleModal} // Open modal on click
-            >
+        {/* Modal for Image */}
+        {isModalOpen && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
+            onClick={handleOutsideClick} // Close modal on outside click
+            aria-label="Image modal"
+          >
+            <div className="relative w-full max-w-4xl">
+              {/* Close Button */}
+              <button
+                className="absolute top-4 right-4 text-white text-2xl"
+                onClick={toggleModal}
+                aria-label="Close modal"
+              >
+                &times;
+              </button>
+
+              {/* Modal Image */}
               <Image
                 src={imageSrc}
                 alt={imageAlt}
-                fill
-                className="drop-shadow-three dark:drop-shadow-none"
+                width={800}
+                height={600}
+                className="rounded-lg"
               />
             </div>
           </div>
-        </div>
+        )}
       </div>
-
-      {/* Modal for Image */}
-      {isModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
-          onClick={handleOutsideClick} // Close modal on outside click
-          aria-label="Image modal"
-        >
-          <div className="relative w-full max-w-4xl">
-            {/* Close Button */}
-            <button
-              className="absolute top-4 right-4 text-white text-2xl"
-              onClick={toggleModal}
-              aria-label="Close modal"
-            >
-              &times;
-            </button>
-
-            {/* Modal Image */}
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              width={800}
-              height={600}
-              className="rounded-lg"
-            />
-          </div>
-        </div>
-      )}
     </section>
   );
 };

@@ -14,44 +14,16 @@ const AboutSectionOne = () => {
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
-            <div>
-            <SectionTitle
-              title="CORPORATE SOCIAL RESPONSIBILITY"
-              paragraph="" // Leave paragraph empty for this instance
-              mb="20px" // Adjust margin-bottom as needed
-            />
-
-            <SectionTitle
-              title="OUR COMMITMENT"
-              paragraph={`GR2 Engineering is committed to ensuring that our projects and clients are guided by the most recent environmental, social, and governance standards so that we all play a role in ensuring a safe and sustainable future for all.\n\nWe strive to improve energy management and environmental sustainability through a holistic approach utilizing our collective wisdom and painstakingly developed technology in order to contribute to the sustainable development of a society as an integrated engineering company.`}
-              mb="44px"
-            />
-            </div>
-
-
-              {/* <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
-
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-
-                    <List text="Environmental Initiatives" />
-                    <List text="Community Engagement" />
-                    <List text="Sustainable Practices" />
-                  </div>
-
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Employee Well-being" />
-                    <List text="Ethical Governance" />
-                    <List text="Continuous Improvement" />
-                  </div>
-                </div>
-              </div> */}
+              <div>
+                <SectionTitle
+                  title="OUR COMMITMENT"
+                  paragraph={`GR2 Engineering is committed to ensuring that our projects and clients are guided by the most recent environmental, social, and governance standards so that we all play a role in ensuring a safe and sustainable future for all.\n\nWe strive to improve energy management and environmental sustainability through a holistic approach utilizing our collective wisdom and painstakingly developed technology in order to contribute to the sustainable development of a society as an integrated engineering company.`}
+                  mb="44px"
+                />
+              </div>
             </div>
 
             {/* Remove or update this section based on your needs */}
