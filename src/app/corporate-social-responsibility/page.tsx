@@ -16,7 +16,7 @@ const AboutPage = () => {
       <Breadcrumb
         subpageName="About Us"
         pageName="CORPORATE SOCIAL RESPONSIBILITY"
-        // description="At GR2 Engineering, we believe that true success is measured not only by financial performance but also by our commitment to social and environmental responsibility. Guided by our core values of integrity, sustainability, and community, we are dedicated to making a positive impact on the world around us."
+        description=""
       />
       <AboutSectionOne />
       {/* <AboutSectionTwo /> */}
