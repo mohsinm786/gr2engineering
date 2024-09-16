@@ -52,7 +52,7 @@ const FlippingCardsSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section className="py-10 md:py-10 lg:py-10">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-2xl font-bold text-blue-900 dark:text-white sm:text-3xl">
