@@ -98,17 +98,17 @@ const Footer = () => {
                     What We Do
                   </h2>
                   <ul>
-                    <li>
+                  <li>
                       <Link
                         href="/"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
-                        Capital Project Services
+                        Engineering
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/"
+                        href="/modular"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
                         Modular
@@ -116,7 +116,15 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/"
+                        href="/capital-project-services"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Capital Project Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/water"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
                         Water
@@ -132,6 +140,22 @@ const Footer = () => {
                     Get In Touch
                   </h2>
                   <ul>
+                    <li>
+                      <Link
+                        href="/news"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        News
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/careers"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Careers
+                      </Link>
+                    </li>
                     <li>
                       <Link
                         href="/contact"
