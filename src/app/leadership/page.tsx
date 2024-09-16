@@ -35,7 +35,7 @@ const LeadershipPage = () => {
                   MANAGEMENT TEAM
                 </h2>
                 <div>
-                  <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="mb-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     GR2 Engineering is established by a team of executives bringing a cumulative 150 years of global experience in project execution, process technologies, engineering, and design developed working for major international companies: KBR, Jacobs, Fluor, CH2M Hill, Parsons, Black & Veatch, Chiyoda for major IOCs, NOCs and Independents, among them ExxonMobil, Qatar Petroleum, ADNOC, Petronas, CNPC (PetroChina), SINOPEC, Shell, Cheniere, Energy Transfer, Kinder Morgan. As well as technology companies such as Honeywell, Emerson, ABB, Yokogawa, and others.
                   </p>
                 </div>

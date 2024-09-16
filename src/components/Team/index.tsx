@@ -10,9 +10,9 @@ type TeamProps = {
 
 const Team: React.FC<TeamProps> = ({ teamData }) => {
   return (
-    <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
+    <div className="flex flex-wrap justify-center items-center gap-4 mt-5 mb-5">
       {teamData.map((member) => (
-        <div key={member.id} className="w-full">
+        <div key={member.id} className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 text-center mx-auto">
           <SingleBlog member={member} />
         </div>
       ))}

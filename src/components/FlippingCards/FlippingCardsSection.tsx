@@ -55,7 +55,7 @@ const FlippingCardsSection = () => {
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold text-black dark:text-white sm:text-3xl">
+          <h2 className="text-2xl font-bold text-blue-900 dark:text-white sm:text-3xl">
             OUR VALUES
           </h2>
           <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-400 mt-4">
@@ -64,14 +64,14 @@ const FlippingCardsSection = () => {
         </div>
         <div className="flex flex-wrap grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6  justify-center">
           {cardData.map((card) => (
-            <div key={card.id} className="card">
-              <div className="flex flex-col justify-center items-center gap-2 ">
+            <div key={card.id} className="card ">
+              <div className="flex flex-col justify-center items-center gap-4 ">
                 <img src={card.icon} alt={card.title} className="card__image object-contain w-20" />
-                <h3 className='card-title1'>{card.title}</h3>
+                <h3 className='card-title1 '>{card.title}</h3>
               </div>
               <div className="card__content">
-                <h3 className="card__title text-primary">{card.title}</h3>
-                <p className="card__description">{card.backContent}</p>
+                <h3 className="card__title text-white">{card.title}</h3>
+                <p className=" card__description text-white">{card.backContent}</p>
               </div>
             </div>
           ))}

@@ -30,8 +30,10 @@
 /* Background color change for the back side */
 .flip-card-back {
   transform: rotateY(180deg);
-  background-color: #808080; /* Grey background when flipped */
+  background-color: #808080;
+  /* Grey background when flipped */
 }
+
 .card {
   position: relative;
   width: 300px;
@@ -49,17 +51,20 @@
 
 .card svg {
   width: 48px;
-  fill: #333;
+  fill: #1e3a8a;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-  outline: 1px solid #5fc352 ;
 }
 
 .card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -67,26 +72,35 @@
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #f2f2f2;
+  background-color: #1e3a8a;
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backface-visibility: hidden; /* Ensure content remains sharp */
+  transform-style: preserve-3d; /* Improve 3D rendering */
+  will-change: transform; /* Optimize for hover */
 }
 
 .card:hover .card__content {
   transform: rotateX(0deg);
 }
-.card-title1{
-color: #5fc352;
+
+.card-title1 {
+  color: #5fc352;
+  font-size: 21px;
+  font-weight: 600;
 }
+
 .card__title {
   text-align: center;
   margin: 0;
-  font-size: 24px;
-  --tw-text-opacity: 1;
-    color: rgb(74 108 247 / var(--tw-text-opacity));
+  font-size: 21px;
 
+  backface-visibility: hidden;
   font-weight: 500;
+  backface-visibility: hidden; /* Ensure text remains sharp */
+  transform-style: preserve-3d; /* Maintain 3D clarity */
+  will-change: transform; /* Help optimize the text */
 }
 
 .card:hover svg {
@@ -95,10 +109,13 @@ color: #5fc352;
 
 .card__description {
   margin: 10px 0 0;
-  font-size: 14px;
-  --tw-text-opacity: 1;
-    color: rgb(1 32 112);
+  font-size: 16px;
+  font-weight: 600;
+  backface-visibility: hidden;
 
   line-height: 1.4;
   text-align: center;
+  backface-visibility: hidden; /* Ensure text remains sharp */
+  transform-style: preserve-3d; /* Maintain 3D clarity */
+  will-change: transform; /* Help optimize the text */
 }
