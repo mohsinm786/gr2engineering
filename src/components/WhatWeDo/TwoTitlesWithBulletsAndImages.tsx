@@ -30,7 +30,7 @@ const TwoTitlesWithBulletsAndImages = () => {
   };
 
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section className="py-10">
       <div className="container">
         <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="flex flex-col items-start">
@@ -61,11 +61,11 @@ const TwoTitlesWithBulletsAndImages = () => {
 
             {/* Images - 2 in one row */}
             <div className="flex justify-center">
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2  gap-6 ">
                 {["/images/addedImg/Modular-1.png", "/images/addedImg/Modular-2.png", "/images/addedImg/Modular-3.png", "/images/addedImg/Modular-4.png"].map((src, index) => (
                   <div
                     key={index}
-                    className="relative h-64 w-full cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                    className="relative w-full cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-300"
                     onClick={() => openModal(src)}
                   >
                     <Image

@@ -7,7 +7,7 @@ const Breadcrumb = ({
 }: {
   subpageName: string;
   pageName: string;
-  description: string;
+  description?: string;
 }) => {
   return (
     <>
