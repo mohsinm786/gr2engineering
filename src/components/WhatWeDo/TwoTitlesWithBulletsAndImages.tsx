@@ -61,11 +61,11 @@ const TwoTitlesWithBulletsAndImages = () => {
 
             {/* Images - 2 in one row */}
             <div className="flex justify-center">
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2  gap-6 ">
                 {["/images/addedImg/Modular-1.png", "/images/addedImg/Modular-2.png", "/images/addedImg/Modular-3.png", "/images/addedImg/Modular-4.png"].map((src, index) => (
                   <div
                     key={index}
-                    className="relative h-64 w-full cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                    className="relative w-full cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-300"
                     onClick={() => openModal(src)}
                   >
                     <Image
