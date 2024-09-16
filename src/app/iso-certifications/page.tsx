@@ -11,10 +11,10 @@ const IsoCertificate = () => {
       <Breadcrumb
         pageName="ISO Certifications"
         subpageName="About Us"
-        description="Below you can find our ISO certification documents."
+        // description="Below you can find our ISO certification documents."
       />
 
-      <section className="py-16 md:py-20 lg:py-28">
+      <section className="py-10">
         <div className="container">
           {/* GR2 Inc ISO Certificate */}
           <div className="mb-10 w-10/12 mx-auto">

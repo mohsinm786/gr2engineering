@@ -3,13 +3,11 @@ import SectionTitle from "../Common/SectionTitle";
 
 const FullWidthSection = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section className="py-10 ">
       <div className="container">
         <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="flex flex-col items-start">
-            <p className="text-base font-medium leading-relaxed text-body-color md:text-lg max-w-full text-left mt-8 mb-8">
-            Our modular approach revolutionizes project delivery by offering flexible, pre-engineered solutions that streamline construction processes and accelerate project timelines. With a focus on quality, scalability, and cost-effectiveness, our modular solutions are designed to meet the unique needs of your project while delivering superior performance and value. Whether you’re looking to optimize space utilization, reduce construction waste, or enhance project flexibility, GR2 Engineering’s modular solutions provide the answer you’ve been searching for.
-            </p>
+            <p className="mb-10 text-base !leading-relaxed text-body-color md:text-lg">Our modular approach revolutionizes project delivery by offering flexible, pre-engineered solutions that streamline construction processes and accelerate project timelines. With a focus on quality, scalability, and cost-effectiveness, our modular solutions are designed to meet the unique needs of your project while delivering superior performance and value. Whether you’re looking to optimize space utilization, reduce construction waste, or enhance project flexibility, GR2 Engineering’s modular solutions provide the answer you’ve been searching for</p>
             <SectionTitle
               title="OUR SERVICES"
               paragraph=""
