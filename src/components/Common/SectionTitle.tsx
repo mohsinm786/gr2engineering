@@ -7,7 +7,7 @@ const SectionTitle = ({
   titleClassName = "",  // Add this new optional prop
 }: {
   title: string;
-  paragraph: string;
+  paragraph?: string;
   width?: string;
   center?: boolean;
   mb?: string;

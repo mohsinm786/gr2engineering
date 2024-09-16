@@ -136,7 +136,7 @@ const WaterPage = () => {
                 </div>
                 <div>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    GR2-Aquamatch is a global industrial and residential water solution company established in 1989.
+                    GR2-Aquamatch is a global <b className="text-blue-500">industrial and residential water solution company</b> established in 1989.
                   </p>
                 </div>
                 <div>

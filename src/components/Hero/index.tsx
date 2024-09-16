@@ -13,7 +13,7 @@ const Hero = () => {
         <img
           src="\images\addedImg\Homepage-banner.jpg"
           alt="Background"
-          className="absolute inset-0 h-full w-full object-cover opacity-50 transition-transform transform hover:scale-105 hover:rotate-3 hover:opacity-80 duration-700 animate-slideInRight"
+          className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform transform   hover:opacity-80 duration-700 animate-slideInRight"
         />
 
 
@@ -24,7 +24,7 @@ const Hero = () => {
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-blue-900 dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   Experience and innovation
                 </h1>
-                <p style={{color:"#5fc352"}} className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                <p  className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                   Project and technology services in energy and infrastructure from the industry experts.
                 </p>
                 <div className="flex items-start justify-start space-y-4 sm:space-x-4 sm:space-y-0 text-left">
@@ -33,7 +33,7 @@ const Hero = () => {
                     href="https://nextjstemplates.com/templates/saas-starter-startup"
                     className="view_service_btn text-blue-600 hover:text-blue-800 font-semibold p-2"
                   >
-                    View services
+                    View services <span><img src="" alt="" /></span>
                   </Link>
                 </div>
               </div>

@@ -6,7 +6,7 @@ const Contact = () => {
   const [file, setFile] = useState(null);
 
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+    <section id="contact" className="overflow-hidden py-10">
       <div className="container">
         <div className="w-10/12 mx-auto">
           <div className="flex justify-center">

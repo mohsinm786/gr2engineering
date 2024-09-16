@@ -17,12 +17,12 @@ const AboutSectionOne = () => {
     </p>
   );
 
-  const points = ["Conceptual Design", "Feasibility Study", "Project Development", "Site Selection", "Process Engineering", "Revamping and Upgrading", "Blast Resistant Design Study", "Debottlenecking", "Process Optimization", "Tech Evaluation and Dev", "Process development", "Computational Analysis", "Finite Element Analysis"]
+  const points = ["Advisory solutions in industry 4.0 digital innovation and transformation", "Strong global construction, fabrication and Professional Engineer network", "Expertise in local, state and federal standards and regulations", "Proven project capability from conceptual stage to completed project delivery", "Multiple well-established client relationships in oil and gas", "Process technology expertise in midstream gas processing"]
 
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container px-4 lg:px-6">
-        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-10 dark:border-white/[.15] md:pb-10 lg:pb-10">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-3/4">
               <SectionTitle
@@ -37,7 +37,7 @@ const AboutSectionOne = () => {
               </ul>
 
               <div
-                className="mb-12 max-w-[570px] lg:mb-0"
+                className="max-w-[570px] lg:mb-0"
                 data-wow-delay=".15s"
               >
                 <div className="mx-[-12px] flex flex-wrap">
