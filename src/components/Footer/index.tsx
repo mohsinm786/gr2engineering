@@ -42,7 +42,7 @@ const Footer = () => {
         <div className="bg-footerColor pt-16">
           <div className="w-10/12 mx-auto">
             <div className="mx-4 flex flex-wrap">
-              <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-blue-900 lg:w-4/12 xl:w-4/12">
+              <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-white lg:w-4/12 xl:w-4/12">
                 <div className="mb-12 lg:mb-16">
                   <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
                     About Us
@@ -92,7 +92,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-blue-900 lg:w-4/12 xl:w-4/12">
+              <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-white lg:w-4/12 xl:w-4/12">
                 <div className="mb-12 lg:mb-16">
                   <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
                     What We Do
@@ -134,7 +134,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 border-l border-blue-900 xl:w-4/12">
+              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 border-l border-white xl:w-4/12">
                 <div className="mb-12 lg:mb-16">
                   <h2 className="mb-4 hover:text-primary text-xl font-bold text-white dark:text-white">
                     <Link href="/news">
