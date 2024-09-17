@@ -25,7 +25,7 @@ const IsoCertificate = () => {
               <img
                 src="/certificates/gr2-inc.jpg"
                 alt="GR2 Inc ISO Certificate"
-                className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105 box-border"
+                className="w-full h-auto object-contain transition-transform duration-300 box-border"
               />
             </div>
           </div>
@@ -39,7 +39,7 @@ const IsoCertificate = () => {
               <img
                 src="/certificates/gr2-india.jpg"
                 alt="GR2 India ISO Certificate"
-                className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105 box-border"
+                className="w-full h-auto object-contain transition-transform duration-300 box-border"
               />
             </div>
           </div>

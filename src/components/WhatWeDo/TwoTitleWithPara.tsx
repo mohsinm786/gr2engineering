@@ -19,21 +19,18 @@ const FullWidthSection = () => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
-        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15]">
           <div className="flex flex-col items-start">
             <SectionTitle
               title="JOIN US"
               paragraph=""
-              mb="20px"
-              titleClassName="text-2xl font-bold text-left"
+              mb="0px"
+              titleClassName="text-2xl font-bold text-blue-900 text-left"
             />
 
-            <SectionTitle
-              title="OPEN ROLES"
-              paragraph=""
-              mb="20px"
-              titleClassName="text-2xl font-bold text-left"
-            />
+            <h2 className={`text-xl text-Green font-bold !leading-tight  dark:text-white sm:text-2xl md:text-[30px]`}>
+              OPEN ROLES
+            </h2>
 
             <p className="text-base font-medium leading-relaxed text-body-color md:text-lg max-w-full text-left mt-8">
               Join our global network of project experts across key sectors: oil and gas, energy, chemicals, water, renewables, and infrastructure. With offices in Abu Dhabi, Bogota, Calgary, Houston, Istanbul, Mumbai, and Rome, we bring localized expertise to projects on a global scale.

@@ -2,7 +2,7 @@ import React from "react";
 
 const Whitepapers = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section className="py-16">
       <div className="container">
         <div className="w-10/12 mx-auto">
           <div className="px-4">

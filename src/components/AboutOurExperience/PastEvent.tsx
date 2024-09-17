@@ -11,7 +11,7 @@ const PastEvents = () => {
               <h3 className="mb-4 text-xl font-bold text-blue-900 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                 UPCOMING EVENTS
               </h3>
-              <h3 className="mb-4 text-xl font-bold text-blue-900 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              <h3 className="mb-4 text-xl font-bold text-Green dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                 MEET US AT THESE UPCOMING EVENTS
               </h3>
               <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
@@ -25,7 +25,7 @@ const PastEvents = () => {
         <div className="w-10/12 mx-auto -mx-4 flex flex-wrap items-center mt-12">
           <div className="w-full px-4 lg:w-1/2">
             <div
-              className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
+              className="relative mx-auto mb-12 aspect-[25/20] max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
               <Image
@@ -45,10 +45,10 @@ const PastEvents = () => {
           <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-[470px]">
               <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                <h3 className="mb-4 text-xl font-bold text-blue-900 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   PAST EVENTS
                 </h3>
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                <h3 className="mb-4 text-xl font-bold text-Green dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   OUR GLOBAL PRESENCE
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">

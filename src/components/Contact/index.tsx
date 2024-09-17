@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="w-10/12 mx-auto">
           <div className="-mx-4 flex flex-wrap">
             {/* Left: Contact Form */}
-            <div className="w-full lg:w-1/2 px-4">
+            <div className="w-full px-4">
               <div
                 className="mb-12 rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
                 data-wow-delay=".15s"
@@ -79,15 +79,17 @@ const Contact = () => {
             </div>
 
             {/* Right: Cards Section */}
-            <div className="w-full lg:w-1/2 px-4">
-              <div className="space-y-8">
-                {/* First Card */}
+            <div className="w-full">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 <CardComponent id={1}/>
 
-                {/* Second Card */}
                 <CardComponent id={2}/>
 
-                {/* Third Card */}
+                {/* <CardComponent id={3}/> */}
+              </div>
+            </div>
+            <div className="w-full">
+              <div className="justify-center mx-auto">
                 <CardComponent id={3}/>
               </div>
             </div>
