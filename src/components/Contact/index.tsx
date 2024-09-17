@@ -1,5 +1,6 @@
 import Address from "./Address";
 import MapComponent from "./MapComponent";
+import CardComponent from "../AddressCard/intex";
 
 const Contact = () => {
   return (
@@ -7,8 +8,8 @@ const Contact = () => {
       <div className="container">
         <div className="w-10/12 mx-auto">
           <div className="-mx-4 flex flex-wrap">
-            {/* Contact Form */}
-            <div className="w-full px-4 lg:w-1/2">
+            {/* Left: Contact Form */}
+            <div className="w-full lg:w-1/2 px-4">
               <div
                 className="mb-12 rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
                 data-wow-delay=".15s"
@@ -68,7 +69,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="w-full px-4">
-                      <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+                      <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-SkyBlue dark:shadow-submit-dark">
                         Submit
                       </button>
                     </div>
@@ -76,14 +77,18 @@ const Contact = () => {
                 </form>
               </div>
             </div>
-            {/* Map and Address Container */}
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="bg-white rounded-lg shadow-lg p-6 h-full">
-                {/* MapComponent and Address components */}
-                <div className="mb-6">
-                  <MapComponent />
-                </div>
-                <Address />
+
+            {/* Right: Cards Section */}
+            <div className="w-full lg:w-1/2 px-4">
+              <div className="space-y-8">
+                {/* First Card */}
+                <CardComponent id={1}/>
+
+                {/* Second Card */}
+                <CardComponent id={2}/>
+
+                {/* Third Card */}
+                <CardComponent id={3}/>
               </div>
             </div>
           </div>

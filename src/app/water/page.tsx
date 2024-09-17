@@ -37,7 +37,7 @@ const WaterPage = () => {
                     Aquamatch ‘s global experience in water desalination and treatment systems with GR2’s broad EPC experience enables GR2-Aquamatch to offer on-schedule and in-budget water treatment at industry standards, with world-class solutions for onshore and offshore facilities.
                   </p>
                 </div>
-                <div className="flex flex-wrap lg:justify-between lg:w-8/12 mx-auto">
+                <div className="flex flex-wrap lg:justify-between lg:w-10/12 mx-auto">
                   {/* First Column */}
                   <div className="w-full lg:w-1/2">
                     <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">

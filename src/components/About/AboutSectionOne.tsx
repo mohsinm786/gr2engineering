@@ -32,7 +32,9 @@ const AboutSectionOne = () => {
               />
               <ul className="mb-10 list-disc list-inside text-gray-700 dark:text-gray-300">
                 {points?.map((point, index) => (
-                  <li key={index}>{point}</li>
+                  <li key={index} className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    {point}
+                  </li>
                 ))}
               </ul>
 

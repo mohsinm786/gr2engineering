@@ -15,35 +15,31 @@ const IsoCertificate = () => {
       />
 
       <section className="py-10">
-        <div className="container">
+        <div className="container w-10/12 mx-auto px-4">
           {/* GR2 Inc ISO Certificate */}
-          <div className="mb-10 w-10/12 mx-auto">
+          <div className="mb-10 w-full max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-blue-900 dark:text-white mb-6">
               GR2 Inc ISO Certificate
             </h2>
-            <div className="w-full h-[600px] border border-gray-300 dark:border-gray-700 shadow-lg">
-              <iframe
-                src="/certificates/gr2-inc.pdf"
-                width="100%"
-                height="100%"
-                style={{ border: 'none' }}
-                title="GR2 Inc ISO Certificate"
+            <div className="w-full border-4 border-sky-500 shadow-lg flex items-center justify-center overflow-hidden">
+              <img
+                src="/certificates/gr2-inc.jpg"
+                alt="GR2 Inc ISO Certificate"
+                className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105 box-border"
               />
             </div>
           </div>
 
           {/* GR2 India ISO Certificate */}
-          <div className="w-10/12 mx-auto">
+          <div className="pt-12 w-full max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-blue-900 dark:text-white mb-6">
               GR2 India ISO Certificate
             </h2>
-            <div className="w-full h-[600px] border border-gray-300 dark:border-gray-700 shadow-lg">
-              <iframe
-                src="/certificates/gr2-india.pdf"
-                width="100%"
-                height="100%"
-                style={{ border: 'none' }}
-                title="GR2 India ISO Certificate"
+            <div className="w-full border-4 border-sky-500 shadow-lg flex items-center justify-center overflow-hidden">
+              <img
+                src="/certificates/gr2-india.jpg"
+                alt="GR2 India ISO Certificate"
+                className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105 box-border"
               />
             </div>
           </div>
