@@ -25,7 +25,7 @@ const PastEvents = () => {
         <div className="w-10/12 mx-auto -mx-4 flex flex-wrap items-center mt-12">
           <div className="w-full px-4 lg:w-1/2">
             <div
-              className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
+              className="relative mx-auto mb-12 aspect-[25/20] max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
               <Image
