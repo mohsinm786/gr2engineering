@@ -126,7 +126,7 @@ const menuData: Menu[] = [
       },
       {
         id: 65,
-        title: "Chinese",
+        title: "Italian",
         path: "#",
         newTab: false,
       },

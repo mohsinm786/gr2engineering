@@ -83,14 +83,14 @@ const Contact = () => {
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 <CardComponent id={1}/>
 
-                <CardComponent id={2}/>
+                <CardComponent id={3}/>
 
                 {/* <CardComponent id={3}/> */}
               </div>
             </div>
             <div className="w-full">
               <div className="justify-center mx-auto">
-                <CardComponent id={3}/>
+                <CardComponent id={2}/>
               </div>
             </div>
           </div>

@@ -5,17 +5,29 @@ const PastEvents = () => {
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
         {/* Upcoming Events Section */}
-        <div className="w-10/12 mx-auto">
+        <div className="w-10/12 mx-auto border-b">
           <div className="px-4">
             <div className="mb-9">
-              <h3 className="mb-4 text-xl font-bold text-blue-900 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              <h3 className="mb-3 text-2xl font-bold text-blue-900 dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                 UPCOMING EVENTS
               </h3>
-              <h3 className="mb-4 text-xl font-bold text-Green dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              <h3 className="mb-3 text-2xl font-bold text-Green dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                 MEET US AT THESE UPCOMING EVENTS
               </h3>
-              <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                Check back later!
+              <div
+                className="mt-4 relative mx-auto mb-12 max-w-[500px] text-center lg:m-0"
+                data-wow-delay=".15s"
+              >
+                <Image
+                  src="/images/addedImg/adipeclogo.png"
+                  alt="about image"
+                  height={300}
+                  width={320}
+                  className="drop-shadow-three dark:hidden dark:drop-shadow-none object-contain"
+                />
+              </div>
+              <p className="mt-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                4-7 November 2024, Abu Dhabi, UAE
               </p>
             </div>
           </div>
@@ -45,10 +57,10 @@ const PastEvents = () => {
           <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-[470px]">
               <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-blue-900 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                <h3 className="mb-3 text-2xl font-bold text-blue-900 dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                   PAST EVENTS
                 </h3>
-                <h3 className="mb-4 text-xl font-bold text-Green dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                <h3 className="mb-3 text-2xl font-bold text-Green dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                   OUR GLOBAL PRESENCE
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
