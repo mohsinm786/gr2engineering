@@ -19,7 +19,7 @@ const WaterPage = () => {
         pageName="Water"
         description=""
       />
-      <section className="pb-[120px]">
+      <section className="pb-[120px] mt-10">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-10/12">

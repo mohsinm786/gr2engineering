@@ -32,7 +32,7 @@ const PastEvents = () => {
                 src="/images/addedImg/event.jpeg"
                 alt="about image"
                 fill
-                className="drop-shadow-three dark:hidden dark:drop-shadow-none"
+                className="drop-shadow-three dark:hidden dark:drop-shadow-none object-contain"
               />
               <Image
                 src="/images/addedImg/event.jpeg"
