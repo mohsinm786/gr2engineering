@@ -13,7 +13,7 @@ const Hero = () => {
         <img
           src="\images\addedImg\Homepage-banner.jpg"
           alt="Background"
-          className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform transform   hover:opacity-80 duration-700 animate-slideInRight"
+          className="absolute inset-0 h-full w-full object-cover transition-transform transform duration-700 animate-slideInRight"
         />
 
 

@@ -42,7 +42,7 @@ const Footer = () => {
         <div className="container bg-white pt-16">
           <div className="w-10/12 mx-auto">
             <div className="mx-4 flex flex-wrap">
-              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-4/12">
+              <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-blue-900 lg:w-4/12 xl:w-4/12">
                 <div className="mb-12 lg:mb-16">
                   <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                     About Us
@@ -50,15 +50,7 @@ const Footer = () => {
                   <ul>
                     <li>
                       <Link
-                        href="/blog"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                      >
-                        Corporate Social Responsibility
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/"
+                        href="/history"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
                         History
@@ -66,7 +58,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/about"
+                        href="/our-experience"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
                         Our Experience
@@ -74,7 +66,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/about"
+                        href="/leadership"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
                         Leadership
@@ -82,33 +74,41 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/about"
+                        href="/corporate-social-responsibility"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
-                        Job Opportunities
+                        Corporate Social Responsibility
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/iso-certifications"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        ISO Certifications
                       </Link>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-4/12">
+              <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-blue-900 lg:w-4/12 xl:w-4/12">
                 <div className="mb-12 lg:mb-16">
                   <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                     What We Do
                   </h2>
                   <ul>
-                    <li>
+                  <li>
                       <Link
                         href="/"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
-                        Capital Project Services
+                        Engineering
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/"
+                        href="/modular"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
                         Modular
@@ -116,7 +116,15 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/"
+                        href="/capital-project-services"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Capital Project Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/water"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
                         Water
@@ -126,12 +134,28 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-4/12">
+              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 border-l border-blue-900 xl:w-4/12">
                 <div className="mb-12 lg:mb-16">
                   <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                     Get In Touch
                   </h2>
                   <ul>
+                    <li>
+                      <Link
+                        href="/news"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        News
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/careers"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Careers
+                      </Link>
+                    </li>
                     <li>
                       <Link
                         href="/contact"
