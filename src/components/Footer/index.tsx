@@ -50,15 +50,7 @@ const Footer = () => {
                   <ul>
                     <li>
                       <Link
-                        href="/blog"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                      >
-                        Corporate Social Responsibility
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/"
+                        href="/history"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
                         History
@@ -66,7 +58,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/about"
+                        href="/our-experience"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
                         Our Experience
@@ -74,7 +66,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/about"
+                        href="/leadership"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
                         Leadership
@@ -82,10 +74,18 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/about"
+                        href="/corporate-social-responsibility"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
-                        Job Opportunities
+                        Corporate Social Responsibility
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/iso-certifications"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        ISO Certifications
                       </Link>
                     </li>
                   </ul>
