@@ -21,7 +21,7 @@ const LeadershipPage = () => {
         pageName="Leadership"
         description=""
       />
-      <section className="pb-[120px]">
+      <section className="pb-[120px] mt-10">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-10/12">
@@ -31,7 +31,7 @@ const LeadershipPage = () => {
                     At GR2 Engineering, we believe that true success is measured not only by financial performance but also by our commitment to social and environmental responsibility. Guided by our core values of integrity, sustainability, and community, we are dedicated to making a positive impact on the world around us.
                   </p>
                 </div>
-                <h2 className="mb-8 text-xl text-blue-900 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight">
+                <h2 className="mb-8 text-xl text-center text-blue-900 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight">
                   MANAGEMENT TEAM
                 </h2>
                 <div>
@@ -40,7 +40,7 @@ const LeadershipPage = () => {
                   </p>
                 </div>
                 <Team teamData={teamData} />
-                <h2 className="mt-12 mb-8 text-xl text-blue-900 font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
+                <h2 className="mt-24 mb-8 text-center text-xl text-blue-900 font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
                   MANAGEMENT TEAM - INDIA
                 </h2>
                 <Team teamData={teamDataIndia} />

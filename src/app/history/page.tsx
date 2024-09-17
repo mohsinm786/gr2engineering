@@ -18,7 +18,7 @@ const HistoryPage = () => {
         pageName="History"
         description=""
       />
-      <section className="pb-[120px]">
+      <section className="pb-[120px] mt-10">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-10/12">
@@ -28,7 +28,7 @@ const HistoryPage = () => {
                     Since our inception, GR2 Engineering has been driven by a relentless commitment to excellence, innovation, and client satisfaction. Our journey began with a vision to revolutionize the energy and infrastructure sectors, and over the years, we have evolved into a trusted partner and industry leader.
                   </p>
                 </div>
-                <h2 className="mb-8 text-xl text-primary font-bold leading-tight text-blue-900 dark:text-white sm:text-3xl sm:leading-tight">
+                <h2 className="mb-8 text-xl text-blue-900 font-bold leading-tight text-blue-900 dark:text-white sm:text-3xl sm:leading-tight">
                   HOW GR2 ENGINEERING STARTED
                 </h2>
                 <div>

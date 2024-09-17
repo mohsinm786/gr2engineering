@@ -16,9 +16,9 @@ const AboutSectionOne = () => {
   );
 
   return (
-    <section id="about" className="pt-5">
+    <section id="about" className="pt-5 mt-10">
       <div className="container">
-        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="w-10/12 mx-auto border-b border-body-color/[.15] dark:border-white/[.15]">
           <div className="flex flex-wrap items-center">
             <p className="text-base !leading-relaxed text-body-color md:text-lg mb-10">At GR2 Engineering, our extensive experience sets us apart as a trusted leader in the energy, infrastructure, and chemicals industries. With decades of collective expertise and a proven track record of success, we have the knowledge, skills, and resources to tackle even the most complex challenges and deliver superior results for our clients.</p>
 
@@ -44,21 +44,19 @@ const AboutSectionOne = () => {
               </div>
             </div>
           </div>
-          
+
           {/* New Section Title and Bullet Points Below Image */}
-          <div className="pt-16 lg:pt-20">
-            <SectionTitle
-              title="OUR INDIA OPERATIONS - GR2 ENGINEERING INDIA PVT. LTD."
-              paragraph=""
-              mb="20px"
-            />
+          <div>
+            <h2 className={`mb-4 text-xl text-blue-900 font-bold !leading-tight  dark:text-white sm:text-2xl md:text-[30px]`}>
+              OUR INDIA OPERATIONS - GR2 ENGINEERING INDIA PVT. LTD.
+            </h2>
             <div>
               <List text="GR2 office in India was formally established in the year 2021 under patronage of GR2 Engineering Inc. USA" />
               <List text="GR2 Engineering India operations was pioneered with a vision to have a `high value' Engineering and Design center to provide world class engineering service to our global client base" />
               <List text="Our India office is strategically located to cater to business needs of our clients especially from ME and Asia regions by leveraging and tapping into a vast pool of skilled engineering resources based out of Mumbai" />
               <List text="India operations is headed by a competent team of Oil and Gas industry veterans and over the years have successfully executed Conceptual, FEED and Detailed Design projects across multiple geographies including USA, UAE and Iraq." />
-              <List text="India teams comprises of energetic and result oriented professionals including Project Managers, Multi-discipline Engineers, Designers, 3D Modelers and Drafters. Additionally, we have collaboration with reliable and experienced Subject Matter Experts (SME) for critical and specialized engineering services"/>
-              <List text="GR2 Engineering is ISO 9001:2015 certified company with focus on quality control and on-time delivery to meet and exceed client expectations"/>
+              <List text="India teams comprises of energetic and result oriented professionals including Project Managers, Multi-discipline Engineers, Designers, 3D Modelers and Drafters. Additionally, we have collaboration with reliable and experienced Subject Matter Experts (SME) for critical and specialized engineering services" />
+              <List text="GR2 Engineering is ISO 9001:2015 certified company with focus on quality control and on-time delivery to meet and exceed client expectations" />
             </div>
           </div>
         </div>
