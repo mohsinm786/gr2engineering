@@ -12,9 +12,9 @@ const AboutSectionOne = () => {
   );
 
   return (
-    <section id="about" className="pt-6 md:pt-6 lg:pt-6">
+    <section id="about" className="mt-10">
       <div className="container">
-        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="w-10/12 mx-auto border-b border-body-color/[.15] dark:border-white/[.15]">
           <div className="-mx-4 flex flex-wrap items-center">
             <p className="mb-12 text-base !leading-relaxed text-body-color md:text-lg ">At GR2 Engineering, we believe that true success is measured not only by financial performance but also by our commitment to social and environmental responsibility. Guided by our core values of integrity, sustainability, and community, we are dedicated to making a positive impact on the world around us.</p>
             <div className="w-full px-4 lg:w-1/2">

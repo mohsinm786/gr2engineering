@@ -24,7 +24,7 @@ const testimonialData = [
 
 const Testimonials = () => {
   return (
-    <section className=" relative z-10 py-10">
+    <section className=" relative z-10 pt-10">
       <div className="container">
         <div className="w-10/12 mx-auto">
           <p className='mb-10 text-base !leading-relaxed text-body-color md:text-lg'>At GR2 Engineering, our Capital Project Services division is dedicated to providing comprehensive solutions for all stages of your project lifecycle. From initial concept development to final commissioning and beyond, we offer a wide range of services tailored to meet your specific needs and objectives. With a focus on innovation, efficiency, and cost-effectiveness, our team of experts is committed to delivering superior results that maximize value and minimize risk. Whether you’re embarking on a new capital project or seeking support for an existing initiative, trust GR2 Engineering to be your partner every step of the way.</p>

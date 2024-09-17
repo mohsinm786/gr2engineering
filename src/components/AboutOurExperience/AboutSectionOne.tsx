@@ -18,7 +18,7 @@ const AboutSectionOne = () => {
   return (
     <section id="about" className="pt-5 mt-10">
       <div className="container">
-        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="w-10/12 mx-auto border-b border-body-color/[.15] dark:border-white/[.15]">
           <div className="flex flex-wrap items-center">
             <p className="text-base !leading-relaxed text-body-color md:text-lg mb-10">At GR2 Engineering, our extensive experience sets us apart as a trusted leader in the energy, infrastructure, and chemicals industries. With decades of collective expertise and a proven track record of success, we have the knowledge, skills, and resources to tackle even the most complex challenges and deliver superior results for our clients.</p>
 
@@ -46,7 +46,7 @@ const AboutSectionOne = () => {
           </div>
 
           {/* New Section Title and Bullet Points Below Image */}
-          <div className="pt-16 lg:pt-20">
+          <div>
             <h2 className={`mb-4 text-xl text-blue-900 font-bold !leading-tight  dark:text-white sm:text-2xl md:text-[30px]`}>
               OUR INDIA OPERATIONS - GR2 ENGINEERING INDIA PVT. LTD.
             </h2>
