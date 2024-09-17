@@ -24,15 +24,15 @@ const FullWidthSection = () => {
             <SectionTitle
               title="JOIN US"
               paragraph=""
-              mb="20px"
-              titleClassName="text-2xl font-bold text-left"
+              mb="0px"
+              titleClassName="text-2xl font-bold text-blue-900 text-left"
             />
 
             <SectionTitle
               title="OPEN ROLES"
               paragraph=""
-              mb="20px"
-              titleClassName="text-2xl font-bold text-left"
+              mb="0px"
+              titleClassName="text-2xl font-bold text-black text-left"
             />
 
             <p className="text-base font-medium leading-relaxed text-body-color md:text-lg max-w-full text-left mt-8">

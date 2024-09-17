@@ -39,19 +39,19 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div className="container bg-white pt-16">
+        <div className="bg-footerColor pt-16">
           <div className="w-10/12 mx-auto">
             <div className="mx-4 flex flex-wrap">
               <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-blue-900 lg:w-4/12 xl:w-4/12">
                 <div className="mb-12 lg:mb-16">
-                  <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                  <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
                     About Us
                   </h2>
                   <ul>
                     <li>
                       <Link
                         href="/history"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         History
                       </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/our-experience"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         Our Experience
                       </Link>
@@ -67,7 +67,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/leadership"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         Leadership
                       </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/corporate-social-responsibility"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         Corporate Social Responsibility
                       </Link>
@@ -83,7 +83,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/iso-certifications"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         ISO Certifications
                       </Link>
@@ -94,14 +94,14 @@ const Footer = () => {
 
               <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-blue-900 lg:w-4/12 xl:w-4/12">
                 <div className="mb-12 lg:mb-16">
-                  <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                  <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
                     What We Do
                   </h2>
                   <ul>
-                  <li>
+                    <li>
                       <Link
                         href="/"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         Engineering
                       </Link>
@@ -109,7 +109,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/modular"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         Modular
                       </Link>
@@ -117,7 +117,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/capital-project-services"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         Capital Project Services
                       </Link>
@@ -125,7 +125,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/water"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         Water
                       </Link>
@@ -136,30 +136,24 @@ const Footer = () => {
 
               <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 border-l border-blue-900 xl:w-4/12">
                 <div className="mb-12 lg:mb-16">
-                  <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                  <h2 className="mb-4 hover:text-primary text-xl font-bold text-white dark:text-white">
+                    <Link href="/news">
+                      News
+                    </Link>
+                  </h2>
+                  <h2 className="mb-4 hover:text-primary text-xl font-bold text-white dark:text-white">
+                    <Link href="/careers">
+                      Careers
+                    </Link>
+                  </h2>
+                  <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
                     Get In Touch
                   </h2>
                   <ul>
                     <li>
                       <Link
-                        href="/news"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                      >
-                        News
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/careers"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                      >
-                        Careers
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
                         href="/contact"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         Send Us A Message
                       </Link>
@@ -171,7 +165,7 @@ const Footer = () => {
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mr-6 text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                     >
                       <svg
                         width="18"
@@ -191,7 +185,7 @@ const Footer = () => {
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mr-6 text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                     >
                       <svg
                         width="18"
@@ -213,7 +207,7 @@ const Footer = () => {
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mr-6 text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                     >
                       <svg
                         width="18"
@@ -229,7 +223,7 @@ const Footer = () => {
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                     >
                       <svg
                         width="17"
@@ -247,8 +241,8 @@ const Footer = () => {
 
             <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
             <div className="py-8">
-              <p className="text-blue-900  text-center text-base  dark:text-white">
-               <b> Copyright © 2021 GR2 Engineering Inc.</b>
+              <p className="text-white text-center text-base  dark:text-white">
+                <b> Copyright © 2021 GR2 Engineering Inc.</b>
               </p>
             </div>
           </div>

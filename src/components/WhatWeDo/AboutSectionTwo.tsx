@@ -33,12 +33,9 @@ const AboutSectionTwo = () => {
                   mb="16px"
                   titleClassName="text-2xl font-bold text-black dark:text-white"
                 />
-                <SectionTitle
-                  title="INTEGRATED PROJECT MANAGEMENT SYSTEM"
-                  paragraph=""
-                  mb="32px"
-                  titleClassName="text-xl font-semibold text-gray-700 dark:text-gray-300"
-                />
+                <h2 className={`mb-4 text-xl text-Green font-bold !leading-tight  dark:text-white sm:text-2xl md:text-[30px]`}>
+                  INTEGRATED PROJECT MANAGEMENT SYSTEM
+                </h2>
               </div>
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] text-center lg:text-left">
                 <Image

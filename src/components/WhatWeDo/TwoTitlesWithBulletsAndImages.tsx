@@ -34,19 +34,12 @@ const TwoTitlesWithBulletsAndImages = () => {
       <div className="container">
         <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="flex flex-col items-start">
-            <SectionTitle
-              title="GR2 MODULAR PLANTS"
-              paragraph=""
-              mb="20px"
-              titleClassName="text-2xl font-bold text-left"
-            />
-
-            <SectionTitle
-              title="FASTER DELIVERY - BETTER RETURN"
-              paragraph=""
-              mb="20px"
-              titleClassName="text-2xl font-bold text-left"
-            />
+            <h2 className={`mb-4 text-xl font-bold !leading-tight text-blue-900 dark:text-white sm:text-2xl md:text-[30px]`}>
+              GR2 MODULAR PLANTS
+            </h2>
+            <h2 className={`mb-4 text-xl font-bold !leading-tight text-Green dark:text-white sm:text-2xl md:text-[30px]`}>
+              FASTER DELIVERY - BETTER RETURN
+            </h2>
 
             {/* Bullet points */}
             <div className="max-w-[570px] mb-12">
