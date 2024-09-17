@@ -73,7 +73,8 @@ module.exports = {
           dark: "#1E232E",
           light: "#F0F2F9",
         },
-        footerColor: "#2d3034"
+        footerColor: "#2d3034",
+        lightgray: "#53565a",
       },
 
       boxShadow: {

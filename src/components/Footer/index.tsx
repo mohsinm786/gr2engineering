@@ -39,11 +39,11 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div className="bg-footerColor pt-16">
+        <div className="bg-footerColor pt-8">
           <div className="w-10/12 mx-auto">
             <div className="mx-4 flex flex-wrap">
               <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-white lg:w-4/12 xl:w-4/12">
-                <div className="mb-12 lg:mb-16">
+                <div>
                   <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
                     About Us
                   </h2>
@@ -93,14 +93,14 @@ const Footer = () => {
               </div>
 
               <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-white lg:w-4/12 xl:w-4/12">
-                <div className="mb-12 lg:mb-16">
+                <div>
                   <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
                     What We Do
                   </h2>
                   <ul>
                     <li>
                       <Link
-                        href="/"
+                        href="/engineering"
                         className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         Engineering
@@ -135,7 +135,7 @@ const Footer = () => {
               </div>
 
               <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 border-l border-white xl:w-4/12">
-                <div className="mb-12 lg:mb-16">
+                <div>
                   <h2 className="mb-4 hover:text-primary text-xl font-bold text-white dark:text-white">
                     <Link href="/news">
                       News
@@ -238,13 +238,12 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-
-            <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-            <div className="py-8">
-              <p className="text-white text-center text-base  dark:text-white">
-                <b> Copyright © 2021 GR2 Engineering Inc.</b>
-              </p>
-            </div>
+          </div>
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
+          <div className="py-8 bg-lightgray">
+            <p className="text-white text-center text-base  dark:text-white">
+              <b> Copyright © 2021 GR2 Engineering Inc.</b>
+            </p>
           </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">

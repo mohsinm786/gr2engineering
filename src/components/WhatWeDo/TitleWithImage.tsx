@@ -48,7 +48,7 @@ const TitleWithImage = ({
             {/* Title Section */}
             <div className="w-full px-4 lg:w-1/2">
               <div className="max-w-[470px] mb-12" style={{ marginBottom: mb }}>
-                <h2 className="mb-4 text-3xl font-bold !leading-tight text-blue-900 dark:text-white sm:text-4xl md:text-[45px]">
+                <h2 className="mb-4 text-3xl font-bold !leading-tight text-blue-900 dark:text-white sm:text-4xl md:text-[30px]">
                   {title}
                 </h2>
               </div>

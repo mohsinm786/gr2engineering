@@ -36,12 +36,9 @@ const TwoTitlesWithBulletsAndImagesSideBySide = () => {
           <div className="flex flex-col lg:flex-row justify-between gap-6">
             {/* Left column */}
             <div className="flex-1">
-              <SectionTitle
-                title="LNG, OLEFINS, LIGHT NGL AND CO2"
-                paragraph=""
-                mb="20px"
-                titleClassName="text-2xl font-bold text-left"
-              />
+              <h2 className={`mb-4 text-xl text-Green font-bold !leading-tight  dark:text-white sm:text-2xl md:text-[30px]`}>
+                LNG, OLEFINS, LIGHT NGL AND CO2
+              </h2>
 
               {/* Bullet points */}
               <div className="max-w-[570px] mb-12">
@@ -75,12 +72,9 @@ const TwoTitlesWithBulletsAndImagesSideBySide = () => {
 
             {/* Right column */}
             <div className="flex-1">
-              <SectionTitle
-                title="APPLICATIONS"
-                paragraph=""
-                mb="20px"
-                titleClassName="text-2xl font-bold text-left"
-              />
+              <h2 className={`mb-4 text-xl text-Green font-bold !leading-tight  dark:text-white sm:text-2xl md:text-[30px]`}>
+                APPLICATIONS              
+              </h2>
 
               {/* Bullet points */}
               <div className="max-w-[570px] mb-12">
