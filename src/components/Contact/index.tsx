@@ -4,14 +4,31 @@ import CardComponent from "../AddressCard/intex";
 
 const Contact = () => {
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+    <section id="contact" className="overflow-hidden py-16">
+      {/* Full-width Banner */}
+      <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10"> {/* Align left with padding */}
+        <img
+          src="/images/addedImg/contact-us-banner.jpg"
+          alt="Contact Us Banner"
+          className="absolute inset-0 object-cover w-full h-full"
+        />
+        <div className="relative z-10 text-left"> {/* Text aligned to left */}
+          <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-5xl">
+            CONTACT US
+          </h1>
+        </div>
+        {/* Optional Overlay */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+      </div>
+
+      {/* Existing Contact Form Section */}
       <div className="container">
         <div className="w-10/12 mx-auto">
-          <div className="-mx-4 flex flex-wrap">
+          <div className="-mx-4 flex flex-wrap pt-10">
             {/* Left: Contact Form */}
             <div className="w-full px-4">
               <div
-                className="mb-12 rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+                className="mb-12 rounded-lg bg-blue-50 px-8 py-11 shadow-lg dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]" // Updated with background color
                 data-wow-delay=".15s"
               >
                 <h2 className="mb-3 text-2xl font-bold text-blue-900 dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
@@ -33,7 +50,7 @@ const Contact = () => {
                         <input
                           type="text"
                           placeholder="Enter your name"
-                          className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                          className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" // Updated for better input visibility
                         />
                       </div>
                     </div>
@@ -48,7 +65,7 @@ const Contact = () => {
                         <input
                           type="email"
                           placeholder="Enter your email"
-                          className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                          className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" // Updated background
                         />
                       </div>
                     </div>
@@ -64,12 +81,12 @@ const Contact = () => {
                           name="message"
                           rows={5}
                           placeholder="Enter your Message"
-                          className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                          className="border-stroke w-full resize-none rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" // Updated for textarea visibility
                         ></textarea>
                       </div>
                     </div>
                     <div className="w-full px-4">
-                      <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-SkyBlue dark:shadow-submit-dark">
+                      <button className="rounded-lg bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-SkyBlue dark:shadow-submit-dark">
                         Submit
                       </button>
                     </div>
@@ -78,19 +95,12 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Right: Cards Section */}
             <div className="w-full">
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                <CardComponent id={1}/>
-
-                <CardComponent id={3}/>
-
-                {/* <CardComponent id={3}/> */}
-              </div>
-            </div>
-            <div className="w-full">
-              <div className="justify-center mx-auto">
-                <CardComponent id={2}/>
+              {/* Use a grid layout for 3 cards in one row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <CardComponent id={1} />
+                <CardComponent id={2} />
+                <CardComponent id={3} />
               </div>
             </div>
           </div>
