@@ -1,0 +1,26 @@
+.leadership_card{
+    display: flex;
+    justify-content: flex-start;
+    max-width:380px ;
+    /* padding: 1rem; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.child_1{
+    width: 50%;
+    height: fit-content;
+    object-fit: contain;
+    
+}
+.child_2{
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.leader_img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}

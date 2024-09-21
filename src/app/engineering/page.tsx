@@ -1,16 +1,28 @@
+"use client"
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
+import Capabilities from "@/components/Capabilities/capabilities";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import Dropdown from "@/components/Dropdown/dropdown";
+;
+import { useState } from "react";
 
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
-  // other metadata
-};
 
-const EngineeringPage = () => {
+const EngineeringPage:React.FC  = () => {
+
+ 
+  // State for selected type in the parent component
+  const [selectedType, setSelectedType] = useState<string>("Capabilities");
+
+  const types = ["Capabilities", "Project resources and disciplines", "PROJECTS SOFTWARE"];
+
+  // Callback function to update the selected type from the child (Dropdown)
+  const handleTypeChange = (newType: string) => {
+    setSelectedType(newType);
+  };
+
+
   return (
     <>
       <Breadcrumb
@@ -23,7 +35,7 @@ const EngineeringPage = () => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-10/12">
               <div>
-                <h2 className="mb-8 text-xl text-blue-900 font-bold leading-tight text-blue-900 dark:text-white sm:text-3xl sm:leading-tight">
+                <h2 className="mb-8 text-xl  font-bold leading-tight text-blue-900 dark:text-white sm:text-3xl sm:leading-tight">
                   CUSTOMERS-FOCUSED ENGINEERING, DESIGN AND CONSULTANCY SERVICES THROUGHOUT THE ENTIRE LIFECYCLE
                 </h2>
                 <div>
@@ -33,7 +45,20 @@ const EngineeringPage = () => {
                     With decades of experience around the globe, we are in a position to offer our customers a full range of engineering, design and consultancy services. These include concept, basic, detail and process engineering as well as project management, construction site management and consultancy activities.                  </p>
                 </div>
               </div>
+
+              <div className="mt-10">
+              <Dropdown types={types} selectedType={selectedType} onTypeChange={handleTypeChange} />
+              </div>
+              <h2 className="mb-8 mt-10 uppercase text-xl text-blue-900 font-bold leading-tight  dark:text-white sm:text-3xl sm:leading-tight">
+                {selectedType}
+              </h2>
+              
+
+              {selectedType === "Capabilities" && <Capabilities /> }
+             
             </div>
+
+
           </div>
         </div>
       </section>

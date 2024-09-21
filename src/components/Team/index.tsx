@@ -12,7 +12,7 @@ const Team: React.FC<TeamProps> = ({ teamData }) => {
   return (
     <div className="flex flex-wrap justify-center items-center gap-4 mt-5 mb-5">
       {teamData.map((member) => (
-        <div key={member.id} className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 text-center mx-auto">
+        <div key={member.id} className="flex flex-wrap">
           <SingleBlog member={member} />
         </div>
       ))}
