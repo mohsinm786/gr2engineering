@@ -21,6 +21,27 @@ const AboutPage = () => {
             <div className="w-full px-4 lg:w-10/12">
               <div>
                 <h2 className="mb-8 text-3xl font-bold leading-tight text-LightBlue dark:text-white sm:text-4xl sm:leading-tight">
+                    ENGINEERING
+                </h2>
+                <div>
+                    <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                    Customers-focused engineering, design and consultancy services throughout the entire lifecycle 
+                    </p>
+                </div>
+                <div>
+                    <Link href="/engineering">
+                        <button className="border-2 hover:bg-SkyBlue hover:text-white border-SkyBlue px-4 py-2">
+                        Learn More
+                        </button>
+                    </Link>
+                </div>
+              </div>
+            </div>
+          </div>  
+        <div className="-mx-4 flex flex-wrap justify-center pt-10">
+            <div className="w-full px-4 lg:w-10/12">
+              <div>
+                <h2 className="mb-8 text-3xl font-bold leading-tight text-LightBlue dark:text-white sm:text-4xl sm:leading-tight">
                     MODULAR
                 </h2>
                 <div>
