@@ -13,7 +13,7 @@ const BulletPoints: React.FC<BulletProps> = ({ columnName, tableDataCol }) => {
 
 
             <ul className="mb-10 list-disc list-inside text-gray-700 dark:text-gray-300">
-            <h1 className='mb-4 font-bold !leading-tight text-green-900 dark:text-white '>{columnName}</h1>
+            <h1 className='mb-4 font-bold !leading-tight  dark:text-white '>{columnName}</h1>
                 {tableDataCol?.map((point, index) => (
                     <>
                         
