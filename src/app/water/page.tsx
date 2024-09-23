@@ -29,7 +29,7 @@ const WaterPage = () => {
                     As global concerns over water scarcity and quality continue to rise, our team is dedicated to providing comprehensive solutions to address these challenges head-on. With expertise in water treatment, distribution, and management, we offer a full spectrum of services tailored to meet the diverse needs of our clients. From designing state-of-the-art treatment facilities to implementing smart water management systems, GR2 Engineering is committed to engineering solutions that ensure access to clean, safe water for generations to come.
                   </p>
                 </div>
-                <h2 className="mb-8 text-3xl text-blue-900 font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
+                <h2 className="mb-8 text-3xl text-blue-900 font-bold leading-tight dark:text-white sm:text-4xl sm:leading-tight">
                   Water Treatment Solutions
                 </h2>
                 <div>
