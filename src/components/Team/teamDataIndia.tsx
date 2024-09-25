@@ -7,7 +7,7 @@ const teamDataIndia: TeamMember[] = [
     jobRole: "Managing Director (India Operations)",
     image: "/images/team/KS.png",
     description1: "Kalim has over 26 years Engineering and Project Management experience. His experience include design centers and construction sites in India, UAE, Oman, Qatar, Iraq, Iran, Sudan, and USA providing design and Engineering support and Construction management. Experienced in Piping engineering leadership positions, delivering top class engineering for Plant Design - OIL & GAS (onshore & offshore) facilities using advanced 3D plant design systems like PDMS, PDS and Smart plant products.",
-    description2: "?",
+    description2: "",
   },
   {
     id: 7,
