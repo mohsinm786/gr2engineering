@@ -1,22 +1,36 @@
+// src/components/Team/index.tsx
+"use client"; // Mark this component as a Client Component
 
-import React from 'react';
-import SingleBlog from "./SingleBlog";
-import { TeamMember } from "@/types/team";
+import { TeamMember } from '@/types/team';
+import SingleBlog from './SingleBlog';
+import Modal from './Modal';
+import { useState } from 'react';
 
+const Team: React.FC<{ teamData: TeamMember[] }> = ({ teamData }) => {
+  const [selectedMember, setSelectedMember] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-type TeamProps = {
-  teamData: TeamMember[];
-};
+  const openModal = (member) => {
+    setSelectedMember(member);
+    setIsModalOpen(true);
+  };
 
-const Team: React.FC<TeamProps> = ({ teamData }) => {
+  const closeModal = () => {
+    setSelectedMember(null);
+    setIsModalOpen(false);
+  };
+
   return (
-    <div className="flex flex-wrap justify-center items-center gap-4 mt-5 mb-5">
-      {teamData.map((member) => (
-        <div key={member.id} className="flex flex-wrap">
-          <SingleBlog member={member} />
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="flex flex-wrap justify-center items-center gap-4 mt-5 mb-5">
+        {teamData.map((member) => (
+          <div key={member.id} onClick={() => openModal(member)}>
+            <SingleBlog member={member} />
+          </div>
+        ))}
+      </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} member={selectedMember} />
+    </>
   );
 };
 
