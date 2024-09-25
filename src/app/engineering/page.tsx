@@ -4,6 +4,7 @@ import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Capabilities from "@/components/Capabilities/capabilities";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Dropdown from "@/components/Dropdown/dropdown";
+import ResourcesDesciplines from "@/components/Resources&Desciplines/Resources&Desciplines";
 ;
 import { useState } from "react";
 
@@ -56,6 +57,8 @@ const EngineeringPage:React.FC  = () => {
               
 
               {selectedType === "Capabilities" && <Capabilities /> }
+              {selectedType === "Project resources and disciplines" && <ResourcesDesciplines /> }
+              {selectedType === "PROJECTS SOFTWARE" && <Capabilities /> }
              
             </div>
 
