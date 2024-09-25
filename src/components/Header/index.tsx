@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import GlobeIcon from "../../../public/images/logo/language.svg";
 
@@ -38,21 +37,6 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
-
-  // Language dropdown
-  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("English");
-
-  const toggleLanguageDropdown = () => {
-    setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
-  };
-
-  const selectLanguage = (language) => {
-    setSelectedLanguage(language);
-    setIsLanguageDropdownOpen(false);
-  };
-
-  const languages = ["English", "Spanish", "Arabic", "German", "Chinese"];
 
   return (
     <>
@@ -107,7 +91,7 @@ const Header = () => {
                   />
                 </button>
                 <nav
-                  id="navbarCollapse"   
+                  id="navbarCollapse"
                   className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${navbarOpen
                     ? "visibility top-full opacity-100"
                     : "invisible top-[120%] opacity-0"
@@ -116,7 +100,7 @@ const Header = () => {
                   <ul className="block lg:flex lg:space-x-12 ml-auto">
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
-                        {menuItem.path ? (
+                        {menuItem.path && menuItem.title !== "About Us" && menuItem.title !== "What We Do" ? (
                           <Link
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${usePathName === menuItem.path
@@ -124,7 +108,7 @@ const Header = () => {
                               : "text-dark hover:text-blue-900 dark:text-white/70 dark:hover:text-white"
                               }`}
                           >
-                            
+
                             {menuItem.title}
                           </Link>
                         ) : (
@@ -142,7 +126,18 @@ const Header = () => {
                                   className="mr-2"
                                 />
                               )}
-                              {menuItem.title}
+                              {menuItem.path ? (
+                                <Link
+                                  href={menuItem.path}
+                                >
+                                  {menuItem.title}
+                                </Link>
+                              ) : (
+                                <span>
+                                  {menuItem.title}
+                                </span>
+                              )}
+
                               <span className="pl-3">
                                 <svg width="25" height="24" viewBox="0 0 25 24">
                                   <path
@@ -175,40 +170,6 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              {/* <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <div className="relative flex">
-                  <button
-                    onClick={toggleLanguageDropdown}
-                    className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                  >
-                    <Image src={GlobeIcon} alt="Globe icon" width={20} height={20} className="mr-2" />
-                    {selectedLanguage}
-                  </button>
-                  {isLanguageDropdownOpen && (
-                    <ul className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg dark:bg-dark dark:border-gray-700">
-                      {languages.map((language) => (
-                        <li key={language}>
-                          <button
-                            onClick={() => selectLanguage(language)}
-                            className="block w-full px-4 py-2 text-left text-dark hover:bg-gray-200 dark:text-white dark:hover:bg-gray-600"
-                          >
-                            {language}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-                <Link
-                  href="/signup"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link>
-                <div>
-                  <ThemeToggler />
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
