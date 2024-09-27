@@ -49,8 +49,6 @@ function ResourcesDesciplines() {
                     {resources.map((resource, index) => (
                         <li key={index} className='mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg'>{resource}</li>
                     ))}
-                    <li></li>
-
                 </div>
                 <div>
 
