@@ -146,10 +146,12 @@ const Footer = () => {
                       Careers
                     </Link>
                   </h2>
-                  <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
+                  <h2 className="mb-4 hover:text-primary text-xl font-bold text-white dark:text-white">
+                    <Link href="/contact">
                     Get In Touch
+                    </Link>
                   </h2>
-                  <ul>
+                  {/* <ul>
                     <li>
                       <Link
                         href="/contact"
@@ -158,7 +160,7 @@ const Footer = () => {
                         Send Us A Message
                       </Link>
                     </li>
-                  </ul>
+                  </ul> */}
                   <div className="flex items-center">
                     <a
                       href="/"
@@ -219,7 +221,7 @@ const Footer = () => {
                       </svg>
                     </a>
                     <a
-                      href="/"
+                      href="https://www.linkedin.com/company/gr2-engineering/"
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -240,7 +242,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-          <div className="py-8 bg-lightgray">
+          <div className="py-4 bg-lightgray">
             <p className="text-white text-center text-base  dark:text-white">
               <b> Copyright © 2021 GR2 Engineering Inc.</b>
             </p>
