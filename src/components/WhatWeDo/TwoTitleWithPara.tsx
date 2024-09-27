@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image"; // Import Image from Next.js
 import SectionTitle from "../Common/SectionTitle";
 
 const FullWidthSection = () => {
@@ -17,17 +18,29 @@ const FullWidthSection = () => {
   );
 
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section className="overflow-hidden py-16">
+      {/* Full-width Banner */}
+      <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
+        <Image
+          src="/images/addedImg/Career-page-banner.jpg" // Your banner image
+          alt="Join Us Banner"
+          layout="fill" // This ensures the image covers the container completely
+          objectFit="cover" // This makes sure the image covers the entire area without distortion
+          priority // This helps in preloading the image
+          className="absolute inset-0 w-full h-full"
+        />
+        <div className="relative z-10 text-left px-10">
+          <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-5xl">
+            JOIN US
+          </h1>
+        </div>
+        {/* Optional Overlay */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+      </div>
+
       <div className="container">
         <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15]">
-          <div className="flex flex-col items-start">
-            <SectionTitle
-              title="JOIN US"
-              paragraph=""
-              mb="0px"
-              titleClassName="text-2xl font-bold text-blue-900 text-left"
-            />
-
+          <div className="flex flex-col items-start pt-9">
             <h2 className={`text-xl text-Green font-bold !leading-tight  dark:text-white sm:text-2xl md:text-[30px]`}>
               OPEN ROLES
             </h2>
