@@ -58,7 +58,7 @@ const EngineeringPage:React.FC  = () => {
 
               {selectedType === "Capabilities" && <Capabilities /> }
               {selectedType === "Project resources and disciplines" && <ResourcesDesciplines /> }
-              {selectedType === "PROJECTS SOFTWARE" && <Capabilities /> }
+              {/* {selectedType === "PROJECTS SOFTWARE" && <Capabilities /> } */}
              
             </div>
 

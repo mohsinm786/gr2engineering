@@ -26,7 +26,7 @@ const Dropdown: React.FC<DropdownProps> = ({ types, selectedType, onTypeChange }
       <button 
         id="dropdownDefaultButton" 
         onClick={toggleDropdown}
-        className="text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" 
+        className="text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 uppercase" 
         type="button"
       >
         {selectedType} {/* Display the selected type */}
@@ -41,10 +41,10 @@ const Dropdown: React.FC<DropdownProps> = ({ types, selectedType, onTypeChange }
           {types.map((type, index) => (
             <li key={index}>
               <button 
-                className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white uppercase"
                 onClick={() => handleSelectType(type)} // Update parent component's state when clicked
               >
-                {type}
+                <span className='uppercase'>{type}</span>
               </button>
             </li>
           ))}
