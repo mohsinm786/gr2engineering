@@ -1,4 +1,3 @@
-import React from 'react'
 import TotalUserPieChart from '../PieChart/Pie';
 import TotalUserBarChart from '../BarChart/BarChart';
 import Table from '../Table/table';
@@ -47,8 +46,8 @@ function ResourcesDesciplines() {
                         Resources
 
                     </h2>
-                    {resources.map((resource) => (
-                        <li className='mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg'>{resource}</li>
+                    {resources.map((resource, index) => (
+                        <li key={index} className='mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg'>{resource}</li>
                     ))}
 
                 </div>
@@ -73,8 +72,8 @@ function ResourcesDesciplines() {
                     <h2 className={`mb-4 font-bold !leading-tight  dark:text-white text-lg underline`}>
                         Multi-discipline Engineering Resources
                     </h2>
-                    {resources2.map((resource) => (
-                        <li className='mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg'>{resource}</li>
+                    {resources2.map((resource, index) => (
+                        <li key={index} className='mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg'>{resource}</li>
                     ))}
                 </div>
                 <div style={{width:"80%" , height:"400px"}}>
