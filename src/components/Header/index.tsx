@@ -43,7 +43,11 @@ const Header = () => {
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center ${sticky
           ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
+<<<<<<< Updated upstream
           : "absolute bg-white"
+=======
+          : "absolute bg-transparent"
+>>>>>>> Stashed changes
           }`}
       >
         <div className="container">
@@ -104,8 +108,13 @@ const Header = () => {
                           <Link
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${usePathName === menuItem.path
+<<<<<<< Updated upstream
                               ? "text-blue-900 dark:text-white"
                               : "text-dark hover:text-blue-900 dark:text-white/70 dark:hover:text-white"
+=======
+                              ? "text-primary dark:text-white"
+                              : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+>>>>>>> Stashed changes
                               }`}
                           >
 
@@ -126,6 +135,7 @@ const Header = () => {
                                   className="mr-2"
                                 />
                               )}
+<<<<<<< Updated upstream
                               {menuItem.path ? (
                                 <Link
                                   href={menuItem.path}
@@ -138,6 +148,9 @@ const Header = () => {
                                 </span>
                               )}
 
+=======
+                              {menuItem.title}
+>>>>>>> Stashed changes
                               <span className="pl-3">
                                 <svg width="25" height="24" viewBox="0 0 25 24">
                                   <path
@@ -171,6 +184,43 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
+<<<<<<< Updated upstream
+=======
+              {/* <div className="flex items-center justify-end pr-16 lg:pr-0">
+                <div className="relative flex">
+                  <button
+                    onClick={toggleLanguageDropdown}
+                    className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
+                  >
+                    <Image src={GlobeIcon} alt="Globe icon" width={20} height={20} className="mr-2" />
+                    {selectedLanguage}
+                  </button>
+                  {isLanguageDropdownOpen && (
+                    <ul className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg dark:bg-dark dark:border-gray-700">
+                      {languages.map((language) => (
+                        <li key={language}>
+                          <button
+                            onClick={() => selectLanguage(language)}
+                            className="block w-full px-4 py-2 text-left text-dark hover:bg-gray-200 dark:text-white dark:hover:bg-gray-600"
+                          >
+                            {language}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                <Link
+                  href="/signup"
+                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
+                >
+                  Sign Up
+                </Link>
+                <div>
+                  <ThemeToggler />
+                </div>
+              </div> */}
+>>>>>>> Stashed changes
             </div>
           </div>
         </div>

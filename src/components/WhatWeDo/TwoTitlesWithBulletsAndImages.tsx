@@ -32,7 +32,11 @@ const TwoTitlesWithBulletsAndImages = () => {
   return (
     <section className="pb-10">
       <div className="container">
+<<<<<<< Updated upstream
         <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15]">
+=======
+        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+>>>>>>> Stashed changes
           <div className="flex flex-col items-start">
             <h2 className={`mb-4 text-xl font-bold !leading-tight text-blue-900 dark:text-white sm:text-2xl md:text-[30px]`}>
               GR2 MODULAR PLANTS

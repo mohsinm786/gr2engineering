@@ -39,17 +39,27 @@ const Footer = () => {
   return (
     <>
       <footer>
+<<<<<<< Updated upstream
         <div className="bg-footerColor pt-8">
           <div className="w-10/12 mx-auto">
             <div className="mx-4 flex flex-wrap">
               <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-white lg:w-4/12 xl:w-4/12">
                 <div>
                   <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
+=======
+        <div className="container bg-white pt-16">
+          <div className="w-10/12 mx-auto">
+            <div className="-mx-4 flex flex-wrap">
+              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-4/12">
+                <div className="mb-12 lg:mb-16">
+                  <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+>>>>>>> Stashed changes
                     About Us
                   </h2>
                   <ul>
                     <li>
                       <Link
+<<<<<<< Updated upstream
                         href="/history"
                         className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
@@ -76,30 +86,72 @@ const Footer = () => {
                       <Link
                         href="/corporate-social-responsibility"
                         className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+=======
+                        href="/blog"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+>>>>>>> Stashed changes
                       >
                         Corporate Social Responsibility
                       </Link>
                     </li>
                     <li>
                       <Link
+<<<<<<< Updated upstream
                         href="/iso-certifications"
                         className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         ISO Certifications
+=======
+                        href="/"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        History
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/about"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Our Experience
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/about"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Leadership
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/about"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Job Opportunities
+>>>>>>> Stashed changes
                       </Link>
                     </li>
                   </ul>
                 </div>
               </div>
 
+<<<<<<< Updated upstream
               <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-white lg:w-4/12 xl:w-4/12">
                 <div>
                   <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
+=======
+              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-4/12">
+                <div className="mb-12 lg:mb-16">
+                  <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+>>>>>>> Stashed changes
                     What We Do
                   </h2>
                   <ul>
                     <li>
                       <Link
+<<<<<<< Updated upstream
                         href="/engineering"
                         className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
@@ -118,14 +170,31 @@ const Footer = () => {
                       <Link
                         href="/capital-project-services"
                         className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+=======
+                        href="/"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+>>>>>>> Stashed changes
                       >
                         Capital Project Services
                       </Link>
                     </li>
                     <li>
                       <Link
+<<<<<<< Updated upstream
                         href="/water"
                         className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+=======
+                        href="/"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Modular
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+>>>>>>> Stashed changes
                       >
                         Water
                       </Link>
@@ -134,6 +203,7 @@ const Footer = () => {
                 </div>
               </div>
 
+<<<<<<< Updated upstream
               <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 border-l border-white xl:w-4/12">
                 <div>
                   <h2 className="mb-4 hover:text-primary text-xl font-bold text-white dark:text-white">
@@ -156,18 +226,38 @@ const Footer = () => {
                       <Link
                         href="/contact"
                         className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+=======
+              <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-4/12">
+                <div className="mb-12 lg:mb-16">
+                  <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                    Get In Touch
+                  </h2>
+                  <ul>
+                    <li>
+                      <Link
+                        href="/contact"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+>>>>>>> Stashed changes
                       >
                         Send Us A Message
                       </Link>
                     </li>
+<<<<<<< Updated upstream
                   </ul> */}
+=======
+                  </ul>
+>>>>>>> Stashed changes
                   <div className="flex items-center">
                     <a
                       href="/"
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
+<<<<<<< Updated upstream
                       className="mr-6 text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+=======
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+>>>>>>> Stashed changes
                     >
                       <svg
                         width="18"
@@ -187,7 +277,11 @@ const Footer = () => {
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
+<<<<<<< Updated upstream
                       className="mr-6 text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+=======
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+>>>>>>> Stashed changes
                     >
                       <svg
                         width="18"
@@ -209,7 +303,11 @@ const Footer = () => {
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
+<<<<<<< Updated upstream
                       className="mr-6 text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+=======
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+>>>>>>> Stashed changes
                     >
                       <svg
                         width="18"
@@ -221,11 +319,19 @@ const Footer = () => {
                       </svg>
                     </a>
                     <a
+<<<<<<< Updated upstream
                       href="https://www.linkedin.com/company/gr2-engineering/"
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+=======
+                      href="/"
+                      aria-label="social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+>>>>>>> Stashed changes
                     >
                       <svg
                         width="17"
@@ -240,12 +346,22 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+<<<<<<< Updated upstream
           </div>
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-4 bg-lightgray">
             <p className="text-white text-center text-base  dark:text-white">
               <b> Copyright © 2021 GR2 Engineering Inc.</b>
             </p>
+=======
+
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
+            <div className="py-8">
+              <p className="text-center text-base text-body-color dark:text-white">
+                Copyright © 2021 GR2 Engineering Inc.
+              </p>
+            </div>
+>>>>>>> Stashed changes
           </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">

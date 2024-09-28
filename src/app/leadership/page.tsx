@@ -31,7 +31,11 @@ const LeadershipPage = () => {
                     At GR2 Engineering, we believe that true success is measured not only by financial performance but also by our commitment to social and environmental responsibility. Guided by our core values of integrity, sustainability, and community, we are dedicated to making a positive impact on the world around us.
                   </p>
                 </div>
+<<<<<<< Updated upstream
                 <h2 className="mb-8 text-xl text-center text-blue-900 font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
+=======
+                <h2 className="mb-8 text-xl text-primary font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight">
+>>>>>>> Stashed changes
                   MANAGEMENT TEAM
                 </h2>
                 <div>

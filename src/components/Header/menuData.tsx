@@ -128,6 +128,7 @@ const menuData: Menu[] = [
       },
       {
         id: 65,
+<<<<<<< Updated upstream
         title: "Italian",
         path: "#",
         newTab: false,
@@ -135,6 +136,9 @@ const menuData: Menu[] = [
       {
         id: 66,
         title: "Turkish",
+=======
+        title: "Chinese",
+>>>>>>> Stashed changes
         path: "#",
         newTab: false,
       },

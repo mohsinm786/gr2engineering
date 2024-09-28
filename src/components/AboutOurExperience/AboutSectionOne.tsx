@@ -18,7 +18,11 @@ const AboutSectionOne = () => {
   return (
     <section id="about" className="pt-5 mt-10">
       <div className="container">
+<<<<<<< Updated upstream
         <div className="w-10/12 mx-auto border-b border-body-color/[.15] dark:border-white/[.15]">
+=======
+        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+>>>>>>> Stashed changes
           <div className="flex flex-wrap items-center">
             <p className="text-base !leading-relaxed text-body-color md:text-lg mb-10">At GR2 Engineering, our extensive experience sets us apart as a trusted leader in the energy, infrastructure, and chemicals industries. With decades of collective expertise and a proven track record of success, we have the knowledge, skills, and resources to tackle even the most complex challenges and deliver superior results for our clients.</p>
 

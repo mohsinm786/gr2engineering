@@ -52,6 +52,7 @@ const PastEvents = () => {
       {/* Content Section */}
       <div className="container">
         {/* Upcoming Events Section */}
+<<<<<<< Updated upstream
         <div className="w-10/12 mx-auto border-b">
           <div className="px-4">
             <div className="mb-9 pt-9">
@@ -78,12 +79,30 @@ const PastEvents = () => {
                   </p>
                 </div>
               </div>
+=======
+        <div className="w-10/12 mx-auto">
+          <div className="px-4">
+            <div className="mb-9">
+              <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                UPCOMING EVENTS
+              </h3>
+              <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                MEET US AT THESE UPCOMING EVENTS
+              </h3>
+              <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                Check back later!
+              </p>
+>>>>>>> Stashed changes
             </div>
           </div>
         </div>
 
         {/* Past Events Section */}
+<<<<<<< Updated upstream
         <div className="w-10/12 mx-auto flex flex-wrap items-center mt-12">
+=======
+        <div className="w-10/12 mx-auto -mx-4 flex flex-wrap items-center mt-12">
+>>>>>>> Stashed changes
           <div className="w-full px-4 lg:w-1/2">
             <Swiper
               spaceBetween={30}

@@ -28,7 +28,11 @@ const HistoryPage = () => {
                     Since our inception, GR2 Engineering has been driven by a relentless commitment to excellence, innovation, and client satisfaction. Our journey began with a vision to revolutionize the energy and infrastructure sectors, and over the years, we have evolved into a trusted partner and industry leader.
                   </p>
                 </div>
+<<<<<<< Updated upstream
                 <h2 className="mb-8 text-xl text-blue-900 font-bold leading-tight dark:text-white sm:text-3xl sm:leading-tight">
+=======
+                <h2 className="mb-8 text-xl text-primary font-bold leading-tight text-black dark:text-white sm:text-3xl sm:leading-tight">
+>>>>>>> Stashed changes
                   HOW GR2 ENGINEERING STARTED
                 </h2>
                 <div>

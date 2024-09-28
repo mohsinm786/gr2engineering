@@ -18,6 +18,7 @@ const FullWidthSection = () => {
   );
 
   return (
+<<<<<<< Updated upstream
     <section className="overflow-hidden py-16">
       {/* Full-width Banner */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
@@ -37,6 +38,18 @@ const FullWidthSection = () => {
         {/* Optional Overlay */}
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
+=======
+    <section className="py-16 md:py-20 lg:py-28">
+      <div className="container">
+        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+          <div className="flex flex-col items-start">
+            <SectionTitle
+              title="JOIN US"
+              paragraph=""
+              mb="20px"
+              titleClassName="text-2xl font-bold text-left"
+            />
+>>>>>>> Stashed changes
 
       <div className="container">
         <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15]">

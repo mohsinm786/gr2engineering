@@ -26,16 +26,29 @@ const AboutSectionTwo = () => {
                   mb="16px"
                   titleClassName="text-2xl font-bold text-black dark:text-white"
                 />
+<<<<<<< Updated upstream
                 <h2 className={`mb-4 text-xl text-Green font-bold !leading-tight  dark:text-white sm:text-2xl md:text-[30px]`}>
                   INTEGRATED PROJECT MANAGEMENT SYSTEM
                 </h2>
+=======
+                <SectionTitle
+                  title="Integrated project Management system"
+                  paragraph=""
+                  mb="32px"
+                  titleClassName="text-xl font-semibold text-gray-700 dark:text-gray-300"
+                />
+>>>>>>> Stashed changes
               </div>
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] text-center lg:text-left">
                 <Image
                   src="/images/addedImg/integrated-project-management.png"
                   alt="about image"
                   fill
+<<<<<<< Updated upstream
                   className="drop-shadow-three dark:hidden dark:drop-shadow-none object-contain"
+=======
+                  className="drop-shadow-three dark:hidden dark:drop-shadow-none"
+>>>>>>> Stashed changes
                 />
                 {/* <Image
                 src="/images/about/about-image-2-dark.svg"
@@ -50,6 +63,7 @@ const AboutSectionTwo = () => {
             <div className="w-full lg:w-1/2 px-4 lg:pl-12">
               <div className="max-w-[470px]">
                 <div className="mb-9">
+<<<<<<< Updated upstream
                   <List text="Intelligent intuitive project management software platform" />
                   <List text="Project Integration among client, PMC, contractors, subcontractors, and vendors" />
                   <List text="No changes required to contractor and vendor systems, tools, and procedures" />
@@ -58,6 +72,18 @@ const AboutSectionTwo = () => {
                   <List text="Scalable" />
                   <List text="Mobile App" />
                   <List text="Cost effective" />
+=======
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
+                    <li>Intelligent intuitive project management software platform</li>
+                    <li>Project Integration among client, PMC, contractors, subcontractors, and vendors</li>
+                    <li>No changes required to contractor and vendor systems, tools, and procedures</li>
+                    <li>AWP based</li>
+                    <li>Cloud based</li>
+                    <li>Scalable</li>
+                    <li>Mobile App</li>
+                    <li>Cost effective</li>
+                  </ul>
+>>>>>>> Stashed changes
                 </div>
               </div>
             </div>

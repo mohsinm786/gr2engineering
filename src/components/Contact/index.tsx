@@ -29,6 +29,7 @@ const Contact = () => {
       {/* Existing Contact Form Section */}
       <div className="container">
         <div className="w-10/12 mx-auto">
+<<<<<<< Updated upstream
           <div className="-mx-4 flex flex-wrap pt-10">
             {/* Left: Contact Form */}
             <div className="w-full px-4">
@@ -37,6 +38,16 @@ const Contact = () => {
                 data-wow-delay=".15s"
               >
                 <h2 className="mb-3 text-2xl font-bold text-blue-900 dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+=======
+          <div className="-mx-4 flex flex-wrap">
+            {/* Contact Form */}
+            <div className="w-full px-4 lg:w-1/2">
+              <div
+                className="mb-12 rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+                data-wow-delay=".15s"
+              >
+                <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+>>>>>>> Stashed changes
                   GET IN TOUCH WITH US
                 </h2>
                 <p className="mb-12 text-base font-medium text-body-color">
@@ -55,7 +66,11 @@ const Contact = () => {
                         <input
                           type="text"
                           placeholder="Enter your name"
+<<<<<<< Updated upstream
                           className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+=======
+                          className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+>>>>>>> Stashed changes
                         />
                       </div>
                     </div>
@@ -70,7 +85,11 @@ const Contact = () => {
                         <input
                           type="email"
                           placeholder="Enter your email"
+<<<<<<< Updated upstream
                           className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+=======
+                          className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+>>>>>>> Stashed changes
                         />
                       </div>
                     </div>
@@ -86,12 +105,20 @@ const Contact = () => {
                           name="message"
                           rows={5}
                           placeholder="Enter your Message"
+<<<<<<< Updated upstream
                           className="border-stroke w-full resize-none rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+=======
+                          className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+>>>>>>> Stashed changes
                         ></textarea>
                       </div>
                     </div>
                     <div className="w-full px-4">
+<<<<<<< Updated upstream
                       <button className="rounded-lg bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-SkyBlue dark:shadow-submit-dark">
+=======
+                      <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+>>>>>>> Stashed changes
                         Submit
                       </button>
                     </div>
@@ -99,6 +126,7 @@ const Contact = () => {
                 </form>
               </div>
             </div>
+<<<<<<< Updated upstream
 
             <div className="w-full">
               {/* Use a grid layout for 3 cards in one row */}
@@ -106,6 +134,16 @@ const Contact = () => {
                 <CardComponent id={1} />
                 <CardComponent id={2} />
                 <CardComponent id={3} />
+=======
+            {/* Map and Address Container */}
+            <div className="w-full px-4 lg:w-1/2">
+              <div className="bg-white rounded-lg shadow-lg p-6 h-full">
+                {/* MapComponent and Address components */}
+                <div className="mb-6">
+                  <MapComponent />
+                </div>
+                <Address />
+>>>>>>> Stashed changes
               </div>
             </div>
           </div>
