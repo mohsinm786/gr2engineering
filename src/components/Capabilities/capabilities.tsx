@@ -10,12 +10,12 @@ import tableData5 from '@/app/engineering/tableData5'
 function Capabilities() {
     return (
         <>
-            <h2 className={`mb-4 font-bold !leading-tight text-green-900 dark:text-white mt-10`}>
+            <h2 className={`mb-4 font-bold !leading-tight text-green-900 dark:text-white mt-10 uppercase`}>
                 EPCM
             </h2>
             <Table columnName={tableData.columnName} tableDataCol1={tableData.tableDataCol1} tableDataCol2={tableData.tableDataCol2} tableDataCol3={tableData.tableDataCol3} />
 
-            <h2 className={`mb-4 font-bold !leading-tight text-green-900 dark:text-white mt-10`}>
+            <h2 className={`mb-4 font-bold !leading-tight text-green-900 dark:text-white mt-10 uppercase`}>
                 Engineering Desciplines
             </h2>
             <div className='mt-10 flex flex-wrap justify-center  gap-10'>
@@ -29,7 +29,7 @@ function Capabilities() {
                 <BulletPoints columnName={tableData2.columnName[7]} tableDataCol={tableData2.tableDataCol8} />
             </div>
 
-            <h2 className={`mb-4 font-bold !leading-tight text-green-900 dark:text-white `}>
+            <h2 className={`uppercase mb-4 font-bold !leading-tight text-green-900 dark:text-white `}>
             Engineering & Design Services
             </h2>
             <Table columnName={tableData3.columnName} tableDataCol1={tableData3.tableDataCol1} tableDataCol2={tableData3.tableDataCol2} tableDataCol3={tableData3.tableDataCol3} />
