@@ -29,7 +29,7 @@ const WaterPage = () => {
                     As global concerns over water scarcity and quality continue to rise, our team is dedicated to providing comprehensive solutions to address these challenges head-on. With expertise in water treatment, distribution, and management, we offer a full spectrum of services tailored to meet the diverse needs of our clients. From designing state-of-the-art treatment facilities to implementing smart water management systems, GR2 Engineering is committed to engineering solutions that ensure access to clean, safe water for generations to come.
                   </p>
                 </div>
-                <h2 className="mb-8 text-3xl text-blue-900 font-bold leading-tight dark:text-white sm:text-4xl sm:leading-tight">
+                <h2 className="uppercase mb-8 text-3xl text-blue-900 font-bold leading-tight dark:text-white sm:text-4xl sm:leading-tight">
                   Water Treatment Solutions
                 </h2>
                 <div>
@@ -40,32 +40,32 @@ const WaterPage = () => {
                 <div className="flex flex-wrap lg:justify-between lg:w-10/12 mx-auto">
                   {/* First Column */}
                   <div className="w-full lg:w-1/2">
-                    <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
+                    <h3 className="uppercase font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                       Industry & Applications
                     </h3>
                     <ul className="mb-10 list-inside list-disc text-body-color">
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Social Programs
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Oil and Gas
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Power
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Residential Projects
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Food & Beverage
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Municipalities
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Heavy Industries
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Textile
                       </li>
                     </ul>
@@ -77,7 +77,7 @@ const WaterPage = () => {
                   </div>
                   {/* Second Column */}
                   <div className="w-full lg:w-1/2">
-                    <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
+                    <h3 className="uppercase font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                       Onshore and Offshore Solutions
 
                     </h3>
@@ -85,31 +85,31 @@ const WaterPage = () => {
                       <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
                         Filtration/Softening Systems
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Ultrafiltration System
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Reverse Osmosis
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Nanofiltration Systems
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Membrane Bio-Reactor Systems
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Electro-deionization Systems
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Ozonization Systems
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Mineral Dosing Systems
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Wastewater Treatment and Recycling Systems
                       </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
                         Desalination
                       </li>
                     </ul>
