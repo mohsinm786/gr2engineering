@@ -34,15 +34,15 @@ function ResourcesDesciplines() {
         <>
             <div className='flex flex-wrap justify-center items-center gap-10'>
                 <div>
-                    <h2 className={` mb-4   font-bold !leading-tight text-green-900 dark:text-white mt-10`}>
+                    <h2 className={`uppercase mb-4   font-bold !leading-tight text-green-900 dark:text-white mt-10`}>
                         Engineering and advisory resources
 
                     </h2>
-                    <h2 className={`mb-4 font-bold !leading-tight text-blue-400 dark:text-white text-lg`}>
+                    <h2  className={`uppercase mb-4 font-bold !leading-tight text-blue-400 dark:text-white text-lg`}>
                         Capabilities and disciplines
 
                     </h2>
-                    <h2 className={`mb-4 font-bold !leading-tight  dark:text-white text-lg underline`}>
+                    <h2 className={`uppercase mb-4 font-bold !leading-tight  dark:text-white text-lg underline`}>
                         Resources
 
                     </h2>
@@ -52,7 +52,7 @@ function ResourcesDesciplines() {
                 </div>
                 <div>
 
-                    <h2 className={`mb-4 font-bold text-green-900 !leading-tight  dark:text-white `}>
+                    <h2 className={`uppercase mb-4 font-bold text-green-900 !leading-tight  dark:text-white `}>
                         Core Team by Numbers, Houston
                     </h2>
 
@@ -62,13 +62,13 @@ function ResourcesDesciplines() {
             </div>
             <div className='flex flex-col justify-center items-center gap-10 mt-10'>
                 <div>
-                    <h2 className={` mb-4   font-bold !leading-tight text-green-900 dark:text-white mt-10`}>
+                    <h2 className={`uppercase mb-4   font-bold !leading-tight text-green-900 dark:text-white mt-10`}>
                         Capabilities - Engineering
                     </h2>
-                    <h2 className={`mb-4 font-bold !leading-tight text-blue-400 dark:text-white text-lg`}>
+                    <h2 className={`uppercase mb-4 font-bold !leading-tight text-blue-400 dark:text-white text-lg`}>
                         Resources Discipline breakdown
                     </h2>
-                    <h2 className={`mb-4 font-bold !leading-tight  dark:text-white text-lg underline`}>
+                    <h2 className={`uppercase mb-4 font-bold !leading-tight  dark:text-white text-lg underline`}>
                         Multi-discipline Engineering Resources
                     </h2>
                     {resources2.map((resource, index) => (
@@ -76,7 +76,7 @@ function ResourcesDesciplines() {
                     ))}
                 </div>
                 <div style={{width:"80%" , height:"400px"}}>
-                    <h2 className={`mb-4 font-bold text-green-900 !leading-tight  dark:text-white `}>
+                    <h2 className={`uppercase mb-4 font-bold text-green-900 !leading-tight  dark:text-white `}>
                         Global Team by Numbers
                     </h2>
                     <TotalUserBarChart labels={labels2} data={data2} label="Global Team by Numbers" backgroundColor={backgroundColor2} />
