@@ -80,14 +80,14 @@ const Footer = () => {
                         Corporate Social Responsibility
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         href="/iso-certifications"
                         className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
                       >
                         ISO Certifications
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>

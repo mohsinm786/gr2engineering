@@ -38,12 +38,12 @@ const menuData: Menu[] = [
         path: "/corporate-social-responsibility",
         newTab: false,
       },
-      {
-        id: 25,
-        title: "ISO Certifications",
-        path: "/iso-certifications",
-        newTab: false,
-      },
+      // {
+      //   id: 25,
+      //   title: "ISO Certifications",
+      //   path: "/iso-certifications",
+      //   newTab: false,
+      // },
     ],
   },
   {
