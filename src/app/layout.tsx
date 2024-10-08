@@ -26,9 +26,16 @@ export default function RootLayout({
           async
           defer
         ></script>
+
       </head>
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+
+        <Script
+           strategy="beforeInteractive"
+          src={`https://www.google.com/recaptcha/api.js?render=6LcE0lYqAAAAANgOW8TymSRVFPj2OYFfgsT4IU3h}`}
+
+        />
         <Providers>
           <Header />
           {children}
@@ -40,4 +47,5 @@ export default function RootLayout({
   );
 }
 
-import { Providers } from "./providers";
+import { Providers } from "./providers"; import Script from "next/script";
+
