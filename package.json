@@ -24,6 +24,7 @@
     "swiper": "^11.1.14"
   },
   "devDependencies": {
+    "@types/grecaptcha": "^3.0.9",
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.33",
     "autoprefixer": "^10.4.17",
