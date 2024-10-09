@@ -1,13 +1,13 @@
 import { TeamMember } from "@/types/team";
 
-const teamData: TeamMember[] = [
+const teamDataColumbia: TeamMember[] = [
   {
     id: 8,
-    title: "Romolo Raciti",
-    jobRole: "President and CEO",
-    image: "/images/team/RR.jpg",
-    description1: "Romolo is a senior energy executive with more than 32 years of experience in establishing and managing EPC operations for capital projects. Romolo successfully managed Parsons re-entry to oil and gas projects prior joining Chiyoda as Senior VP in charge of U.S. operations.  In this role he led the efforts to establish firm’s USA operations supporting execution of large LNG and Petrochemical projects in the Americas.",
-    description2: "Romolo received his B.S. from Tennessee Tech and his MSc. In Mechanical Engineering from Virginia Tech, and Executive Education from Rice University.",
+    title: "Arturo Portilla",
+    jobRole: "Colombia Country Manager",
+    image: "/images/team/arturoportilla.jpg",
+    description1: "Arturo is a seasoned engineering and project management professional with over 30 years of experience across diverse global markets, including the USA, Colombia, KSA, Uganda, Chile, and Canada. His expertise encompasses both design centers and construction sites, providing exceptional design and engineering support as well as construction management.",
+    description2: "Specializing in Mechanical Engineering, Arturo has held leadership positions where he has successfully delivered top-class engineering solutions for plant design in the Oil & Gas, Chemicals, Minning and Power sectors. He is proficient in Engineering tools and Design platforms.",
   },
 ];
-export default teamData;
+export default teamDataColumbia;
