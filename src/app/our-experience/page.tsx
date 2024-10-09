@@ -1,5 +1,4 @@
 import AboutSectionOne from "@/components/AboutOurExperience/AboutSectionOne";
-import Whitepapers from "@/components/AboutOurExperience/Whitepapers";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import FeaturesCopy from "@/components/FeaturesCopy";
 
@@ -20,7 +19,7 @@ const AboutPage = () => {
         description=""
       />
       <AboutSectionOne />
-      <Whitepapers />
+      {/* <Whitepapers /> */}
       {/* <FeaturesCopy /> */}
     </>
   );

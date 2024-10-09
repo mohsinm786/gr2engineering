@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react'; // Ensure only necessary imports
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation'; // Still import navigation css for any potential future use
+import 'swiper/css/navigation';
 import './Event.css';
 
 const PastEvents = () => {
@@ -14,7 +15,7 @@ const PastEvents = () => {
   useEffect(() => {
     const marquee = marqueeRef.current;
     if (marquee) {
-      let marqueeSpeed = 2; // Set the speed for the marquee
+      let marqueeSpeed = 2;
       const animateMarquee = () => {
         marquee.scrollLeft += marqueeSpeed;
         if (marquee.scrollLeft >= marquee.scrollWidth - marquee.clientWidth) {
@@ -22,22 +23,19 @@ const PastEvents = () => {
         }
       };
       const interval = setInterval(animateMarquee, 20);
-
       return () => clearInterval(interval);
     }
   }, []);
 
   return (
     <section id="past-events" className="overflow-hidden py-16">
-      {/* Full-width Banner */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
-        {/* Use Next.js Image component for better performance */}
         <Image
-          src="/images/addedImg/Event-page-banner.jpg" // Your banner image for the Past Events page
+          src="/images/addedImg/Event-page-banner.jpg"
           alt="Past Events Banner"
-          layout="fill" // This ensures the image covers the container completely
-          objectFit="cover" // This makes sure the image covers the entire area without distortion
-          priority // This helps in preloading the image, avoiding flicker
+          layout="fill"
+          objectFit="cover"
+          priority
           className="absolute inset-0 w-full h-full"
         />
         <div className="relative z-10 text-left">
@@ -45,13 +43,10 @@ const PastEvents = () => {
             NEWS
           </h1>
         </div>
-        {/* Optional Overlay */}
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
-      {/* Content Section */}
       <div className="container">
-        {/* Upcoming Events Section */}
         <div className="w-10/12 mx-auto border-b">
           <div className="px-4">
             <div className="mb-9 pt-9">
@@ -62,10 +57,7 @@ const PastEvents = () => {
                 MEET US AT THESE UPCOMING EVENTS
               </h3>
               <div className="marquee-container" ref={marqueeRef}>
-                <div
-                  className="marquee-content mt-4 relative mx-auto mb-12 max-w-[500px] text-center lg:m-0"
-                  data-wow-delay=".15s"
-                >
+                <div className="marquee-content mt-4 relative mx-auto mb-12 max-w-[500px] text-center lg:m-0" data-wow-delay=".15s">
                   <Image
                     src="/images/addedImg/adipeclogo.png"
                     alt="Upcoming Event"
@@ -82,7 +74,6 @@ const PastEvents = () => {
           </div>
         </div>
 
-        {/* Past Events Section */}
         <div className="w-10/12 mx-auto flex flex-wrap items-center mt-12">
           <div className="w-full px-4 lg:w-1/2">
             <Swiper
@@ -95,7 +86,8 @@ const PastEvents = () => {
               pagination={{
                 clickable: true,
               }}
-              loop={true} // Enable looping
+              loop={true}
+              modules={[Autoplay, Pagination, Navigation]}  // Add modules here
               className="relative mx-auto mb-12 aspect-[25/20] max-w-[500px] text-center"
             >
               <SwiperSlide>
@@ -108,7 +100,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event.jpeg"
+                  src="/images/addedImg/event1.jpg"
                   alt="Past Event 2"
                   fill
                   className="drop-shadow-three object-contain"
@@ -116,13 +108,60 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event.jpeg"
+                  src="/images/addedImg/event2.jpeg"
                   alt="Past Event 3"
                   fill
                   className="drop-shadow-three object-contain"
                 />
               </SwiperSlide>
-              {/* Add more SwiperSlide components here for additional images */}
+              <SwiperSlide>
+                <Image
+                  src="/images/addedImg/event3.jpeg"
+                  alt="Past Event 4"
+                  fill
+                  className="drop-shadow-three object-contain"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/addedImg/event4.jpeg"
+                  alt="Past Event 5"
+                  fill
+                  className="drop-shadow-three object-contain"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/addedImg/event5.jpeg"
+                  alt="Past Event 6"
+                  fill
+                  className="drop-shadow-three object-contain"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/addedImg/event6.jpeg"
+                  alt="Past Event 7"
+                  fill
+                  className="drop-shadow-three object-contain"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/addedImg/event7.jpeg"
+                  alt="Past Event 8"
+                  fill
+                  className="drop-shadow-three object-contain"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/addedImg/event8.jpg"
+                  alt="Past Event 9"
+                  fill
+                  className="drop-shadow-three object-contain"
+                />
+              </SwiperSlide>
             </Swiper>
           </div>
           <div className="w-full px-4 lg:w-1/2">

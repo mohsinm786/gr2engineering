@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 import Link from "next/link";
+import Whitepapers from "@/components/AboutOurExperience/Whitepapers";
 
 export const metadata: Metadata = {
   title: "What We Do - GR2 Engineering",
@@ -15,7 +16,7 @@ const AboutPage = () => {
         description=""
       />
       
-      <section className="pb-[120px]">
+      <section>
         <div className="container">
         <div className="-mx-4 flex flex-wrap justify-center pt-10">
             <div className="w-full px-4 lg:w-10/12">
@@ -102,6 +103,7 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
+        <Whitepapers/>
         </div>
       </section>
      
