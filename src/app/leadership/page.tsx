@@ -44,10 +44,10 @@ const LeadershipPage = () => {
                   MANAGEMENT TEAM - INDIA
                 </h2>
                 <Team teamData={teamDataIndia} />
-                {/* <h2 className="mt-12 mb-8 text-xl text-blue-900 font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
+                <h2 className="mt-24 mb-8 text-center text-xl text-blue-900 font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
                   MANAGEMENT TEAM - COLUMBIA
-                </h2> */}
-                {/* <Team teamData={teamDataColumbia} /> */}
+                </h2>
+                <Team teamData={teamDataColumbia} />
               </div>
             </div>
           </div>

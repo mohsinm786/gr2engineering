@@ -10,14 +10,14 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        subpageName="About Us"
+        subpageName="Home"
         pageName="ABOUT US"
         description=""
       />
       
       <section className="pb-[120px]">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
+          <div className="-mx-4 flex flex-wrap justify-center pt-10">
             <div className="w-full px-4 lg:w-10/12">
               <div>
                 <div>
@@ -28,7 +28,7 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-          <div className="-mx-4 flex flex-wrap justify-center pt-10">
+          <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-10/12">
               <div>
                 <h2 className="mb-8 text-3xl font-bold leading-tight text-SkyBlue dark:text-white sm:text-4xl sm:leading-tight">
