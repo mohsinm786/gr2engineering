@@ -19,6 +19,7 @@ const AboutPage = () => {
         subpageName="What We Do"
         pageName="MODULAR SERVICES"
         description=""
+        img="/images/breadcrumb_images/Modular0.jpg"
       />
       <AboutSectionOne />
       <TwoTitlesWithBulletsAndImages />

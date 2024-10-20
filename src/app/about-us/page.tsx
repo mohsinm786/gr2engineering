@@ -9,10 +9,12 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <>
+     
       <Breadcrumb
         subpageName="Home"
         pageName="ABOUT US"
         description=""
+        img=""
       />
       
       <section className="pb-[120px]">

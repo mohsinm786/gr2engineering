@@ -20,6 +20,7 @@ const LeadershipPage = () => {
         subpageName="About Us"
         pageName="Leadership"
         description=""
+        img="/images/breadcrumb_images/Leadership.jpg"
       />
       <section className="pb-[120px] mt-10">
         <div className="container">
