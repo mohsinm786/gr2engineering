@@ -17,6 +17,7 @@ const HistoryPage = () => {
         subpageName="About Us"
         pageName="History"
         description=""
+        img="/images/breadcrumb_images/History.jpg" 
       />
       <section className="pb-[120px] mt-10">
         <div className="container">

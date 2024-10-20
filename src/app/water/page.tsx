@@ -18,6 +18,7 @@ const WaterPage = () => {
         subpageName="What We Do"
         pageName="Water"
         description=""
+        img="/images/breadcrumb_images/Water.jpg"
       />
       <section className="pb-[120px] mt-10">
         <div className="container">
