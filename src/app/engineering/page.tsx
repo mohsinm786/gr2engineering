@@ -31,6 +31,7 @@ const EngineeringPage:React.FC  = () => {
         subpageName="What We Do"
         pageName="Engineering"
         description=""
+        img="/images/breadcrumb_images/Engineering.jpg"
       />
       <section className="pb-[120px] mt-10">
         <div className="container">

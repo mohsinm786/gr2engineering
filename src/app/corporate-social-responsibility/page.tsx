@@ -17,6 +17,7 @@ const AboutPage = () => {
         subpageName="About Us"
         pageName="CORPORATE SOCIAL RESPONSIBILITY"
         description=""
+        img="/images/breadcrumb_images/CSR.jpg"
       />
       <AboutSectionOne />
       {/* <AboutSectionTwo /> */}

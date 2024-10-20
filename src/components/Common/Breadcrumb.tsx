@@ -1,17 +1,28 @@
 import Link from "next/link";
-
+import React from "react";
 const Breadcrumb = ({
   subpageName,
   pageName,
   description,
+  img,
 }: {
   subpageName: string;
   pageName: string;
   description?: string;
+  img?: string;
 }) => {
+
+  
   return (
     <>
-      <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px] bg-gradient-to-r from-green-700 to-blue-900">
+      <section
+        className="relative z-10 overflow-hidden pt-28 lg:pt-[150px] bg-gradient-to-r from-green-700 to-blue-900"
+        style={{
+          backgroundImage: img ? `url(${img})` : undefined,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 md:w-8/12 lg:w-7/12">
