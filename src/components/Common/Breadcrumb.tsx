@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+
 const Breadcrumb = ({
   subpageName,
   pageName,
@@ -11,12 +12,10 @@ const Breadcrumb = ({
   description?: string;
   img?: string;
 }) => {
-
-  
   return (
     <>
       <section
-        className="relative z-10 overflow-hidden pt-28 lg:pt-[150px] bg-gradient-to-r from-green-700 to-blue-900"
+        className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]"
         style={{
           backgroundImage: img ? `url(${img})` : undefined,
           backgroundSize: "cover",
@@ -56,6 +55,8 @@ const Breadcrumb = ({
           </div>
         </div>
 
+        {/* Commented out the gradient background and SVG elements */}
+        {/*
         <div>
           <span className="absolute left-0 top-0 z-[-1]">
             <svg
@@ -130,6 +131,7 @@ const Breadcrumb = ({
             </svg>
           </span>
         </div>
+        */}
       </section>
     </>
   );

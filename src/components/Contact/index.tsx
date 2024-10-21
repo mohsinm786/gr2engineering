@@ -5,7 +5,7 @@ import CardComponent from "../AddressCard/intex";
 
 const Contact = () => {
   return (
-    <section id="contact" className="overflow-hidden py-16">
+    <section id="contact" className="overflow-hidden">
       {/* Full-width Banner */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
         {/* Use Next.js Image component for better performance */}

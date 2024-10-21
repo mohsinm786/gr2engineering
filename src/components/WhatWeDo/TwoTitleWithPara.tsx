@@ -18,7 +18,7 @@ const FullWidthSection = () => {
   );
 
   return (
-    <section className="overflow-hidden py-16">
+    <section className="overflow-hidden">
       {/* Full-width Banner */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
         <Image

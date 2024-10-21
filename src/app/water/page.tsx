@@ -1,9 +1,9 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image"; // Import Image for optimized images
 
 export const metadata: Metadata = {
   title: "About Page | Free Next.js Template for Startup and SaaS",
@@ -14,12 +14,32 @@ export const metadata: Metadata = {
 const WaterPage = () => {
   return (
     <>
-      <Breadcrumb
-        subpageName="What We Do"
-        pageName="Water"
-        description=""
-        img="/images/breadcrumb_images/Water.jpg"
-      />
+      {/* Background Banner Section */}
+      <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
+        <Image
+          src="/images/breadcrumb_images/Water.jpg" // Background image path
+          alt="Water Background"
+          layout="fill" // Cover the entire section
+          objectFit="cover" // Maintain aspect ratio
+          priority // Preload the image
+          className="absolute inset-0 w-full h-full"
+        />
+        {/* Optional Dark Overlay */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+
+        {/* Breadcrumb Section */}
+        <div className="absolute top-0 left-0 w-full z-10">
+          <div className="container mx-auto pt-10 px-10">
+            <Breadcrumb
+              subpageName="What We Do"
+              pageName="Water"
+              description=""
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
       <section className="pb-[120px] mt-10">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
@@ -35,7 +55,7 @@ const WaterPage = () => {
                 </h2>
                 <div>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Aquamatch ‘s global experience in water desalination and treatment systems with GR2’s broad EPC experience enables GR2-Aquamatch to offer on-schedule and in-budget water treatment at industry standards, with world-class solutions for onshore and offshore facilities.
+                    Aquamatch’s global experience in water desalination and treatment systems with GR2’s broad EPC experience enables GR2-Aquamatch to offer on-schedule and in-budget water treatment at industry standards, with world-class solutions for onshore and offshore facilities.
                   </p>
                 </div>
                 <div className="flex flex-wrap lg:justify-between lg:w-10/12 mx-auto">
@@ -80,7 +100,6 @@ const WaterPage = () => {
                   <div className="w-full lg:w-1/2">
                     <h3 className="uppercase font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                       Onshore and Offshore Solutions
-
                     </h3>
                     <ul className="mb-10 list-inside list-disc text-body-color">
                       <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
@@ -121,12 +140,6 @@ const WaterPage = () => {
                     />
                   </div>
                 </div>
-                {/* <Link
-                  href="/signup"
-                  className="mb-10 ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Download the PDF
-                </Link> */}
                 <div className="w-full flex justify-center">
                   <Link
                     href="/signup"
@@ -142,12 +155,12 @@ const WaterPage = () => {
                 </div>
                 <div>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Company opened its Houston office with GR2 Engineering in 2019 as a leading provider of water treatment, desalination, produced water and wastewater reuse systems.
+                    The company opened its Houston office with GR2 Engineering in 2019 as a leading provider of water treatment, desalination, produced water and wastewater reuse systems.
                   </p>
                 </div>
                 <div>
                   <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    GR2-Aquamatch is active in 34 countries and four continents with 18 offices in Europe, Asia and the USA.
+                    GR2-Aquamatch is active in 34 countries and four continents with 18 offices in Europe, Asia, and the USA.
                   </p>
                 </div>
               </div>

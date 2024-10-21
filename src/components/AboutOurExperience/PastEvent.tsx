@@ -28,7 +28,7 @@ const PastEvents = () => {
   }, []);
 
   return (
-    <section id="past-events" className="overflow-hidden py-16">
+    <section id="past-events" className="overflow-hidden">
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
         <Image
           src="/images/addedImg/Event-page-banner.jpg"
