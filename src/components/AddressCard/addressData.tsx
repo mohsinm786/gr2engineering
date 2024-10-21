@@ -12,7 +12,7 @@ const addressData = [
   {
     id: 2,
     city: "Bogotá",
-    country: "Columbia",
+    country: "Colombia",
     address: "GR2 Colombia — Cra 54d # 134 – 51",
     email: "GR2Colombia@gr2engineering.com",
     phoneNo: "+57 313 455 8407",
@@ -21,7 +21,7 @@ const addressData = [
   },
   {
     id: 3,
-    city: "Thane",
+    city: "Mumbai",
     country: "India",
     address: "GR2 India — B-104, Centrum Business Square",
     email: "GR2India@gr2engineering.com",

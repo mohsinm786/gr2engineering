@@ -6,9 +6,9 @@ const Whitepapers = () => {
       <div className="container">
         <div className="w-10/12 mx-auto">
           <div className="px-4">
-            <h3 className="mb-6 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+          <h2 className="mb-8 text-3xl font-bold leading-tight text-Green dark:text-white sm:text-4xl sm:leading-tight">
               WHITEPAPERS
-            </h3>
+            </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {/* Whitepaper Card 1 */}
               <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">

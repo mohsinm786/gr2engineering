@@ -1,6 +1,8 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 import Link from "next/link";
+import Whitepapers from "@/components/AboutOurExperience/Whitepapers";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "What We Do - GR2 Engineering",
@@ -9,13 +11,32 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <>
-      <Breadcrumb
-        subpageName="home"
-        pageName="WHAT WE DO"
-        description=""
-      />
+      {/* Background Banner Section */}
+      <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
+        <Image
+          src="/images/breadcrumb_images/what-we-do.jpg" // Change this to the correct image path
+          alt="Capital Project Services Background"
+          layout="fill" // Ensures the image covers the container completely
+          objectFit="cover" // Ensures the image fits the container without distortion
+          priority // Preloads the image for better performance
+          className="absolute inset-0 w-full h-full"
+        />
+        {/* Optional Dark Overlay */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+
+        {/* Breadcrumb Section */}
+        <div className="absolute top-0 left-0 w-full z-10">
+          <div className="container mx-auto pt-10 px-10">
+            <Breadcrumb
+              subpageName="HOME"
+              pageName="WHAT WE DO"
+              description=""
+            />
+          </div>
+        </div>
+      </div>
       
-      <section className="pb-[120px]">
+      <section>
         <div className="container">
         <div className="-mx-4 flex flex-wrap justify-center pt-10">
             <div className="w-full px-4 lg:w-10/12">
@@ -102,6 +123,7 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
+        <Whitepapers/>
         </div>
       </section>
      

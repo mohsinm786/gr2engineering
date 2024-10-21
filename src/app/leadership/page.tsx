@@ -1,5 +1,6 @@
 import Team from "@/components/Team";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import Image from "next/image"; // Import Next.js Image component
 
 import teamData from "@/components/Team/teamData";
 import teamDataIndia from "@/components/Team/teamDataIndia";
@@ -16,12 +17,30 @@ export const metadata: Metadata = {
 const LeadershipPage = () => {
   return (
     <>
-      <Breadcrumb
-        subpageName="About Us"
-        pageName="Leadership"
-        description=""
-        img="/images/breadcrumb_images/Leadership.jpg"
-      />
+      {/* Background Banner Section */}
+      <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
+        {/* Use Next.js Image component for better performance */}
+        <Image
+          src="/images/breadcrumb_images/Leadership.jpg" // Ensure this is the correct path to your banner image
+          alt="Leadership Banner"
+          layout="fill" // Ensures the image covers the container completely
+          objectFit="cover" // Ensures the image covers the area without distortion
+          priority // Helps in preloading the image
+          className="absolute inset-0 w-full h-full"
+        />
+        
+        {/* Optional Dark Overlay */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+
+        {/* Breadcrumb Section */}
+        <div className="absolute top-0 left-0 w-full z-10">
+          <div className="container mx-auto pt-10 px-10">
+            <Breadcrumb subpageName="About Us" pageName="Leadership" description="" />
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
       <section className="pb-[120px] mt-10">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
@@ -46,7 +65,7 @@ const LeadershipPage = () => {
                 </h2>
                 <Team teamData={teamDataIndia} />
                 <h2 className="mt-24 mb-8 text-center text-xl text-blue-900 font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
-                  MANAGEMENT TEAM - COLUMBIA
+                  MANAGEMENT TEAM - COLOMBIA
                 </h2>
                 <Team teamData={teamDataColumbia} />
               </div>
