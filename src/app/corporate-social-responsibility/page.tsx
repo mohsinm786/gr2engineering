@@ -17,7 +17,7 @@ const AboutPage = () => {
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
         {/* Use Next.js Image component for better performance */}
         <Image
-          src="/images/breadcrumb_images/CSR.jpg" // Path to your banner image
+          src="/images/banner/CSR.jpg" // Path to your banner image
           alt="CSR Banner"
           layout="fill" // Ensures the image covers the container completely
           objectFit="cover" // Ensures the image fits the container without distortion

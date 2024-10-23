@@ -58,7 +58,7 @@ const Header = () => {
                   alt="logo"
                   width={200}
                   height={50}
-                  className="w-full h-14 dark:hidden"
+                  className="w-full h-14 dark:hidden object-contain"
                 />
                 {/* <Image
                   src="/images/logo/new-logo.png"

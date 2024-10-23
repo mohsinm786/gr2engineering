@@ -5,8 +5,8 @@ import Image from "next/image"; // Import Image for optimized rendering
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
+  title: "Our Experience - GR2 Engineering",
+  // description: "This is About Page for Startup Nextjs Template",
   // other metadata
 };
 
@@ -17,7 +17,7 @@ const AboutPage = () => {
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
         {/* Use Next.js Image component for better performance */}
         <Image
-          src="/images/breadcrumb_images/our-experience.jpg" // Replace with the actual image path
+          src="/images/banner/our-experience.jpg" // Replace with the actual image path
           alt="About Our Experience Banner"
           layout="fill" // Ensures the image covers the container completely
           objectFit="cover" // Ensures the image covers the entire area without distortion

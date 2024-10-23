@@ -6,8 +6,8 @@ import Link from "next/link";
 import Image from "next/image"; // Import Image for optimized images
 
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
+  title: "Water - GR2 Engineering",
+  // description: "This is About Page for Startup Nextjs Template",
   // other metadata
 };
 
@@ -17,7 +17,7 @@ const WaterPage = () => {
       {/* Background Banner Section */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
         <Image
-          src="/images/breadcrumb_images/Water.jpg" // Background image path
+          src="/images/banner/Water.jpg" // Background image path
           alt="Water Background"
           layout="fill" // Cover the entire section
           objectFit="cover" // Maintain aspect ratio
@@ -40,7 +40,7 @@ const WaterPage = () => {
       </div>
 
       {/* Content Section */}
-      <section className="pb-[120px] mt-10">
+      <section className="pb-10 mt-10">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-10/12">
@@ -90,13 +90,8 @@ const WaterPage = () => {
                         Textile
                       </li>
                     </ul>
-                    <img
-                      src="/images/addedImg/water1.png"
-                      alt="Industry & Applications"
-                      className="mb-10 h-auto rounded-lg shadow-lg"
-                    />
                   </div>
-                  {/* Second Column */}
+                  {/* Second Column for Solutions */}
                   <div className="w-full lg:w-1/2">
                     <h3 className="uppercase font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                       Onshore and Offshore Solutions
@@ -133,6 +128,21 @@ const WaterPage = () => {
                         Desalination
                       </li>
                     </ul>
+                  </div>
+                </div>
+
+                {/* Row for Images */}
+                <div className="flex flex-wrap justify-center lg:w-10/12 mx-auto mt-10">
+                  {/* First Image */}
+                  <div className="w-full lg:w-6/12 px-4">
+                    <img
+                      src="/images/addedImg/water1.png"
+                      alt="Industry & Applications"
+                      className="mb-10 h-auto rounded-lg shadow-lg"
+                    />
+                  </div>
+                  {/* Second Image */}
+                  <div className="w-full lg:w-6/12 px-4">
                     <img
                       src="/images/addedImg/water2.png"
                       alt="Onshore and Offshore Solutions"
@@ -140,6 +150,7 @@ const WaterPage = () => {
                     />
                   </div>
                 </div>
+
                 <div className="w-full flex justify-center">
                   <Link
                     href="/signup"

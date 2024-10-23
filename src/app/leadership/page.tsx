@@ -21,7 +21,7 @@ const LeadershipPage = () => {
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
         {/* Use Next.js Image component for better performance */}
         <Image
-          src="/images/breadcrumb_images/Leadership.jpg" // Ensure this is the correct path to your banner image
+          src="/images/banner/Leadership.jpg" // Ensure this is the correct path to your banner image
           alt="Leadership Banner"
           layout="fill" // Ensures the image covers the container completely
           objectFit="cover" // Ensures the image covers the area without distortion
