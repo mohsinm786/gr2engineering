@@ -25,7 +25,7 @@ const EngineeringPage: React.FC = () => {
       {/* Background Banner Section */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
         <Image
-          src="/images/breadcrumb_images/Engineering.jpg"
+          src="/images/banner/Engineering.jpg"
           alt="Engineering Background"
           layout="fill" // Ensures the image covers the container completely
           objectFit="cover" // Ensures the image fits the container without distortion

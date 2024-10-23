@@ -22,7 +22,7 @@ const FullWidthSection = () => {
       {/* Full-width Banner */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
         <Image
-          src="/images/addedImg/Career-page-banner.jpg" // Your banner image
+          src="/images/banner/Career-page-banner.jpg" // Your banner image
           alt="Join Us Banner"
           layout="fill" // This ensures the image covers the container completely
           objectFit="cover" // This makes sure the image covers the entire area without distortion

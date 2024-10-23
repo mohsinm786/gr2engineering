@@ -17,7 +17,7 @@ const HistoryPage = () => {
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
         {/* Background Banner */}
         <Image
-          src="/images/breadcrumb_images/History.jpg"
+          src="/images/banner/History.jpg"
           alt="Contact Us Banner"
           layout="fill" // Ensures the image covers the container completely
           objectFit="cover" // Ensures the image fits the container without distortion

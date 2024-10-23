@@ -19,7 +19,7 @@ const AboutPage = () => {
       {/* Background Banner Section */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
         <Image
-          src="/images/breadcrumb_images/Capital-project-services.jpg" // Change this to the correct image path
+          src="/images/banner/Capital-project-services.jpg" // Change this to the correct image path
           alt="Capital Project Services Background"
           layout="fill" // Ensures the image covers the container completely
           objectFit="cover" // Ensures the image fits the container without distortion

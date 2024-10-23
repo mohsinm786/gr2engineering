@@ -31,7 +31,7 @@ const PastEvents = () => {
     <section id="past-events" className="overflow-hidden">
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
         <Image
-          src="/images/addedImg/Event-page-banner.jpg"
+          src="/images/banner/Event-page-banner.jpg"
           alt="Past Events Banner"
           layout="fill"
           objectFit="cover"

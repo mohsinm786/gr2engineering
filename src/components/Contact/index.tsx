@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
         {/* Use Next.js Image component for better performance */}
         <Image
-          src="/images/contact-us-banner.jpg"
+          src="/images/banner/contact-us-banner.jpg"
           alt="Contact Us Banner"
           layout="fill" // This ensures the image covers the container completely
           objectFit="cover" // This makes sure the image covers the entire area without distortion
