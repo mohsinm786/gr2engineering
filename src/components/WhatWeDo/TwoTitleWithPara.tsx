@@ -39,7 +39,7 @@ const FullWidthSection = () => {
       </div>
 
       <div className="container">
-        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15]">
+        <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-6 dark:border-white/[.15]">
           <div className="flex flex-col items-start pt-9">
             <h2 className={`text-xl text-Green font-bold !leading-tight  dark:text-white sm:text-2xl md:text-[30px]`}>
               OPEN ROLES
@@ -87,6 +87,94 @@ const FullWidthSection = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="w-10/12 mx-auto pt-10 p-4">
+        {/* Search form */}
+        <div className="bg-gray-100 p-6 rounded-md shadow-md">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <input
+              type="text"
+              placeholder="Keywords"
+              className="w-full p-2 border border-gray-300 rounded-md"
+            />
+            <input
+              type="text"
+              placeholder="Location"
+              className="w-full p-2 border border-gray-300 rounded-md"
+            />
+          </div>
+          <div className="flex items-center space-x-2 mb-4">
+            <input type="checkbox" id="remote" className="mr-2" />
+            <label htmlFor="remote" className="text-gray-700">
+              Remote positions only
+            </label>
+          </div>
+          <div className="text-center">
+            <button className="bg-blue-800 text-white px-6 py-2 rounded-md">
+              SEARCH JOBS
+            </button>
+          </div>
+        </div>
+
+        {/* Job Type Filters */}
+        <div className="flex flex-wrap justify-center space-x-2 mt-4">
+          {["Freelance", "Full Time", "Internship", "Part Time", "Temporary"].map(
+            (type) => (
+              <label key={type} className="flex items-center space-x-2">
+                <input type="checkbox" className="form-checkbox" defaultChecked />
+                <span className="text-gray-700">{type}</span>
+              </label>
+            )
+          )}
+        </div>
+
+        {/* Job Listings */}
+        <div className="mt-6">
+          {[
+            {
+              title:
+                "Electrical & Instrumentation Engineering - Technical Professional",
+              company: "GR2 Engineering",
+              location: "Mumbai, Houston, Bogota",
+              date: "Posted 3 months ago",
+            },
+            {
+              title: "Mechanical Engineering - Technical Professional",
+              company: "GR2 Engineering",
+              location: "Mumbai, Houston, Bogota",
+              date: "Posted 3 months ago",
+            },
+          ].map((job, index, jobs) => (
+            <div
+              key={index}
+              className={`flex items-center justify-between py-8 ${index !== jobs.length - 1 ? "border-b" : ""
+                }`}
+            >
+              <div className="flex items-start space-x-4">
+                <img
+                  src="\images\logo\company.png" // Replace with your actual image path or URL
+                  alt="Company Logo"
+                  className="w-12 h-12 rounded-md object-cover" // Ensures the image fits well in the container
+                />
+                <div>
+                  <h3 className="text-blue-800 font-semibold">{job.title}</h3>
+                  <p className="text-gray-500">{job.company}</p>
+                </div>
+              </div>
+              <div className="text-right text-gray-500">
+                <p>{job.location}</p>
+                <p>{job.date}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* RSS Link */}
+        {/* <div className="text-right mt-4">
+          <a href="#" className="text-blue-800">
+            RSS
+          </a>
+        </div> */}
       </div>
     </section>
   );
