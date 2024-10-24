@@ -1,9 +1,8 @@
-"use client"
+"use client";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Capabilities from "@/components/Capabilities/capabilities";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import Dropdown from "@/components/Dropdown/dropdown";
 import ProjectSoftware from "@/components/ProjectSoftware/projectSoftware";
 import ResourcesDesciplines from "@/components/Resources&Desciplines/Resources&Desciplines";
 import { useState } from "react";
@@ -13,11 +12,15 @@ const EngineeringPage: React.FC = () => {
   // State for selected type in the parent component
   const [selectedType, setSelectedType] = useState<string>("Capabilities");
 
-  const types = ["Capabilities", "Project resources and disciplines", "PROJECTS SOFTWARE"];
+  const types = [
+    { label: "Capabilities", value: "Capabilities" },
+    { label: "Project Resources & Discipline", value: "Project resources and Discipline" },
+    { label: "Projects Software", value: "PROJECTS SOFTWARE" },
+  ];
 
-  // Callback function to update the selected type from the child (Dropdown)
-  const handleTypeChange = (newType: string) => {
-    setSelectedType(newType);
+  // Callback function to update the selected type from the tab buttons
+  const handleTabClick = (type: string) => {
+    setSelectedType(type);
   };
 
   return (
@@ -38,11 +41,7 @@ const EngineeringPage: React.FC = () => {
         {/* Breadcrumb Section */}
         <div className="absolute top-0 left-0 w-full z-10">
           <div className="container mx-auto pt-10 px-10">
-            <Breadcrumb
-              subpageName="What We Do"
-              pageName="Engineering"
-              description=""
-            />
+            <Breadcrumb subpageName="What We Do" pageName="Engineering" description="" />
           </div>
         </div>
       </div>
@@ -66,15 +65,30 @@ const EngineeringPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-10">
-                <Dropdown types={types} selectedType={selectedType} onTypeChange={handleTypeChange} />
+              {/* Tabs Navigation */}
+              <div className="mt-10 flex justify-center">
+                {types.map((type) => (
+                  <button
+                    key={type.value}
+                    onClick={() => handleTabClick(type.value)}
+                    className={`px-4 py-2 mx-2 border-b-2 ${
+                      selectedType === type.value
+                        ? "border-blue-500 text-white bg-blue-400 rounded"
+                        : "border-transparent text-white bg-gray-400 rounded"
+                    } hover:shadow-lg transition-colors duration-300`}
+                  >
+                    {type.label}
+                  </button>
+                ))}
               </div>
+
+              {/* Dynamic Content Rendering */}
               <h2 className="mb-8 mt-10 uppercase text-xl text-blue-900 font-bold leading-tight dark:text-white sm:text-3xl sm:leading-tight">
                 {selectedType}
               </h2>
 
               {selectedType === "Capabilities" && <Capabilities />}
-              {selectedType === "Project resources and disciplines" && <ResourcesDesciplines />}
+              {selectedType === "Project resources and Discipline" && <ResourcesDesciplines />}
               {selectedType === "PROJECTS SOFTWARE" && <ProjectSoftware />}
             </div>
           </div>
