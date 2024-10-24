@@ -17,7 +17,7 @@ const WaterPage = () => {
       {/* Background Banner Section */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
         <Image
-          src="/images/banner/Water.jpg" // Background image path
+          src="/images/banner/water.jpg" // Background image path
           alt="Water Background"
           layout="fill" // Cover the entire section
           objectFit="cover" // Maintain aspect ratio
