@@ -23,13 +23,13 @@ function ResourcesDesciplines() {
     const labels2 = ["PM, 27", "Process, 36", "Piping, 104", "Mech, 27", "E&I, 64", "C&S, 36 ", "Other, 158"];
     const data2 = [27, 36, 104, 27, 64, 36, 158];
     const backgroundColor2 = [
-        'rgba(41, 128, 185)',
-        'rgba(231, 76, 60)',
-        'rgba(204, 209, 209)',
-        'rgba(244, 208, 63)',
         'rgba(31, 97, 141)',
-        'rgba(46, 204, 113)',
-        'rgba(142, 68, 173)',
+        'rgba(31, 97, 141)', 
+        'rgba(31, 97, 141)', 
+        'rgba(31, 97, 141)', 
+        'rgba(31, 97, 141)', 
+        'rgba(31, 97, 141)', 
+        'rgba(31, 97, 141)',
     ];
     return (
         <>
@@ -39,12 +39,12 @@ function ResourcesDesciplines() {
                         Engineering and advisory resources
                     </h2>
                     <h2 className={`uppercase mb-4 font-bold !leading-tight text-blue-400 dark:text-white text-[30px]`}>
-                        Capabilities and disciplines
+                        Capabilities and Discipline
                     </h2>
                     {/* Placeholder image using Next.js Image component */}
                     <Image
                         src="/images/addedImg/Capabilities-disciplines.png"
-                        alt="Capabilities disciplines"
+                        alt="Capabilities discipline"
                         width={400}
                         height={200}
                         className="my-4"
