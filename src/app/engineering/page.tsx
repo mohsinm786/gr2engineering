@@ -14,8 +14,8 @@ const EngineeringPage: React.FC = () => {
 
   const types = [
     { label: "Capabilities", value: "Capabilities" },
-    { label: "Project Resources & Discipline", value: "Project resources and Discipline" },
-    { label: "Projects Software", value: "PROJECTS SOFTWARE" },
+    { label: "Engineering & advisory resources", value: "Engineering & advisory resources" },
+    { label: "Projects tools", value: "Projects tools" },
   ];
 
   // Callback function to update the selected type from the tab buttons
@@ -83,13 +83,13 @@ const EngineeringPage: React.FC = () => {
               </div>
 
               {/* Dynamic Content Rendering */}
-              <h2 className="mb-8 mt-10 uppercase text-xl text-blue-900 font-bold leading-tight dark:text-white sm:text-3xl sm:leading-tight">
+              {/* <h2 className="mb-8 mt-10 uppercase text-xl text-blue-900 font-bold leading-tight dark:text-white sm:text-3xl sm:leading-tight">
                 {selectedType}
-              </h2>
+              </h2> */}
 
               {selectedType === "Capabilities" && <Capabilities />}
-              {selectedType === "Project resources and Discipline" && <ResourcesDesciplines />}
-              {selectedType === "PROJECTS SOFTWARE" && <ProjectSoftware />}
+              {selectedType === "Engineering & advisory resources" && <ResourcesDesciplines />}
+              {selectedType === "Projects tools" && <ProjectSoftware />}
             </div>
           </div>
         </div>
