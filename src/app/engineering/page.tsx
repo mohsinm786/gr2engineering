@@ -66,7 +66,7 @@ const EngineeringPage: React.FC = () => {
               </div>
 
               {/* Tabs Navigation */}
-              <div className="mt-10 flex justify-center">
+              <div className="mt-10 flex flex-wrap gap-y-3 justify-center">
                 {types.map((type) => (
                   <button
                     key={type.value}

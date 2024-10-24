@@ -51,7 +51,7 @@ function ResourcesDesciplines() {
 
     return (
         <>
-            <div className='flex flex-wrap justify-center items-center gap-10'>
+            <div className='flex flex-wrap justify-center items-center gap-10 mt-10'>
                 <div>
                     <h2 className={`uppercase mb-4 font-bold !leading-tight text-blue-400 dark:text-white text-[30px]`}>
                         Capabilities and Discipline
