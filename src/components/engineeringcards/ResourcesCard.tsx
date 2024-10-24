@@ -1,8 +1,8 @@
 import React from 'react';
 
 type CapabilityCardProps = {
-    title: string;
-    points: string[];
+    title: string;      // The title of the card
+    points: string[];   // Array of points to display
 };
 
 const ResourcesCard: React.FC<CapabilityCardProps> = ({ title, points }) => {
