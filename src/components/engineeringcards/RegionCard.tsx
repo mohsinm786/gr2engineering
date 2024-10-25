@@ -1,47 +1,55 @@
+// CapabilityCards.tsx
 import React from 'react';
 
-type RegionCardProps = {
-    title: string;
-    regions: string[];    // Array for Regions
-    pocs: string[];       // Array for POCs
-    locations: string[];  // Array for Locations
+// Define the type for the table data columns
+type CapabilityCardProps = {
+  columnName: string;
+  points: string[];
 };
 
-const RegionCard: React.FC<RegionCardProps> = ({ title, regions, pocs, locations }) => {
-    return (
-        <div className="border-2 border-blue-400 bg-white dark:bg-bg-color-dark rounded-lg p-6 w-full transform transition-transform duration-300 ease-in-out hover:scale-105">
-            <h3 className="text-xl font-semibold dark:text-white mb-4">{title}</h3>
-            <div className="grid grid-cols-3 gap-4">
-                {/* Column 1: Regions */}
-                <div>
-                    <h4 className="font-semibold text-gray-700 dark:text-white">Region</h4>
-                    <ul className="list-disc ml-4">
-                        {regions.map((region, index) => (
-                            <li key={index} className="text-gray-700 dark:text-gray-300 mb-1">{region}</li>
-                        ))}
-                    </ul>
-                </div>
-                {/* Column 2: POCs */}
-                <div>
-                    <h4 className="font-semibold text-gray-700 dark:text-white">POC</h4>
-                    <ul className="list-disc ml-4">
-                        {pocs.map((poc, index) => (
-                            <li key={index} className="text-gray-700 dark:text-gray-300 mb-1">{poc}</li>
-                        ))}
-                    </ul>
-                </div>
-                {/* Column 3: Locations */}
-                <div>
-                    <h4 className="font-semibold text-gray-700 dark:text-white">Location</h4>
-                    <ul className="list-disc ml-4">
-                        {locations.map((location, index) => (
-                            <li key={index} className="text-gray-700 dark:text-gray-300 mb-1">{location}</li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    );
+const CapabilityCard: React.FC<CapabilityCardProps> = ({ columnName, points }) => {
+  return (
+    <div className="border-2 border-blue-400 bg-white dark:bg-bg-color-dark rounded-lg p-6 w-full lg:w-1/3 transform transition-transform duration-300 ease-in-out hover:scale-105">
+      <h2 className="text-xl font-semibold dark:text-white mb-4">{columnName}</h2>
+      <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
+        {points.map((point, index) => (
+          <li style={{textIndent:"-1.4em",paddingLeft:"1.2em"}} key={index}>{point}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
-export default RegionCard;
+const RegionCards = () => {
+  const tableData6 = {
+    columnName: ["Region", "POC", "Location"],
+    tableDataCol1: ["Global Projects", "North America", "Asia and Oceania", "Americas", "Europe", "Middle East", "MENA & CIS", "US Gov. & Infra."],
+    tableDataCol2: ["Romolo Raciti", "Pamir Alkus", "Kalim Shaikh", "Arturo Portilla", "Luca Gaetani", "Marilena Macrina", "Ted Akharman", "Charlie Peker"],
+    tableDataCol3: ["Houston", "Houston", "Mumbai", "Bogota", "Rome", "Abu Dhabi", "Istanbul", "Houston"],
+  };
+
+  return (
+    <section className="mt-10">
+  <div className="w-full"> {/* This div takes the full width of the parent */}
+    <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-x-6 w-full"> {/* Ensuring this also takes full width */}
+      {/* Render a CapabilityCard for each column */}
+      <CapabilityCard
+        columnName={tableData6.columnName[0]}
+        points={tableData6.tableDataCol1}
+      />
+      <CapabilityCard
+        columnName={tableData6.columnName[1]}
+        points={tableData6.tableDataCol2}
+      />
+      <CapabilityCard
+        columnName={tableData6.columnName[2]}
+        points={tableData6.tableDataCol3}
+      />
+    </div>
+  </div>
+</section>
+
+  );
+};
+
+export default RegionCards;

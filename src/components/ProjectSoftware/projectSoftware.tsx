@@ -20,7 +20,7 @@ function ProjectSoftware() {
         <div className='mt-10'>
             {data.map((table, idx) => (
                 <div key={idx}>
-                    <h2 className={`mb-4 font-bold !leading-tight text-green-900 dark:text-white mt-10 uppercase text-[23px]`}>
+                    <h2 className={`mb-4 font-bold !leading-tight text-Green dark:text-white mt-10 uppercase text-[23px]`}>
                         {table.columnName}
                     </h2>
 
