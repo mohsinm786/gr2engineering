@@ -24,17 +24,17 @@ function ProjectSoftware() {
                         {table.columnName}
                     </h2>
 
-                    {/* Added justify-center to center the cards */}
-                    <div className="flex flex-wrap justify-center w-full">
+                    {/* Adjusted to show 2 cards in a row */}
+                    <div className="flex flex-wrap justify-center ">
                         {/* First card with data from tableDataCol1 */}
-                        <div className="flex-1 basis-full md:basis-1/2">
+                        <div className="w-full md:w-1/2 flex justify-center">
                             <SoftwareCard
                                 title="" // Remove title by passing an empty string or null
                                 tools={table.tableDataCol1}
                             />
                         </div>
                         {/* Second card with data from tableDataCol2 */}
-                        <div className="flex-1 basis-full md:basis-1/2 h-[132px]">
+                        <div className="w-full md:w-1/2 flex justify-center">
                             <SoftwareCard
                                 title="" // Remove title by passing an empty string or null
                                 tools={table.tableDataCol2}
