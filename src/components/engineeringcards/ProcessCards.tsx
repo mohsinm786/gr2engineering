@@ -13,7 +13,7 @@ const ProcessCard: React.FC<ProcessCardProps> = ({ columnName, points }) => {
       <h2 className="text-xl font-semibold dark:text-white mb-4">{columnName}</h2>
       <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
         {points.map((point, index) => (
-          <li key={index}>{point}</li>
+          <li style={{textIndent:"-1.4em",paddingLeft:"1.2em"}} key={index}>{point}</li>
         ))}
       </ul>
     </div>

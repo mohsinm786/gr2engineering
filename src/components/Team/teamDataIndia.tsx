@@ -13,7 +13,7 @@ const teamDataIndia: TeamMember[] = [
     id: 7,
     title: "Mahesh Dere",
     jobRole: "Operations and Strategy Lead",
-    image: "/images/team/maheshdere.jpg",
+    image: "/images/team/maheshdere.jpeg",
     description1: "Mahesh has over 25 years of IT engineering and Delivery experience in software project execution . Mahesh has a proven track record of successfully delivering complex Global Programs in Healthcare Domain (100+ associates spread across multiple geographies). He has Spearheaded Digital Transformation/Innovation initiatives and has sound experience in Business Development, Pre Sales and leading large complex RFP’s. He is an astute organizer, motivator, leader, and team player with strong People Management skills.",
     description2: "Mahesh has a Bachelors degree in Electronics Engineering from Mumbai University.",
   },
