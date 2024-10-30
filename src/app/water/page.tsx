@@ -1,40 +1,67 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
+import React from 'react';
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image"; // Import Image for optimized images
+import Image from "next/image";
+import WaterCard from "@/components/WhatWeDo/WaterCard"; // Adjust path if needed
 
+// Metadata
 export const metadata: Metadata = {
   title: "Water - GR2 Engineering",
-  // description: "This is About Page for Startup Nextjs Template",
-  // other metadata
 };
 
+// Define Card Data
+const waterPageCardData = [
+  {
+    id: 1,
+    title: "Industry & Applications",
+    items: [
+      "Social Programs",
+      "Oil and Gas",
+      "Power",
+      "Residential Projects",
+      "Food & Beverage",
+      "Municipalities",
+      "Heavy Industries",
+      "Textile",
+    ],
+  },
+  {
+    id: 2,
+    title: "Onshore and Offshore Solutions",
+    items: [
+      "Filtration/Softening Systems",
+      "Ultrafiltration System",
+      "Reverse Osmosis",
+      "Nanofiltration Systems",
+      "Membrane Bio-Reactor Systems",
+      "Electro-deionization Systems",
+      "Ozonization Systems",
+      "Mineral Dosing Systems",
+      "Wastewater Treatment and Recycling Systems",
+      "Desalination",
+    ],
+  },
+];
+
+// WaterPage Component
 const WaterPage = () => {
   return (
     <>
       {/* Background Banner Section */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
         <Image
-          src="/images/banner/water.jpg" // Background image path
+          src="/images/banner/water.jpg"
           alt="Water Background"
-          layout="fill" // Cover the entire section
-          objectFit="cover" // Maintain aspect ratio
-          priority // Preload the image
+          layout="fill"
+          objectFit="cover"
+          priority
           className="absolute inset-0 w-full h-full"
         />
-        {/* Optional Dark Overlay */}
         <div className="absolute inset-0 bg-black opacity-40"></div>
-
-        {/* Breadcrumb Section */}
         <div className="absolute top-0 left-0 w-full z-10">
           <div className="container mx-auto pt-10 px-10">
-            <Breadcrumb
-              subpageName="What We Do"
-              pageName="Water"
-              description=""
-            />
+            <Breadcrumb subpageName="What We Do" pageName="Water" description="" />
           </div>
         </div>
       </div>
@@ -45,135 +72,52 @@ const WaterPage = () => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-10/12">
               <div>
-                <div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    As global concerns over water scarcity and quality continue to rise, our team is dedicated to providing comprehensive solutions to address these challenges head-on. With expertise in water treatment, distribution, and management, we offer a full spectrum of services tailored to meet the diverse needs of our clients. From designing state-of-the-art treatment facilities to implementing smart water management systems, GR2 Engineering is committed to engineering solutions that ensure access to clean, safe water for generations to come.
-                  </p>
-                </div>
+                <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  As global concerns over water scarcity and quality continue to rise, our team is dedicated to providing comprehensive solutions to address these challenges head-on. With expertise in water treatment, distribution, and management, we offer a full spectrum of services tailored to meet the diverse needs of our clients. From designing state-of-the-art treatment facilities to implementing smart water management systems, GR2 Engineering is committed to engineering solutions that ensure access to clean, safe water for generations to come.
+                </p>
+
+                {/* Title and Subtitle */}
                 <h2 className="uppercase mb-8 text-3xl text-blue-900 font-bold leading-tight dark:text-white sm:text-4xl sm:leading-tight">
                   Water Treatment Solutions
                 </h2>
-                <div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Aquamatch’s global experience in water desalination and treatment systems with GR2’s broad EPC experience enables GR2-Aquamatch to offer on-schedule and in-budget water treatment at industry standards, with world-class solutions for onshore and offshore facilities.
-                  </p>
-                </div>
-                <div className="flex flex-wrap lg:justify-between lg:w-10/12 mx-auto">
-                  {/* First Column */}
-                  <div className="w-full lg:w-1/2">
-                    <h3 className="uppercase font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
-                      Industry & Applications
-                    </h3>
-                    <ul className="mb-10 list-inside list-disc text-body-color">
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Social Programs
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Oil and Gas
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Power
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Residential Projects
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Food & Beverage
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Municipalities
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Heavy Industries
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Textile
-                      </li>
-                    </ul>
-                  </div>
-                  {/* Second Column for Solutions */}
-                  <div className="w-full lg:w-1/2">
-                    <h3 className="uppercase font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
-                      Onshore and Offshore Solutions
-                    </h3>
-                    <ul className="mb-10 list-inside list-disc text-body-color">
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                        Filtration/Softening Systems
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Ultrafiltration System
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Reverse Osmosis
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Nanofiltration Systems
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Membrane Bio-Reactor Systems
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Electro-deionization Systems
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Ozonization Systems
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Mineral Dosing Systems
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Wastewater Treatment and Recycling Systems
-                      </li>
-                      <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
-                        Desalination
-                      </li>
-                    </ul>
-                  </div>
+
+                <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  Aquamatch’s global experience in water desalination and treatment systems with GR2’s broad EPC experience enables GR2-Aquamatch to offer on-schedule and in-budget water treatment at industry standards, with world-class solutions for onshore and offshore facilities.
+                </p>
+
+                {/* Display Card Components and Images */}
+                <div className="flex flex-col lg:flex-row gap-6">
+                  {waterPageCardData.map((data, index) => (
+                    <div key={data.id} className="w-full lg:w-1/2 px-4">
+                      <WaterCard
+                        title={data.title}
+                        items={data.items}
+                        style={index === 0 ? { height: '335px' } : {}}
+                      />
+                      <img
+                        src={data.id === 1 ? "/images/addedImg/water1.png" : "/images/addedImg/water2.png"}
+                        alt={data.title}
+                        className="mt-6 h-[300px] w-full rounded-lg shadow-lg object-cover"
+                      />
+                    </div>
+                  ))}
                 </div>
 
-                {/* Row for Images */}
-                <div className="flex flex-wrap justify-center lg:w-10/12 mx-auto mt-10">
-                  {/* First Image */}
-                  <div className="w-full lg:w-6/12 px-4">
-                    <img
-                      src="/images/addedImg/water1.png"
-                      alt="Industry & Applications"
-                      className="mb-10 h-auto rounded-lg shadow-lg"
-                    />
-                  </div>
-                  {/* Second Image */}
-                  <div className="w-full lg:w-6/12 px-4">
-                    <img
-                      src="/images/addedImg/water2.png"
-                      alt="Onshore and Offshore Solutions"
-                      className="mb-10 h-auto rounded-lg shadow-lg"
-                    />
-                  </div>
-                </div>
-
-                <div className="w-full flex justify-center">
-                  <Link
-                    href="/signup"
-                    className="mb-10 inline-block shadow-btn hover:shadow-btn-hover rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90"
-                  >
+                <div className="w-full flex justify-center mt-10">
+                  <Link href="/signup" className="inline-block shadow-btn hover:shadow-btn-hover rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90">
                     Download the PDF
                   </Link>
                 </div>
-                <div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    GR2-Aquamatch is a global <b className="text-blue-500">industrial and residential water solution company</b> established in 1989.
-                  </p>
-                </div>
-                <div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    The company opened its Houston office with GR2 Engineering in 2019 as a leading provider of water treatment, desalination, produced water and wastewater reuse systems.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    GR2-Aquamatch is active in 34 countries and four continents with 18 offices in Europe, Asia, and the USA.
-                  </p>
-                </div>
+
+                <p className="mb-10 mt-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  GR2-Aquamatch is a global <b className="text-blue-500">industrial and residential water solution company</b> established in 1989.
+                </p>
+                <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  The company opened its Houston office with GR2 Engineering in 2019 as a leading provider of water treatment, desalination, produced water, and wastewater reuse systems.
+                </p>
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  GR2-Aquamatch is active in 34 countries and four continents with 18 offices in Europe, Asia, and the USA.
+                </p>
               </div>
             </div>
           </div>
