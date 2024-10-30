@@ -32,7 +32,7 @@ const TwoTitlesWithBulletsAndImages = () => {
       <div className="container">
         <div className="w-10/12 mx-auto border-b border-body-color/[.15] pb-16 dark:border-white/[.15]">
           <div className="flex flex-col items-start">
-            <h2 className={`mb-4 text-xl font-bold !leading-tight text-blue-900 dark:text-white sm:text-2xl md:text-[30px]`}>
+            <h2 className={`mb-4 text-xl font-bold !leading-tight text-SkyBlue dark:text-white sm:text-2xl md:text-[23px]`}>
               GR2 MODULAR PLANTS
             </h2>
             <h2 className={`mb-4 text-xl font-bold !leading-tight text-Green dark:text-white sm:text-2xl md:text-[30px]`}>
@@ -41,7 +41,7 @@ const TwoTitlesWithBulletsAndImages = () => {
 
             {/* Single Card for All Capabilities */}
             <div className="max-w-[570px] mb-12">
-              <div className="border-2 border-blue-400 bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105">
+              <div className="border-2 border-LightBlue bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105">
                 <ul className="list-disc list-inside text-lg text-gray-700 dark:text-gray-300">
                   {capabilities.map((capability, index) => (
                     <li

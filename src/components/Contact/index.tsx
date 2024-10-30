@@ -36,7 +36,7 @@ const Contact = () => {
                 className="mb-12 rounded-lg bg-blue-50 px-8 py-11 shadow-lg dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
                 data-wow-delay=".15s"
               >
-                <h2 className="mb-3 text-2xl font-bold text-blue-900 dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+                <h2 className="mb-3 text-2xl font-bold text-SkyBlue dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                   GET IN TOUCH WITH US
                 </h2>
                 <p className="mb-12 text-base font-medium text-body-color">
@@ -91,7 +91,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="w-full px-4">
-                      <button className="rounded-lg bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-SkyBlue dark:shadow-submit-dark">
+                      <button className="rounded-lg bg-SkyBlue px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-blue-800 dark:shadow-submit-dark">
                         Submit
                       </button>
                     </div>

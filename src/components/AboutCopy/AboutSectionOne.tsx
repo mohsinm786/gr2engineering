@@ -20,7 +20,7 @@ const AboutSectionOne = () => {
               <p className="mb-7 text-base !leading-relaxed text-body-color md:text-lg">
                 At GR2 Engineering, we believe that true success is measured not only by financial performance but also by our commitment to social and environmental responsibility. Guided by our core values of integrity, sustainability, and community, we are dedicated to making a positive impact on the world around us.
               </p>
-              <h2 className="uppercase mb-5 text-3xl text-blue-900 font-bold leading-tight dark:text-white sm:text-4xl sm:leading-tight">
+              <h2 className="uppercase mb-5 text-3xl text-SkyBlue font-bold leading-tight dark:text-white sm:text-4xl sm:leading-tight">
                 OUR COMMITMENT
               </h2>
               <p className="mb-5 text-base !leading-relaxed text-body-color md:text-lg">

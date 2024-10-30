@@ -51,7 +51,7 @@ const LeadershipPage = () => {
                     At GR2 Engineering, we believe that true success is measured not only by financial performance but also by our commitment to social and environmental responsibility. Guided by our core values of integrity, sustainability, and community, we are dedicated to making a positive impact on the world around us.
                   </p>
                 </div>
-                <h2 className="mb-8 text-xl text-center text-blue-900 font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
+                <h2 className="mb-8 text-xl text-center text-SkyBlue font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
                   MANAGEMENT TEAM
                 </h2>
                 <div>
@@ -60,11 +60,11 @@ const LeadershipPage = () => {
                   </p>
                 </div>
                 <Team teamData={teamData} />
-                <h2 className="mt-24 mb-8 text-center text-xl text-blue-900 font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
+                <h2 className="mt-24 mb-8 text-center text-xl text-SkyBlue font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
                   MANAGEMENT TEAM - INDIA
                 </h2>
                 <Team teamData={teamDataIndia} />
-                <h2 className="mt-24 mb-8 text-center text-xl text-blue-900 font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
+                <h2 className="mt-24 mb-8 text-center text-xl text-SkyBlue font-bold leading-tight dark:text-white sm:text-2xl sm:leading-tight">
                   MANAGEMENT TEAM - COLOMBIA
                 </h2>
                 <Team teamData={teamDataColumbia} />

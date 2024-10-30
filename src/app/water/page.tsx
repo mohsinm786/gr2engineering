@@ -77,7 +77,7 @@ const WaterPage = () => {
                 </p>
 
                 {/* Title and Subtitle */}
-                <h2 className="uppercase mb-8 text-3xl text-blue-900 font-bold leading-tight dark:text-white sm:text-4xl sm:leading-tight">
+                <h2 className="uppercase mb-8 text-3xl text-SkyBlue font-bold leading-tight dark:text-white sm:text-4xl sm:leading-tight">
                   Water Treatment Solutions
                 </h2>
 
@@ -104,13 +104,13 @@ const WaterPage = () => {
                 </div>
 
                 <div className="w-full flex justify-center mt-10">
-                  <Link href="/signup" className="inline-block shadow-btn hover:shadow-btn-hover rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90">
+                  <Link href="/signup" className="inline-block shadow-btn hover:shadow-btn-hover rounded-sm bg-SkyBlue px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90">
                     Download the PDF
                   </Link>
                 </div>
 
                 <p className="mb-10 mt-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  GR2-Aquamatch is a global <b className="text-blue-500">industrial and residential water solution company</b> established in 1989.
+                  GR2-Aquamatch is a global <b className="text-SkyBlue">industrial and residential water solution company</b> established in 1989.
                 </p>
                 <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                   The company opened its Houston office with GR2 Engineering in 2019 as a leading provider of water treatment, desalination, produced water, and wastewater reuse systems.

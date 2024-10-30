@@ -104,8 +104,8 @@ const Header = () => {
                           <Link
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${usePathName === menuItem.path
-                              ? "text-blue-900 dark:text-white"
-                              : "text-dark hover:text-blue-900 dark:text-white/70 dark:hover:text-white"
+                              ? "text-SkyBlue dark:text-white"
+                              : "text-dark hover:text-SkyBlue dark:text-white/70 dark:hover:text-white"
                               }`}
                           >
 
@@ -115,7 +115,7 @@ const Header = () => {
                           <>
                             <div
                               onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-SkyBlue dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             >
                               {menuItem.isLanguageMenu && (
                                 <Image

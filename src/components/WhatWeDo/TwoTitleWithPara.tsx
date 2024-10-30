@@ -8,7 +8,7 @@ const FullWidthSection = () => {
   // Bullet point list component
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-SkyBlue">
         <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
           <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
         </svg>
@@ -63,7 +63,7 @@ const FullWidthSection = () => {
                       href="https://www.linkedin.com/company/gr2-engineering"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:underline"
+                      className="text-SkyBlue hover:underline"
                     >
                       LinkedIn
                     </a>
@@ -77,7 +77,7 @@ const FullWidthSection = () => {
                     Share your ideas or contact us with any questions at&nbsp;
                     <a
                       href="mailto:info@gr2engineering.com"
-                      className="text-primary hover:underline"
+                      className="text-SkyBlue hover:underline"
                     >
                       info@gr2engineering.com
                     </a>
@@ -110,7 +110,7 @@ const FullWidthSection = () => {
             </label>
           </div>
           <div className="text-center">
-            <button className="bg-blue-800 text-white px-6 py-2 rounded-md">
+            <button className="bg-SkyBlue text-white px-6 py-2 rounded-md">
               SEARCH JOBS
             </button>
           </div>
@@ -157,7 +157,7 @@ const FullWidthSection = () => {
                   className="w-12 h-12 rounded-md object-cover" // Ensures the image fits well in the container
                 />
                 <div>
-                  <h3 className="text-blue-800 font-semibold">{job.title}</h3>
+                  <h3 className="text-SkyBlue font-semibold">{job.title}</h3>
                   <p className="text-gray-500">{job.company}</p>
                 </div>
               </div>

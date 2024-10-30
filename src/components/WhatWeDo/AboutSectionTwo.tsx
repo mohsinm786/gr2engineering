@@ -21,7 +21,7 @@ const AboutSectionTwo = () => {
                 
                 {/* Titles Outside the Image Container */}
                 <div className="w-full px-4 mb-6">
-                  <h2 className="mb-4 text-xl text-SkyBlue font-bold !leading-tight dark:text-white sm:text-2xl md:text-[30px]">
+                  <h2 className="mb-4 text-xl text-SkyBlue font-bold !leading-tight dark:text-white sm:text-2xl md:text-[23px]">
                     OUR TOOLS
                   </h2>
                   <h2 className="mb-4 text-xl text-Green font-bold !leading-tight dark:text-white sm:text-2xl md:text-[30px]">
@@ -47,7 +47,7 @@ const AboutSectionTwo = () => {
                   <div className="w-full lg:w-1/2 px-4 lg:pl-12">
                     <div className="max-w-[470px]">
                       {/* Single Card for all capabilities */}
-                      <div className="border-2 border-blue-400 bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105">
+                      <div className="border-2 border-LightBlue bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105">
                         <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 pl-5">
                           {/* Mapping the capabilities */}
                           {capabilities.map((capability, index) => (

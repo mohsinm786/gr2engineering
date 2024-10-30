@@ -50,7 +50,7 @@ const PastEvents = () => {
         <div className="w-10/12 mx-auto border-b">
           <div className="px-4">
             <div className="mb-9 pt-9">
-              <h3 className="mb-3 text-2xl font-bold text-blue-900 dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+              <h3 className="mb-3 text-2xl font-bold text-SkyBlue dark:text-white sm:text-3xl lg:text-2xl xl:text-2xl">
                 UPCOMING EVENTS
               </h3>
               <h3 className="mb-3 text-2xl font-bold text-Green dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
@@ -167,7 +167,7 @@ const PastEvents = () => {
           <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-[470px]">
               <div className="mb-9">
-                <h3 className="mb-3 text-2xl font-bold text-blue-900 dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+                <h3 className="mb-3 text-2xl font-bold text-SkyBlue dark:text-white sm:text-3xl lg:text-2xl xl:text-2xl">
                   PAST EVENTS
                 </h3>
                 <h3 className="mb-3 text-2xl font-bold text-Green dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">

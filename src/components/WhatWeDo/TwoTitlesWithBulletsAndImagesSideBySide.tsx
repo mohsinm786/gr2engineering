@@ -49,7 +49,7 @@ const TwoTitlesWithBulletsAndImagesSideBySide = () => {
 
               {/* Single Card for LNG, OLEFINS, LIGHT NGL AND CO2 */}
               <div className="flex-grow mb-6">
-                <div className="border-2 border-blue-400 bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105 h-full">
+                <div className="border-2 border-LightBlue bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105 h-full">
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
                     {lngOlefinsPoints.map((point, index) => (
                       <li key={index} className="mb-2">
@@ -85,7 +85,7 @@ const TwoTitlesWithBulletsAndImagesSideBySide = () => {
 
               {/* Single Card for Applications */}
               <div className="flex-grow mb-6">
-                <div className="border-2 border-blue-400 bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105 h-full">
+                <div className="border-2 border-LightBlue bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105 h-full">
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
                     {applicationsPoints.map((point, index) => (
                       <li key={index} className="mb-2">

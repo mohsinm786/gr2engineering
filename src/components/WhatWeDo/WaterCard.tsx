@@ -9,7 +9,7 @@ type WaterCardProps = {
 const WaterCard: React.FC<WaterCardProps> = ({ title, items, style }) => {
   return (
     <div 
-      className="border-2 border-blue-400 bg-white dark:bg-bg-color-dark rounded-lg p-6 w-full transform transition-transform duration-300 ease-in-out hover:scale-105"
+      className="border-2 border-LightBlue bg-white dark:bg-bg-color-dark rounded-lg p-6 w-full transform transition-transform duration-300 ease-in-out hover:scale-105"
       style={style} // Apply the style prop here
     >
       <h2 className="text-xl font-semibold dark:text-white mb-4">
