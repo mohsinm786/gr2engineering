@@ -29,14 +29,7 @@ const Breadcrumb = ({
                 <h1 className="mb-5 text-4xl font-bold text-white pb-5 px-5 dark:text-white sm:text-4xl">
                   {pageName.toUpperCase()}
                 </h1>
-                <p className="text-base font-medium leading-relaxed text-body-color">
-                  {description}
-                </p>
-              </div>
-            </div>
-            <div className="w-full px-4 md:w-4/12 lg:w-5/12">
-              <div className="text-end">
-                <ul className="flex items-center md:justify-end">
+                <ul className="flex items-center px-5">
                   <li className="flex items-center">
                     <Link
                       href="/"
@@ -50,6 +43,11 @@ const Breadcrumb = ({
                     {pageName.toUpperCase()}
                   </li>
                 </ul>
+              </div>
+            </div>
+            <div className="w-full px-4 md:w-4/12 lg:w-5/12">
+              <div className="text-end">
+                
               </div>
             </div>
           </div>
