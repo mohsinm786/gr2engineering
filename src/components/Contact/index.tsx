@@ -100,7 +100,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="w-full">
+            <div className="w-full p-8">
               {/* Use a grid layout for 3 cards in one row */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <CardComponent id={1} />

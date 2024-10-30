@@ -40,7 +40,7 @@ const Footer = () => {
     <>
       <footer>
         <div className="bg-footerColor pt-8">
-          <div className="w-10/12 mx-auto">
+          <div className="w-10/12 mx-auto mb-8">
             <div className="mx-4 flex flex-wrap">
               <div className="w-full px-4 sm:w-1/2 md:w-1/2 border-l border-white lg:w-4/12 xl:w-4/12">
                 <div>
@@ -51,7 +51,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/history"
-                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                       >
                         History
                       </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/our-experience"
-                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                       >
                         Our Experience
                       </Link>
@@ -67,7 +67,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/leadership"
-                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                       >
                         Leadership
                       </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/corporate-social-responsibility"
-                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                       >
                         Corporate Social Responsibility
                       </Link>
@@ -83,7 +83,7 @@ const Footer = () => {
                     {/* <li>
                       <Link
                         href="/iso-certifications"
-                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                       >
                         ISO Certifications
                       </Link>
@@ -101,7 +101,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/engineering"
-                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                       >
                         Engineering
                       </Link>
@@ -109,7 +109,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/modular"
-                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                       >
                         Modular
                       </Link>
@@ -117,7 +117,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/capital-project-services"
-                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                       >
                         Capital Project Services
                       </Link>
@@ -125,7 +125,7 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/water"
-                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                       >
                         Water
                       </Link>
@@ -136,17 +136,17 @@ const Footer = () => {
 
               <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 border-l border-white xl:w-4/12">
                 <div>
-                  <h2 className="mb-4 hover:text-primary text-xl font-bold text-white dark:text-white">
+                  <h2 className="mb-4 hover:text-LightBlue text-xl font-bold text-white dark:text-white">
                     <Link href="/news">
                       News
                     </Link>
                   </h2>
-                  <h2 className="mb-4 hover:text-primary text-xl font-bold text-white dark:text-white">
+                  <h2 className="mb-4 hover:text-LightBlue text-xl font-bold text-white dark:text-white">
                     <Link href="/careers">
-                      Careers
+                      Job Opportunities
                     </Link>
                   </h2>
-                  <h2 className="mb-4 hover:text-primary text-xl font-bold text-white dark:text-white">
+                  <h2 className="mb-4 hover:text-LightBlue text-xl font-bold text-white dark:text-white">
                     <Link href="/contact">
                     Get In Touch
                     </Link>
@@ -155,19 +155,19 @@ const Footer = () => {
                     <li>
                       <Link
                         href="/contact"
-                        className="mb-4 inline-block text-base text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                        className="mb-4 inline-block text-base text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                       >
                         Send Us A Message
                       </Link>
                     </li>
                   </ul> */}
                   <div className="flex items-center">
-                    <a
+                    {/* <a
                       href="/"
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mr-6 text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                      className="mr-6 text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                     >
                       <svg
                         width="18"
@@ -187,7 +187,7 @@ const Footer = () => {
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mr-6 text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                      className="mr-6 text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                     >
                       <svg
                         width="18"
@@ -209,7 +209,7 @@ const Footer = () => {
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mr-6 text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                      className="mr-6 text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                     >
                       <svg
                         width="18"
@@ -219,13 +219,13 @@ const Footer = () => {
                       >
                         <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 7.26191e-08 9.0627 0 9.0627 0C9.0627 0 3.54766 7.26191e-08 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191C9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z" />
                       </svg>
-                    </a>
+                    </a> */}
                     <a
                       href="https://www.linkedin.com/company/gr2-engineering/"
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white duration-300 hover:text-primary dark:text-white-dark dark:hover:text-primary"
+                      className="text-white duration-300 hover:text-LightBlue dark:text-white-dark dark:hover:text-LightBlue"
                     >
                       <svg
                         width="17"

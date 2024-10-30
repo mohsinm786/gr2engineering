@@ -32,7 +32,7 @@ const Hero = () => {
                   <Link
                     style={{ border: "3px solid #3B71CA" }}
                     href="/what-we-do"
-                    className="view_service_btn text-blue-600 hover:text-blue-800 font-semibold p-2"
+                    className="view_service_btn text-blue-900 hover:text-blue-900 font-semibold p-2"
                   >
                     View services <span><img src="" alt="" /></span>
                   </Link>
