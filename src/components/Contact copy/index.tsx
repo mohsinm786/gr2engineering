@@ -157,7 +157,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="w-full px-4">
-                      <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+                      <button className="rounded-sm bg-SkyBlue px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-blue-800 dark:shadow-submit-dark">
                         Submit
                       </button>
                     </div>

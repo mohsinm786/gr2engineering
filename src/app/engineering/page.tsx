@@ -73,7 +73,7 @@ const EngineeringPage: React.FC = () => {
                     onClick={() => handleTabClick(type.value)}
                     className={`px-4 py-2 mx-2 border-b-2 ${
                       selectedType === type.value
-                        ? "border-blue-500 text-white bg-blue-400 rounded"
+                        ? "border-blue-800 text-white bg-SkyBlue rounded"
                         : "border-transparent text-white bg-gray-400 rounded"
                     } hover:shadow-lg transition-colors duration-300`}
                   >

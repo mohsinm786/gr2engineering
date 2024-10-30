@@ -11,7 +11,7 @@ const SingleBlog = ({ member }: { member: TeamMember }) => {
         <Image style={{ objectFit: "cover" }} className="leader_img" src={image} alt={title} width={200} height={200} />
       </div>
       <div className="child_2 p-6 text-center">
-        <h1 className="text-2xl text-blue-900 font-bold transition duration-300 hover:text-blue-700 text-center truncate">{title}</h1>
+        <h1 className="text-2xl text-SkyBlue font-bold transition duration-300 hover:text-blue-800 text-center truncate">{title}</h1>
         <h5 className="text-lg font-medium text-gray-600 text-center truncate">{jobRole}</h5>
       </div>
     </div>

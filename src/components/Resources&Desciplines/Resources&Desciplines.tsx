@@ -59,7 +59,7 @@ function ResourcesDesciplines() {
 
                     {/* Single Card for All Capabilities */}
                     <div className="max-w-[470px] mb-12">
-                        <div className="border-2 border-blue-400 bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105">
+                        <div className="border-2 border-LightBlue bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105">
                             <ul className="list-disc list-inside text-lg text-gray-700 dark:text-gray-300">
                                 {resources.map((capability, index) => (
                                     <li
@@ -97,7 +97,7 @@ function ResourcesDesciplines() {
                                 ))} */}
 
                             <div className="max-w-[570px] mb-12">
-                                <div className="border-2 border-blue-400 bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105">
+                                <div className="border-2 border-LightBlue bg-white dark:bg-bg-color-dark rounded-lg p-6 transform transition-transform duration-300 ease-in-out hover:scale-105">
                                     <ul className="list-disc list-inside text-lg text-gray-700 dark:text-gray-300">
                                         {resources2.map((capability, index) => (
                                             <li

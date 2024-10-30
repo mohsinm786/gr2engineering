@@ -25,7 +25,7 @@ const CardComponent = ({ id }) => {
       <div className="p-6">
         {/* Location Details */}
         <div className="mb-3">
-          <h3 className="text-lg font-bold text-blue-900 hover:text-blue-700 transition-colors cursor-pointer">
+          <h3 className="text-lg font-bold text-SkyBlue hover:text-blue-800 transition-colors cursor-pointer">
             {addressInfo.city}, {addressInfo.country}
           </h3>
           <p className="text-sm text-gray-600 hover:text-SkyBlue transition-colors cursor-pointer">
@@ -52,7 +52,7 @@ const CardComponent = ({ id }) => {
         <div className="mb-4">
           <a
             href={addressInfo.mapLink}
-            className="text-blue-600 hover:text-blue-800 text-sm flex items-center"
+            className="text-Green hover:text-blue-800 text-sm flex items-center"
           >
             See on maps →
           </a>
