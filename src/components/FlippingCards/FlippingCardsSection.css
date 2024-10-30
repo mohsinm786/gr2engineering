@@ -51,7 +51,7 @@
 
 .card svg {
   width: 48px;
-  fill: #1e3a8a;
+  fill: #002171;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -72,7 +72,7 @@
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #1e3a8a;
+  background-color: #002171;
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);

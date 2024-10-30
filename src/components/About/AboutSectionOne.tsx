@@ -10,7 +10,7 @@ const checkIcon = (
 const AboutSectionOne = () => {
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-SkyBlue">
         {checkIcon}
       </span>
       {text}
@@ -32,7 +32,7 @@ const AboutSectionOne = () => {
               />
               <ul className="mb-10 list-disc list-inside text-gray-700 dark:text-gray-300">
                 {points?.map((point, index) => (
-                  <li key={index} className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-blue-400 hover:underline">
+                  <li key={index} className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-SkyBlue hover:underline">
                     {point}
                   </li>
                 ))}

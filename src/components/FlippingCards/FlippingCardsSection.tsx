@@ -55,10 +55,10 @@ const FlippingCardsSection = () => {
     <section className="py-10 md:py-10 lg:py-10">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold text-blue-900 dark:text-white sm:text-3xl">
+          <h2 className="text-2xl font-bold text-SkyBlue dark:text-white sm:text-3xl">
             OUR VALUES
           </h2>
-          <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-400 mt-4">
+          <h3 className="text-2xl font-semibold text-LightBlue dark:text-gray-400 mt-4">
             GR2 ENGINEERING’S UNIQUE APPROACH
           </h3>
         </div>
