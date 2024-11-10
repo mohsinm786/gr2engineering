@@ -13,7 +13,7 @@ const AboutSectionOne = () => {
   return (
     <section id="about" className="mt-10">
       <div className="container">
-        <div className="w-12/12 mx-auto border-b border-body-color/[.15] dark:border-white/[.15]">
+        <div className="w-12/12 mx-auto border-body-color/[.15] dark:border-white/[.15]">
           <div className="flex flex-wrap items-center justify-center">
             {/* Use w-10/12 for the text width */}
             <div className="w-10/12 px-4">

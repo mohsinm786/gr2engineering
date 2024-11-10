@@ -27,6 +27,16 @@ const PastEvents = () => {
     }
   }, []);
 
+  const List = ({ text }: { text: string }) => (
+    <div className="mb-2 flex items-start text-lg font-medium text-body-color">
+      <span className="mr-4 mt-1 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-SkyBlue shrink-0">
+        {/* Dot icon */}
+        <span className="h-[8px] w-[8px] rounded-full bg-SkyBlue inline-block" />
+      </span>
+      <p className="leading-relaxed">{text}</p>
+    </div>
+  );
+
   return (
     <section id="past-events" className="overflow-hidden">
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
@@ -177,13 +187,18 @@ const PastEvents = () => {
                   We’ve had the opportunity to attend various conferences in the past:
                 </p>
                 <br />
-                <ul className="list-disc pl-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  <li>Oil and Gas 2023 – Kuala Lumpur – September 2023</li>
-                  <li>Gastech Event – Singapore – September 2023</li>
-                  <li>GPA Midstream Convention – San Antonio, TX – September 2022</li>
-                  <li>Gastech Exhibition & Conference – Milan, Italy – 5-8 September 2022</li>
-                  <li>TradeWinds 2022 – Abu Dhabi, U.A.E. – March 2022</li>
-                </ul>
+
+
+
+                {/* <ul className="list-disc pl-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed"> */}
+                <div>
+                  <List text="Oil and Gas 2023 – Kuala Lumpur – September 2023"/>
+                  <List text="Gastech Event – Singapore – September 2023"/>
+                  <List text="GPA Midstream Convention – San Antonio, TX – September 2022"/>
+                  <List text="Gastech Exhibition & Conference – Milan, Italy – 5-8 September 2022"/>
+                  <List text="TradeWinds 2022 – Abu Dhabi, U.A.E. – March 2022"/>
+                  </div>
+                {/* </ul> */}
               </div>
             </div>
           </div>

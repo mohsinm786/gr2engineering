@@ -6,20 +6,19 @@ const AboutSectionOne = () => {
   const List = ({ text }: { text: string }) => (
     <p className="mb-5 flex items-start text-lg font-medium text-body-color">
       <span className="mr-4 mt-1 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-SkyBlue shrink-0">
-        {/* Check icon */}
-        <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
-          <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
-        </svg>
+        {/* Dot icon */}
+        <div className="h-[8px] w-[8px] rounded-full bg-SkyBlue" />
       </span>
       <span className="leading-relaxed">{text}</span>
     </p>
   );
   
+  
 
   return (
-    <section id="about" className="pt-5 mt-10 pb-7">
+    <section id="about" className="pt-5 mt-10 pb-2">
       <div className="container">
-        <div className="w-10/12 mx-auto border-b border-body-color/[.15] dark:border-white/[.15]">
+        <div className="w-10/12 mx-auto border-body-color/[.15] dark:border-white/[.15]">
           <div className="flex flex-wrap items-center">
             <p className="text-base !leading-relaxed text-body-color md:text-lg mb-10">At GR2 Engineering, our extensive experience sets us apart as a trusted leader in the energy, infrastructure, and chemicals industries. With decades of collective expertise and a proven track record of success, we have the knowledge, skills, and resources to tackle even the most complex challenges and deliver superior results for our clients.</p>
 

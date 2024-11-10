@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Image from "next/image"; // Importing Image for optimized images
 
 export const metadata: Metadata = {
-  title: "About Us - GR2 Engineering",
+  title: "Career - Electrical & Instrumentation Engineering",
 };
 
 const AboutPage = () => {
@@ -12,26 +12,20 @@ const AboutPage = () => {
       {/* Background Banner Section */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start">
         <Image
-          src="/images/banner/about-us.jpg" // Change this to the correct image path
-          alt="Capital Project Services Background"
-          layout="fill" // Ensures the image covers the container completely
-          objectFit="cover" // Ensures the image fits the container without distortion
-          priority // Preloads the image for better performance
+          src="/images/banner/JD.jpg" // Your banner image
+          alt="JD Banner"
+          layout="fill" // This ensures the image covers the container completely
+          objectFit="cover" // This makes sure the image covers the entire area without distortion
+          priority // This helps in preloading the image
           className="absolute inset-0 w-full h-full"
         />
-        {/* Optional Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-
-        {/* Breadcrumb Section */}
-        <div className="absolute top-0 left-0 w-full z-10">
-          <div className="container mx-auto pt-10 px-10">
-            <Breadcrumb
-              subpageName="HOME"
-              pageName="ABOUT US"
-              description=""
-            />
-          </div>
+        <div className="relative z-10 text-left px-10">
+          <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-5xl">
+          ELECTRICAL & INSTRUMENTATION ENGINEERING - TECHNICAL PROFESSIONAL
+          </h1>
         </div>
+        {/* Optional Overlay */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
       {/* Main Content Section */}

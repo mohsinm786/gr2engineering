@@ -51,7 +51,7 @@ const AboutPage = () => {
                 </div>
                 <div>
                     <Link href="/engineering">
-                        <button className="border-2 hover:bg-SkyBlue hover:text-white border-SkyBlue px-4 py-2">
+                        <button className="border-2 hover:bg-SkyBlue hover:text-white border-SkyBlue px-4 py-2 rounded-lg">
                         Learn More
                         </button>
                     </Link>
@@ -72,7 +72,7 @@ const AboutPage = () => {
                 </div>
                 <div>
                     <Link href="/modular">
-                        <button className="border-2 hover:bg-SkyBlue hover:text-white border-SkyBlue px-4 py-2">
+                        <button className="border-2 hover:bg-SkyBlue hover:text-white border-SkyBlue px-4 py-2 rounded-lg">
                         Learn More
                         </button>
                     </Link>
@@ -93,7 +93,7 @@ const AboutPage = () => {
                 </div>
                 <div>
                     <Link href="/capital-project-services">
-                        <button className="border-2 hover:bg-SkyBlue hover:text-white border-SkyBlue px-4 py-2">
+                        <button className="border-2 hover:bg-SkyBlue hover:text-white border-SkyBlue px-4 py-2 rounded-lg">
                         Learn More
                         </button>
                     </Link>
@@ -115,7 +115,7 @@ const AboutPage = () => {
                 </div>
                 <div>
                     <Link href="/water">
-                        <button className="border-2 hover:bg-SkyBlue hover:text-white border-SkyBlue px-4 py-2">
+                        <button className="border-2 hover:bg-SkyBlue hover:text-white border-SkyBlue px-4 py-2 rounded-lg">
                         Learn More
                         </button>
                     </Link>

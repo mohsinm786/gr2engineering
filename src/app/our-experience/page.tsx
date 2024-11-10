@@ -41,7 +41,7 @@ const AboutPage = () => {
       </div>
 
       {/* Content Section */}
-      <section className="pb-[120px] mt-10">
+      <section className="pb-[20px] mt-10">
         <div className="container">
           <AboutSectionOne />
         </div>

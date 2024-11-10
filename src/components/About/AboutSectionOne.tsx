@@ -1,23 +1,22 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+// import HomePageCard from "@/components/About/HomePageCard";
+import HomePageCard, { HomePageCardData } from '@/components/About/HomePageCard';
 
-const checkIcon = (
-  <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
-    <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
-  </svg>
-);
 
 const AboutSectionOne = () => {
-  const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-SkyBlue">
-        {checkIcon}
+  const List = ({ text }: { text: string }) => (
+    <div className="mb-5 flex items-start text-lg font-medium text-body-color">
+      <span className="mr-4 mt-1 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-SkyBlue shrink-0">
+        {/* Dot icon */}
+        <span className="h-[8px] w-[8px] rounded-full bg-SkyBlue inline-block" />
       </span>
-      {text}
-    </p>
+      <p className="leading-relaxed">{text}</p>
+    </div>
   );
 
-  const points = ["Advisory solutions in industry 4.0 digital innovation and transformation", "Strong global construction, fabrication and Professional Engineer network", "Expertise in local, state and federal standards and regulations", "Proven project capability from conceptual stage to completed project delivery", "Multiple well-established client relationships in oil and gas", "Process technology expertise in midstream gas processing"]
+
+  // const points = ["Advisory solutions in industry 4.0 digital innovation and transformation", "Strong global construction, fabrication and Professional Engineer network", "Expertise in local, state and federal standards and regulations", "Proven project capability from conceptual stage to completed project delivery", "Multiple well-established client relationships in oil and gas", "Process technology expertise in midstream gas processing"]
 
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
@@ -30,18 +29,16 @@ const AboutSectionOne = () => {
                 paragraph="GR2 Engineering provides smart, expedited solutions tailored around a wide variety of technical, geographic, legislative, and environmental challenges. We are a team of experts with global reach, wide experience and technical excellence to plan and execute complete life cycle projects irrespective of location, scale and complexity."
                 mb="44px"
               />
-              <ul className="mb-10 list-disc list-inside text-gray-700 dark:text-gray-300">
-                {points?.map((point, index) => (
-                  <li key={index} className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg hover:scale-110 hover:text-SkyBlue hover:underline">
-                    {point}
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <List text="Advisory solutions in industry 4.0 digital innovation and transformation" />
+                <List text="Strong global construction, fabrication and Professional Engineer network" />
+                <List text="Expertise in local, state and federal standards and regulations" />
+                <List text="Proven project capability from conceptual stage to completed project delivery" />
+                <List text="Multiple well-established client relationships in oil and gas" />
+                <List text="Process technology expertise in midstream gas processing" />
+              </div>
 
-              <div
-                className="max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
+              {/* <div className="max-w-[570px] lg:mb-0" data-wow-delay=".15s">
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-2/4 lg:w-full xl:w-2/4">
                     <List text="Operations support" />
@@ -55,7 +52,14 @@ const AboutSectionOne = () => {
                     <List text="Advanced Digital Technology" />
                   </div>
                 </div>
+              </div> */}
+
+              <div className="flex flex-wrap gap-6">
+                {HomePageCardData.map((data, index) => (
+                  <HomePageCard key={index} points={data.points} />
+                ))}
               </div>
+
             </div>
 
             <div className="w-full px-4 lg:w-1/4">
@@ -66,12 +70,6 @@ const AboutSectionOne = () => {
                   fill
                   className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
                 />
-                {/* <Image
-                  src="/images/about/about-image-dark.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                /> */}
               </div>
             </div>
           </div>
