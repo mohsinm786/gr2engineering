@@ -3,7 +3,51 @@
 import { useState } from "react";
 
 const Contact = () => {
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState<File | null>(null); // Proper type for the file
+  const [formData, setFormData] = useState({
+    clientName: "",
+    fieldLocation: "",
+    contactName: "",
+    contactEmail: "",
+    contactPhone: "",
+    gasField: "",
+    comments: "",
+  });
+
+  // Handle form data change
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
+  // Handle file selection
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedFile = e.target.files ? e.target.files[0] : null;
+    setFile(selectedFile); // Set file state
+  };
+
+  // Handle form submission
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // You can add logic here to submit the form (e.g., sending data to an API)
+    console.log("Form Data: ", formData);
+    console.log("Uploaded File: ", file);
+
+    // Reset form after submit
+    setFormData({
+      clientName: "",
+      fieldLocation: "",
+      contactName: "",
+      contactEmail: "",
+      contactPhone: "",
+      gasField: "",
+      comments: "",
+    });
+    setFile(null);
+  };
 
   return (
     <section id="contact" className="overflow-hidden py-10">
@@ -21,7 +65,7 @@ const Contact = () => {
                 <p className="mb-12 text-base font-medium text-body-color">
                   Please fill out the form below and we will get back to you as soon as possible.
                 </p>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="flex flex-wrap">
                     <div className="w-full px-4 md:w-1/2">
                       <div className="mb-8">
@@ -35,6 +79,8 @@ const Contact = () => {
                           type="text"
                           id="client-name"
                           placeholder="Enter client name"
+                          value={formData.clientName}
+                          onChange={handleChange}
                           className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                           required
                         />
@@ -52,6 +98,8 @@ const Contact = () => {
                           type="text"
                           id="field-location"
                           placeholder="Enter field/site location"
+                          value={formData.fieldLocation}
+                          onChange={handleChange}
                           className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                           required
                         />
@@ -69,8 +117,9 @@ const Contact = () => {
                           type="text"
                           id="contact-name"
                           placeholder="Enter contact name"
+                          value={formData.contactName}
+                          onChange={handleChange}
                           className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                          required
                         />
                       </div>
                     </div>
@@ -86,6 +135,8 @@ const Contact = () => {
                           type="email"
                           id="contact-email"
                           placeholder="Enter contact email"
+                          value={formData.contactEmail}
+                          onChange={handleChange}
                           className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                           required
                         />
@@ -103,6 +154,8 @@ const Contact = () => {
                           type="tel"
                           id="contact-phone"
                           placeholder="Enter contact phone"
+                          value={formData.contactPhone}
+                          onChange={handleChange}
                           className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                         />
                       </div>
@@ -119,6 +172,8 @@ const Contact = () => {
                           type="text"
                           id="gas-field"
                           placeholder="Enter gas field or source"
+                          value={formData.gasField}
+                          onChange={handleChange}
                           className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                         />
                       </div>
@@ -135,6 +190,8 @@ const Contact = () => {
                           id="comments"
                           rows={5}
                           placeholder="Enter your comments"
+                          value={formData.comments}
+                          onChange={handleChange}
                           className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                           required
                         ></textarea>
@@ -151,7 +208,7 @@ const Contact = () => {
                         <input
                           type="file"
                           id="file-upload"
-                          onChange={(e) => setFile(e.target.files[0])}
+                          onChange={handleFileChange}
                           className="w-full rounded-sm border border-gray-300 bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                         />
                       </div>

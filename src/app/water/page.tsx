@@ -104,7 +104,7 @@ const WaterPage = () => {
                 </div>
 
                 <div className="w-full flex justify-center mt-10">
-                  <Link href="/signup" className="inline-block shadow-btn hover:shadow-btn-hover rounded-sm bg-SkyBlue px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90">
+                  <Link href="#" className="inline-block shadow-btn hover:shadow-btn-hover rounded-sm bg-SkyBlue px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90">
                     Download the PDF
                   </Link>
                 </div>
