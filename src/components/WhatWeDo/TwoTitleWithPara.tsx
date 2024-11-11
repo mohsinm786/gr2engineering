@@ -131,51 +131,50 @@ const FullWidthSection = () => {
 
         {/* Job Listings */}
         <div className="mt-6">
-      {[
-        {
-          title: "Electrical & Instrumentation Engineering - Technical Professional",
-          company: "GR2 Engineering",
-          location: "Mumbai, Houston, Bogota",
-          date: "Posted 3 months ago",
-          link: "/components/JobDescriptions/Electrical", // Corrected the path to follow convention
-        },
-        {
-          title: "Mechanical Engineering - Technical Professional",
-          company: "GR2 Engineering",
-          location: "Mumbai, Houston, Bogota",
-          date: "Posted 3 months ago",
-          link: "/job/mechanical-engineering",
-        },
-      ].map((job, index, jobs) => (
-        <div
-          key={index}
-          className={`flex items-center justify-between py-8 ${
-            index !== jobs.length - 1 ? "border-b" : ""
-          }`}
-        >
-          <div className="flex items-start space-x-4">
-            <img
-              src="/images/logo/company.png" // Corrected slashes for URL consistency
-              alt="Company Logo"
-              className="w-12 h-12 rounded-md object-cover"
-            />
-            <div>
-              {/* Link the title to its respective job description */}
-              <Link href={job.link} passHref>
-                <h3 className="text-SkyBlue font-semibold cursor-pointer hover:underline">
-                  {job.title}
-                </h3>
-              </Link>
-              <p className="text-gray-500">{job.company}</p>
+          {[
+            {
+              title: "Electrical & Instrumentation Engineering - Technical Professional",
+              company: "GR2 Engineering",
+              location: "Mumbai, Houston, Bogota",
+              date: "Posted 3 months ago",
+              link: "/Electrical", // Corrected the path to follow convention
+            },
+            {
+              title: "Mechanical Engineering - Technical Professional",
+              company: "GR2 Engineering",
+              location: "Mumbai, Houston, Bogota",
+              date: "Posted 3 months ago",
+              link: "/job/mechanical-engineering",
+            },
+          ].map((job, index, jobs) => (
+            <div
+              key={index}
+              className={`flex items-center justify-between py-8 ${index !== jobs.length - 1 ? "border-b" : ""
+                }`}
+            >
+              <div className="flex items-start space-x-4">
+                <img
+                  src="/images/logo/company.png" // Corrected slashes for URL consistency
+                  alt="Company Logo"
+                  className="w-12 h-12 rounded-md object-cover"
+                />
+                <div>
+                  {/* Link the title to its respective job description */}
+                  <Link href={job.link} passHref>
+                    <h3 className="text-SkyBlue font-semibold cursor-pointer hover:underline">
+                      {job.title}
+                    </h3>
+                  </Link>
+                  <p className="text-gray-500">{job.company}</p>
+                </div>
+              </div>
+              <div className="text-right text-gray-500">
+                <p>{job.location}</p>
+                <p>{job.date}</p>
+              </div>
             </div>
-          </div>
-          <div className="text-right text-gray-500">
-            <p>{job.location}</p>
-            <p>{job.date}</p>
-          </div>
+          ))}
         </div>
-      ))}
-    </div>
 
         {/* RSS Link */}
         {/* <div className="text-right mt-4">

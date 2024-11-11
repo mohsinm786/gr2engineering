@@ -36,7 +36,7 @@ const AboutPage = () => {
               <div>
                 <div>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Founded by a team of seasoned engineers, GR2 Engineering has established itself as a specialist in small and mid-sized capital projects across various sectors. Our focus areas include petrochemicals, oil and gas, energy, chemicals, water, renewables, and sustainable global infrastructure development initiatives. What sets us apart is our unwavering commitment to positive environmental and social impact. 
+                  GR2 is an engineering consulting firm with global offices. We are committed to delivering innovative solutions across various industries. As an Electrical & Instrumentation Engineer, you’ll play a crucial role in shaping our projects and ensuring excellence in process design and implementation.
                   </p>
                 </div>
               </div>
