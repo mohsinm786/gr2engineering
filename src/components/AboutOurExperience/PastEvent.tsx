@@ -29,7 +29,7 @@ const PastEvents = () => {
 
   const List = ({ text }: { text: string }) => (
     <div className="mb-2 flex items-start text-lg font-medium text-body-color">
-      <span className="mr-4 mt-1 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-SkyBlue shrink-0">
+      <span className="mr-4 mt-1 flex h-[30px] w-[30px] items-center justify-center rounded-md text-SkyBlue shrink-0">
         {/* Dot icon */}
         <span className="h-[8px] w-[8px] rounded-full bg-SkyBlue inline-block" />
       </span>

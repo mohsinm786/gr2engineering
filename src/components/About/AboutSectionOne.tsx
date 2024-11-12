@@ -6,14 +6,15 @@ import HomePageCard, { HomePageCardData } from '@/components/About/HomePageCard'
 
 const AboutSectionOne = () => {
   const List = ({ text }: { text: string }) => (
-    <div className="mb-5 flex items-start text-lg font-medium text-body-color">
-      <span className="mr-4 mt-1 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-SkyBlue shrink-0">
+    <div className="mb-5 flex items-center text-lg font-medium text-body-color">
+      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md text-SkyBlue shrink-0">
         {/* Dot icon */}
         <span className="h-[8px] w-[8px] rounded-full bg-SkyBlue inline-block" />
       </span>
       <p className="leading-relaxed">{text}</p>
     </div>
   );
+  
 
 
   // const points = ["Advisory solutions in industry 4.0 digital innovation and transformation", "Strong global construction, fabrication and Professional Engineer network", "Expertise in local, state and federal standards and regulations", "Proven project capability from conceptual stage to completed project delivery", "Multiple well-established client relationships in oil and gas", "Process technology expertise in midstream gas processing"]

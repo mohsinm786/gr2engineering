@@ -4,19 +4,20 @@ import React from "react";
 import Image from "next/image"; // Import Image from Next.js
 import SectionTitle from "../Common/SectionTitle";
 import Link from 'next/link';
+import FancyButton from '@/components/Button/FancyButton';
 
 const FullWidthSection = () => {
   // Bullet point list component
-  const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-SkyBlue">
-        <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
-          <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
-        </svg>
+  const List = ({ text }: { text: React.ReactNode }) => (
+    <div className="mb-2 flex items-center text-lg font-medium text-body-color">
+      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md text-SkyBlue shrink-0">
+        {/* Dot icon */}
+        <span className="h-[8px] w-[8px] rounded-full bg-SkyBlue inline-block" />
       </span>
-      {text}
-    </p>
+      <p className="leading-relaxed">{text}</p>
+    </div>
   );
+  
 
   return (
     <section className="overflow-hidden">
@@ -111,9 +112,10 @@ const FullWidthSection = () => {
             </label>
           </div>
           <div className="text-center">
-            <button className="bg-SkyBlue text-white px-6 py-2 rounded-md">
+            {/* <button className="bg-SkyBlue text-white px-6 py-2 rounded-md">
               SEARCH JOBS
-            </button>
+            </button> */}
+            <FancyButton text="SEARCH JOBS" path="#" />
           </div>
         </div>
 
@@ -131,51 +133,50 @@ const FullWidthSection = () => {
 
         {/* Job Listings */}
         <div className="mt-6">
-      {[
-        {
-          title: "Electrical & Instrumentation Engineering - Technical Professional",
-          company: "GR2 Engineering",
-          location: "Mumbai, Houston, Bogota",
-          date: "Posted 3 months ago",
-          link: "/components/JobDescriptions/Electrical", // Corrected the path to follow convention
-        },
-        {
-          title: "Mechanical Engineering - Technical Professional",
-          company: "GR2 Engineering",
-          location: "Mumbai, Houston, Bogota",
-          date: "Posted 3 months ago",
-          link: "/job/mechanical-engineering",
-        },
-      ].map((job, index, jobs) => (
-        <div
-          key={index}
-          className={`flex items-center justify-between py-8 ${
-            index !== jobs.length - 1 ? "border-b" : ""
-          }`}
-        >
-          <div className="flex items-start space-x-4">
-            <img
-              src="/images/logo/company.png" // Corrected slashes for URL consistency
-              alt="Company Logo"
-              className="w-12 h-12 rounded-md object-cover"
-            />
-            <div>
-              {/* Link the title to its respective job description */}
-              <Link href={job.link} passHref>
-                <h3 className="text-SkyBlue font-semibold cursor-pointer hover:underline">
-                  {job.title}
-                </h3>
-              </Link>
-              <p className="text-gray-500">{job.company}</p>
+          {[
+            {
+              title: "Electrical & Instrumentation Engineering - Technical Professional",
+              company: "GR2 Engineering",
+              location: "Mumbai, Houston, Bogota",
+              date: "Posted 3 months ago",
+              link: "/components/JobDescriptions/Electrical", // Corrected the path to follow convention
+            },
+            {
+              title: "Mechanical Engineering - Technical Professional",
+              company: "GR2 Engineering",
+              location: "Mumbai, Houston, Bogota",
+              date: "Posted 3 months ago",
+              link: "/job/mechanical-engineering",
+            },
+          ].map((job, index, jobs) => (
+            <div
+              key={index}
+              className={`flex items-center justify-between py-8 ${index !== jobs.length - 1 ? "border-b" : ""
+                }`}
+            >
+              <div className="flex items-start space-x-4">
+                <img
+                  src="/images/logo/company.png" // Corrected slashes for URL consistency
+                  alt="Company Logo"
+                  className="w-12 h-12 rounded-md object-cover"
+                />
+                <div>
+                  {/* Link the title to its respective job description */}
+                  <Link href={job.link} passHref>
+                    <h3 className="text-SkyBlue font-semibold cursor-pointer hover:underline">
+                      {job.title}
+                    </h3>
+                  </Link>
+                  <p className="text-gray-500">{job.company}</p>
+                </div>
+              </div>
+              <div className="text-right text-gray-500">
+                <p>{job.location}</p>
+                <p>{job.date}</p>
+              </div>
             </div>
-          </div>
-          <div className="text-right text-gray-500">
-            <p>{job.location}</p>
-            <p>{job.date}</p>
-          </div>
+          ))}
         </div>
-      ))}
-    </div>
 
         {/* RSS Link */}
         {/* <div className="text-right mt-4">

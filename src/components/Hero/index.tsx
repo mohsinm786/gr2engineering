@@ -1,6 +1,8 @@
+'use client';
 import React from "react";
 import Link from "next/link";
 import "./index.css"
+import FancyButton from '@/components/Button/FancyButton';
 
 const Hero = () => {
   return (
@@ -29,13 +31,14 @@ const Hero = () => {
                   Project and technology services in energy and infrastructure from the industry experts.
                 </p>
                 <div className="flex items-start justify-start space-y-4 sm:space-x-4 sm:space-y-0 text-left">
-                  <Link
+                  {/* <Link
                     style={{ border: "3px solid #002171" }}
                     href="/what-we-do"
                     className="view_service_btn text-SkyBlue hover:text-Blue-800 font-semibold p-2 rounded-lg"
                   >
                     View services <span><img src="" alt="" /></span>
-                  </Link>
+                  </Link> */}
+                  <FancyButton text="View Services" path="/what-we-do" />
                 </div>
               </div>
 

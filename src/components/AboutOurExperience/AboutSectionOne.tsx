@@ -4,14 +4,15 @@ import SectionTitle from "../Common/SectionTitle";
 const AboutSectionOne = () => {
   // Define a List component for bullet points
   const List = ({ text }: { text: string }) => (
-    <p className="mb-5 flex items-start text-lg font-medium text-body-color">
-      <span className="mr-4 mt-1 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-SkyBlue shrink-0">
+    <div className="mb-5 flex items-start text-lg font-medium text-body-color">
+      <span className="mr-4 mt-1 flex h-[30px] w-[30px] items-center justify-center rounded-md text-SkyBlue shrink-0">
         {/* Dot icon */}
         <div className="h-[8px] w-[8px] rounded-full bg-SkyBlue" />
       </span>
       <span className="leading-relaxed">{text}</span>
-    </p>
+    </div>
   );
+  
   
   
 

@@ -2,6 +2,7 @@ import Image from "next/image"; // Import the Next.js Image component
 import Address from "./Address";
 import MapComponent from "./MapComponent";
 import CardComponent from "../AddressCard/intex";
+import FancyButton from '@/components/Button/FancyButton';
 
 const Contact = () => {
   return (
@@ -91,9 +92,10 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="w-full px-4">
-                      <button className="rounded-lg bg-SkyBlue px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-blue-800 dark:shadow-submit-dark">
+                      {/* <button className="rounded-lg bg-SkyBlue px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-blue-800 dark:shadow-submit-dark">
                         Submit
-                      </button>
+                      </button> */}
+                      <FancyButton text="Submit" path="#" />
                     </div>
                   </div>
                 </form>
