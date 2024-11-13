@@ -8,12 +8,15 @@ type CapabilityCardProps = {
 
 const CapabilityCard: React.FC<CapabilityCardProps> = ({ rows, columnNames }) => {
   return (
-    <div className="border-2 border-LightBlue bg-white dark:bg-bg-color-dark rounded-lg p-6 w-full">
+    <div className="bg-white dark:bg-bg-color-dark rounded-lg w-[700px]">
       <div className="grid grid-cols-1 gap-2">
         {/* Table Header */}
-        <div className="grid grid-cols-3 gap-4 font-bold text-xl dark:text-white py-2">
+        <div className="grid grid-cols-3 gap-4 font-bold text-xl dark:text-white">
           {columnNames.map((name, index) => (
-            <div key={index} className="text-gray-900 dark:text-gray-100">
+            <div
+              key={index}
+              className="text-gray-900 dark:text-gray-100 flex items-center justify-center"
+            >
               {name}
             </div>
           ))}
@@ -24,10 +27,15 @@ const CapabilityCard: React.FC<CapabilityCardProps> = ({ rows, columnNames }) =>
             key={rowIndex}
             className={`grid grid-cols-3 gap-4 text-black dark:text-gray-300 ${
               rowIndex % 2 === 0 ? "bg-Blue dark:bg-gray-800" : "bg-LightBlue dark:bg-gray-700"
-            } transition-transform duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg`}
+            } transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:shadow-2xl`}
           >
             {columnNames.map((col, colIndex) => (
-              <div key={colIndex}>{row[col]}</div>
+              <div
+                key={colIndex}
+                className="flex items-center justify-center"
+              >
+                {row[col]}
+              </div>
             ))}
           </div>
         ))}
