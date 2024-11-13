@@ -3,6 +3,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import FeaturesCopy from "@/components/FeaturesCopy";
 import { Metadata } from "next";
 import Image from "next/image";
+import CsrEvents from "@/components/AboutOurExperience/CsrEvents";
 
 export const metadata: Metadata = {
   title: "Corporate Social Responsibility - GR2 Engineering",
@@ -40,6 +41,7 @@ const AboutPage = () => {
       <AboutSectionOne />
       {/* Optionally include other sections like AboutSectionTwo if needed */}
       <FeaturesCopy />
+      <CsrEvents/>
     </>
   );  
 };

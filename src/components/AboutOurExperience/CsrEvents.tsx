@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Event.css';
 
-const PastEvents = () => {
+const CsrEvents = () => {
   const marqueeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -39,51 +39,7 @@ const PastEvents = () => {
 
   return (
     <section id="past-events" className="overflow-hidden">
-      <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
-        <Image
-          src="/images/banner/Event-page-banner.jpg"
-          alt="Past Events Banner"
-          layout="fill"
-          objectFit="cover"
-          priority
-          className="absolute inset-0 w-full h-full"
-        />
-        <div className="relative z-10 text-left">
-          <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-5xl">
-            NEWS
-          </h1>
-        </div>
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-      </div>
-
       <div className="container">
-        <div className="w-10/12 mx-auto border-b">
-          <div className="px-4">
-            <div className="mb-9 pt-9">
-              <h3 className="mb-3 text-2xl font-bold text-SkyBlue dark:text-white sm:text-3xl lg:text-2xl xl:text-2xl">
-                UPCOMING EVENTS
-              </h3>
-              <h3 className="mb-3 text-2xl font-bold text-Green dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                MEET US AT THESE UPCOMING EVENTS
-              </h3>
-              <div className="marquee-container" ref={marqueeRef}>
-                <div className="marquee-content mt-4 relative mx-auto mb-12 max-w-[500px] text-center lg:m-0" data-wow-delay=".15s">
-                  <Image
-                    src="/images/addedImg/adipeclogo.png"
-                    alt="Upcoming Event"
-                    height={300}
-                    width={320}
-                    className="drop-shadow-three dark:hidden dark:drop-shadow-none object-contain"
-                  />
-                  <p className="mt-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                    4-7 November 2024, Abu Dhabi, UAE
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="w-10/12 mx-auto flex flex-wrap items-center mt-12">
           <div className="w-full px-4 lg:w-1/2">
             <Swiper
@@ -102,7 +58,7 @@ const PastEvents = () => {
             >
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event.jpeg"
+                  src="/images/CSRImg/1.jpeg"
                   alt="Past Event 1"
                   fill
                   className="drop-shadow-three object-contain"
@@ -110,7 +66,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event1.jpg"
+                  src="/images/CSRImg/2.jpeg"
                   alt="Past Event 2"
                   fill
                   className="drop-shadow-three object-contain"
@@ -118,7 +74,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event2.jpeg"
+                  src="/images/CSRImg/3.jpeg"
                   alt="Past Event 3"
                   fill
                   className="drop-shadow-three object-contain"
@@ -126,7 +82,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event3.jpeg"
+                  src="/images/CSRImg/4.jpeg"
                   alt="Past Event 4"
                   fill
                   className="drop-shadow-three object-contain"
@@ -134,7 +90,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event4.jpeg"
+                  src="/images/CSRImg/5.jpeg"
                   alt="Past Event 5"
                   fill
                   className="drop-shadow-three object-contain"
@@ -142,7 +98,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event5.jpeg"
+                  src="/images/CSRImg/6.jpeg"
                   alt="Past Event 6"
                   fill
                   className="drop-shadow-three object-contain"
@@ -150,7 +106,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event6.jpeg"
+                  src="/images/CSRImg/7.jpeg"
                   alt="Past Event 7"
                   fill
                   className="drop-shadow-three object-contain"
@@ -158,7 +114,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event7.jpeg"
+                  src="/images/CSRImg/8.jpeg"
                   alt="Past Event 8"
                   fill
                   className="drop-shadow-three object-contain"
@@ -166,7 +122,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event8.jpg"
+                  src="/images/CSRImg/9.jpeg"
                   alt="Past Event 9"
                   fill
                   className="drop-shadow-three object-contain"
@@ -174,7 +130,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event9.jpeg"
+                  src="/images/CSRImg/10.jpeg"
                   alt="Past Event 10"
                   fill
                   className="drop-shadow-three object-contain"
@@ -182,7 +138,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event10.jpeg"
+                  src="/images/CSRImg/11.jpeg"
                   alt="Past Event 11"
                   fill
                   className="drop-shadow-three object-contain"
@@ -190,7 +146,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event11.jpeg"
+                  src="/images/CSRImg/12.jpeg"
                   alt="Past Event 12"
                   fill
                   className="drop-shadow-three object-contain"
@@ -198,7 +154,7 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event12.jpeg"
+                  src="/images/CSRImg/13.jpeg"
                   alt="Past Event 13"
                   fill
                   className="drop-shadow-three object-contain"
@@ -206,8 +162,16 @@ const PastEvents = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/addedImg/event13.jpeg"
+                  src="/images/CSRImg/14.jpeg"
                   alt="Past Event 14"
+                  fill
+                  className="drop-shadow-three object-contain"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/CSRImg/15.jpeg"
+                  alt="Past Event 15"
                   fill
                   className="drop-shadow-three object-contain"
                 />
@@ -218,25 +182,25 @@ const PastEvents = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-3 text-2xl font-bold text-SkyBlue dark:text-white sm:text-3xl lg:text-2xl xl:text-2xl">
-                  PAST EVENTS
+                  PAST EVENTS CSR
                 </h3>
-                <h3 className="mb-3 text-2xl font-bold text-Green dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+                {/* <h3 className="mb-3 text-2xl font-bold text-Green dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                   OUR GLOBAL PRESENCE
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                </h3> */}
+                {/* <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                   We’ve had the opportunity to attend various conferences in the past:
-                </p>
+                </p> */}
                 <br />
 
 
 
                 {/* <ul className="list-disc pl-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed"> */}
                 <div>
-                  <List text="Oil and Gas 2023 – Kuala Lumpur – September 2023"/>
-                  <List text="Gastech Event – Singapore – September 2023"/>
+                  <List text="Event held Near Sai Baba Temple, Ramchandra Nagar, Thane - 400605"/>
+                  {/* <List text="Gastech Event – Singapore – September 2023"/>
                   <List text="GPA Midstream Convention – San Antonio, TX – September 2022"/>
                   <List text="Gastech Exhibition & Conference – Milan, Italy – 5-8 September 2022"/>
-                  <List text="TradeWinds 2022 – Abu Dhabi, U.A.E. – March 2022"/>
+                  <List text="TradeWinds 2022 – Abu Dhabi, U.A.E. – March 2022"/> */}
                   </div>
                 {/* </ul> */}
               </div>
@@ -248,4 +212,4 @@ const PastEvents = () => {
   );
 };
 
-export default PastEvents;
+export default CsrEvents;
