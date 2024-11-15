@@ -182,26 +182,26 @@ const CsrEvents = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-3 text-2xl font-bold text-SkyBlue dark:text-white sm:text-3xl lg:text-2xl xl:text-2xl">
-                  PAST EVENTS CSR
+                  CSR EVENTS
                 </h3>
                 {/* <h3 className="mb-3 text-2xl font-bold text-Green dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                   OUR GLOBAL PRESENCE
                 </h3> */}
-                {/* <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  We’ve had the opportunity to attend various conferences in the past:
-                </p> */}
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  CSR Event to Improve Nutrition Awareness and  Distribute  Nutritional Supplement  to under privileged children below 14 years
+                </p>
                 <br />
 
 
 
                 {/* <ul className="list-disc pl-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed"> */}
                 <div>
-                  <List text="Event held Near Sai Baba Temple, Ramchandra Nagar, Thane - 400605"/>
+                  <List text="Event held Near Sai Baba Temple, Ramchandra Nagar, Thane - 400605" />
                   {/* <List text="Gastech Event – Singapore – September 2023"/>
                   <List text="GPA Midstream Convention – San Antonio, TX – September 2022"/>
                   <List text="Gastech Exhibition & Conference – Milan, Italy – 5-8 September 2022"/>
                   <List text="TradeWinds 2022 – Abu Dhabi, U.A.E. – March 2022"/> */}
-                  </div>
+                </div>
                 {/* </ul> */}
               </div>
             </div>
