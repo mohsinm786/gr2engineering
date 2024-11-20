@@ -1,21 +1,62 @@
-import Image from "next/image"; // Import the Next.js Image component
+"use client"; // Ensure this file is treated as a client component
+
+import { useState } from "react";
+import Image from "next/image";
 import Address from "./Address";
 import MapComponent from "./MapComponent";
 import CardComponent from "../AddressCard/intex";
-import FancyButton from '@/components/Button/FancyButton';
+import FancyButton from "@/components/Button/FancyButton";
 
 const Contact = () => {
+  const [submissionStatus, setSubmissionStatus] = useState<string | null>(null); // To manage submission status
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const formData = {
+      name: (e.target as any).name.value,
+      email: (e.target as any).email.value,
+      message: (e.target as any).message.value,
+    };
+
+    try {
+      const response = await fetch("http://localhost:5241/Contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmissionStatus("Message sent successfully!"); // Show success message
+        (e.target as any).reset(); // Clear the form after submission
+      } else {
+        setSubmissionStatus("Failed to send your message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      setSubmissionStatus("An error occurred. Please try again later.");
+    }
+  };
+
   return (
     <section id="contact" className="overflow-hidden">
+      {/* Success or Failure Message */}
+      {submissionStatus && (
+        <div className="bg-green-500 text-white p-4 text-center">
+          {submissionStatus}
+        </div>
+      )}
+
       {/* Full-width Banner */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
-        {/* Use Next.js Image component for better performance */}
         <Image
           src="/images/banner/contact-us-banner.jpg"
           alt="Contact Us Banner"
-          layout="fill" // This ensures the image covers the container completely
-          objectFit="cover" // This makes sure the image covers the entire area without distortion
-          priority // This helps in preloading the image, avoiding flicker
+          layout="fill"
+          objectFit="cover"
+          priority
           className="absolute inset-0 w-full h-full"
         />
         <div className="relative z-10 text-left">
@@ -23,27 +64,23 @@ const Contact = () => {
             CONTACT US
           </h1>
         </div>
-        {/* Optional Overlay */}
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
-      {/* Existing Contact Form Section */}
+      {/* Contact Form Section */}
       <div className="container">
         <div className="w-10/12 mx-auto">
           <div className="-mx-4 flex flex-wrap pt-10">
             {/* Left: Contact Form */}
             <div className="w-full px-4">
-              <div
-                className="mb-12 rounded-lg bg-blue-50 px-8 py-11 shadow-lg dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
-                data-wow-delay=".15s"
-              >
+              <div className="mb-12 rounded-lg bg-blue-50 px-8 py-11 shadow-lg dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
                 <h2 className="mb-3 text-2xl font-bold text-SkyBlue dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                   GET IN TOUCH WITH US
                 </h2>
                 <p className="mb-12 text-base font-medium text-body-color">
                   You can easily reach us by filling out this form — we will get in touch with you shortly.
                 </p>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="-mx-4 flex flex-wrap">
                     <div className="w-full px-4 md:w-1/2">
                       <div className="mb-8">
@@ -55,7 +92,9 @@ const Contact = () => {
                         </label>
                         <input
                           type="text"
+                          name="name"
                           placeholder="Enter your name"
+                          required
                           className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                         />
                       </div>
@@ -70,7 +109,9 @@ const Contact = () => {
                         </label>
                         <input
                           type="email"
+                          name="email"
                           placeholder="Enter your email"
+                          required
                           className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                         />
                       </div>
@@ -87,23 +128,21 @@ const Contact = () => {
                           name="message"
                           rows={5}
                           placeholder="Enter your Message"
+                          required
                           className="border-stroke w-full resize-none rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                         ></textarea>
                       </div>
                     </div>
                     <div className="w-full px-4">
-                      {/* <button className="rounded-lg bg-SkyBlue px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-blue-800 dark:shadow-submit-dark">
-                        Submit
-                      </button> */}
-                      <FancyButton text="Submit" path="#" />
+                      <FancyButton text="Submit" path="#" type="submit" />
                     </div>
                   </div>
                 </form>
               </div>
             </div>
 
+            {/* Right: Address Cards */}
             <div className="w-full p-8">
-              {/* Use a grid layout for 3 cards in one row */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <CardComponent id={1} />
                 <CardComponent id={2} />

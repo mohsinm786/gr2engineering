@@ -54,9 +54,22 @@ const StyledButton = styled.div`
 interface FancyButtonProps {
   text: string;
   path: string;
+  type?: "button" | "submit" | "reset"; // Add type as an optional prop
 }
 
-const FancyButton: React.FC<FancyButtonProps> = ({ text, path }) => {
+const FancyButton: React.FC<FancyButtonProps> = ({ text, path, type = "button" }) => {
+  // If type is submit and path is "#" (indicating it's a form submission button), use a button element instead of Link
+  if (type === "submit") {
+    return (
+      <button type="submit">
+        <StyledButton>
+          <span>{text}</span>
+        </StyledButton>
+      </button>
+    );
+  }
+
+  // If path is provided, return a Link component (for navigation)
   return (
     <Link href={path}>
       <StyledButton>
