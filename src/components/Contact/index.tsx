@@ -9,45 +9,52 @@ import FancyButton from "@/components/Button/FancyButton";
 
 const Contact = () => {
   const [submissionStatus, setSubmissionStatus] = useState<string | null>(null); // To manage submission status
+  const [statusType, setStatusType] = useState<"success" | "error" | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formData = {
-      name: (e.target as any).name.value,
-      email: (e.target as any).email.value,
-      message: (e.target as any).message.value,
-    };
+    // const formData = {
+    //   name: (e.target as any).name.value,
+    //   email: (e.target as any).email.value,
+    //   message: (e.target as any).message.value,
+    // };
+
+    const formData = new FormData();
+    formData.append("name", (e.target as any).name.value);
+    formData.append("email", (e.target as any).email.value);
+    formData.append("message", (e.target as any).message.value);
 
     try {
       const response = await fetch("http://localhost:5241/Contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+
+        body: formData,
       });
 
       if (response.ok) {
         setSubmissionStatus("Message sent successfully!"); // Show success message
+        setStatusType("success");
         (e.target as any).reset(); // Clear the form after submission
       } else {
         setSubmissionStatus("Failed to send your message. Please try again.");
+        setStatusType("error");
       }
     } catch (error) {
       console.error("Error submitting the form:", error);
       setSubmissionStatus("An error occurred. Please try again later.");
+      setStatusType("error");
     }
   };
 
   return (
     <section id="contact" className="overflow-hidden">
       {/* Success or Failure Message */}
-      {submissionStatus && (
+      {/* {submissionStatus && (
         <div className="bg-green-500 text-white p-4 text-center">
           {submissionStatus}
         </div>
-      )}
+      )} */}
 
       {/* Full-width Banner */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
@@ -133,8 +140,19 @@ const Contact = () => {
                         ></textarea>
                       </div>
                     </div>
-                    <div className="w-full px-4">
-                      <FancyButton text="Submit" path="#" type="submit" />
+                    {/* Submit Button with Message */}
+                    <div className="flex justify-between items-center">
+                      <div className="flex justify-center">
+                        <FancyButton text="Submit" path="#" type="submit" />
+                      </div>
+                      {submissionStatus && (
+                        <div
+                          className={`ml-4 px-4 py-2 text-sm font-medium rounded-lg text-white ${statusType === "success" ? "bg-green-500" : "bg-red-500"
+                            }`}
+                        >
+                          {submissionStatus}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </form>
