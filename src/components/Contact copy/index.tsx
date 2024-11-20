@@ -7,39 +7,51 @@ import FancyButton from "@/components/Button/FancyButton";
 
 const ModularForm = () => {
   const [submissionStatus, setSubmissionStatus] = useState<string | null>(null); // To manage submission status
+  const [statusType, setStatusType] = useState<"success" | "error" | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formData = {
-      clientName: (e.target as any).clientName.value,
-      fieldLocation: (e.target as any).fieldLocation.value,
-      contactName: (e.target as any).contactName.value,
-      contactEmail: (e.target as any).contactEmail.value,
-      contactPhone: (e.target as any).contactPhone.value,
-      gasFieldSource: (e.target as any).gasFieldSource.value,
-      comments: (e.target as any).comments.value,
-      file: (e.target as any).file.value,
-    };
+    // const formData = {
+    //   clientName: (e.target as any).clientName.value,
+    //   location: (e.target as any).fieldLocation.value,
+    //   customerName: (e.target as any).contactName.value,
+    //   customerEmail: (e.target as any).contactEmail.value,
+    //   customerPhone: (e.target as any).contactPhone.value,
+    //   source: (e.target as any).gasFieldSource.value,
+    //   comments: (e.target as any).comments.value,
+    //   file: (e.target as any).file.value,
+    // };
+
+    const formData = new FormData();
+    formData.append("clientName", (e.target as any).clientName.value)
+    formData.append("location", (e.target as any).fieldLocation.value)
+    formData.append("customerName", (e.target as any).contactName.value)
+    formData.append("customerEmail", (e.target as any).contactEmail.value)
+    formData.append("customerPhone", (e.target as any).contactPhone.value)
+    formData.append("source", (e.target as any).gasFieldSource.value)
+    formData.append("comments", (e.target as any).comments.value)
+    formData.append("file", (e.target as any).file.value)
 
     try {
       const response = await fetch("http://localhost:5241/Modular", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+
+        body: formData,
       });
 
       if (response.ok) {
         setSubmissionStatus("Message sent successfully!"); // Show success message
+        setStatusType("success");
         (e.target as any).reset(); // Clear the form after submission
       } else {
         setSubmissionStatus("Failed to send your message. Please try again.");
+        setStatusType("error");
       }
     } catch (error) {
       console.error("Error submitting the form:", error);
       setSubmissionStatus("An error occurred. Please try again later.");
+      setStatusType("error");
     }
   };
 
@@ -130,14 +142,18 @@ const ModularForm = () => {
                           htmlFor="contactEmail"
                           className="mb-3 block text-sm font-medium text-dark dark:text-white"
                         >
-                          Customer Contact Email
+                          Customer Contact Email <span className="text-red-500">*</span>
                         </label>
                         <input
                           type="email"
                           name="contactEmail"
                           placeholder="Enter Customer Contact Email"
+                          required
                           className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                         />
+                        <small className="text-xs text-red-500">
+                          Please enter a valid email address.
+                        </small>
                       </div>
                     </div>
 
@@ -148,14 +164,20 @@ const ModularForm = () => {
                           htmlFor="contactPhone"
                           className="mb-3 block text-sm font-medium text-dark dark:text-white"
                         >
-                          Customer Contact Phone
+                          Customer Contact Phone <span className="text-red-500">*</span>
                         </label>
                         <input
                           type="text"
                           name="contactPhone"
                           placeholder="Enter Customer Contact Phone"
+                          pattern="\d*" // Ensures only numbers are allowed
+                          maxLength={10} // Optional: Limits input length to 10 digits
+                          required
                           className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                         />
+                        <small className="text-xs text-red-500">
+                          Only numeric values are allowed.
+                        </small>
                       </div>
                     </div>
 
@@ -213,9 +235,19 @@ const ModularForm = () => {
                       </div>
                     </div>
 
-                    {/* Submit Button */}
-                    <div className="w-full px-4">
-                      <FancyButton text="Submit" path="#" type="submit" />
+                    {/* Submit Button with Message */}
+                    <div className="flex justify-between items-center">
+                      <div className="flex justify-center">
+                        <FancyButton text="Submit" path="#" type="submit" />
+                      </div>
+                      {submissionStatus && (
+                        <div
+                          className={`ml-4 px-4 py-2 text-sm font-medium rounded-lg text-white ${statusType === "success" ? "bg-green-500" : "bg-red-500"
+                            }`}
+                        >
+                          {submissionStatus}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </form>
