@@ -6,6 +6,7 @@ import Address from "./Address";
 import MapComponent from "./MapComponent";
 import CardComponent from "../AddressCard/intex";
 import FancyButton from "@/components/Button/FancyButton";
+import Script from 'next/script';
 
 const Contact = () => {
   const [submissionStatus, setSubmissionStatus] = useState<string | null>(null); // To manage submission status
@@ -55,6 +56,10 @@ const Contact = () => {
           {submissionStatus}
         </div>
       )} */}
+      <Script
+        src="https://www.google.com/recaptcha/api.js"
+        strategy="lazyOnload"
+      />
 
       {/* Full-width Banner */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
@@ -140,6 +145,16 @@ const Contact = () => {
                         ></textarea>
                       </div>
                     </div>
+
+                    {/* reCAPTCHA Widget */}
+                    <div className="w-full px-4 mb-6">
+                      <div
+                        className="g-recaptcha mx-auto"
+                        data-sitekey="6Lf1QIYqAAAAAGcnflhQvf7kZKeCppU2ONsqZsUc"
+                        style={{transformOrigin: "center" }}
+                      ></div>
+                    </div>
+
                     {/* Submit Button with Message */}
                     <div className="flex justify-between items-center">
                       <div className="flex justify-center">

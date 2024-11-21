@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import CardComponent from "../AddressCard/intex";
 import FancyButton from "@/components/Button/FancyButton";
+import Script from 'next/script';
 
 const ModularForm = () => {
   const [submissionStatus, setSubmissionStatus] = useState<string | null>(null); // To manage submission status
@@ -63,6 +64,11 @@ const ModularForm = () => {
           {submissionStatus}
         </div>
       )}
+
+      <Script
+        src="https://www.google.com/recaptcha/api.js"
+        strategy="lazyOnload"
+      />
 
       {/* Contact Form Section */}
       <div className="container">
@@ -233,6 +239,15 @@ const ModularForm = () => {
                           className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                         />
                       </div>
+                    </div>
+
+                    {/* reCAPTCHA Widget */}
+                    <div className="w-full px-4 mb-6">
+                      <div
+                        className="g-recaptcha mx-auto"
+                        data-sitekey="6Lf1QIYqAAAAAGcnflhQvf7kZKeCppU2ONsqZsUc"
+                        style={{ transformOrigin: "center" }}
+                      ></div>
                     </div>
 
                     {/* Submit Button with Message */}
