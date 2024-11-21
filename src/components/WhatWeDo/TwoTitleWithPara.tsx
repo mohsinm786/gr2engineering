@@ -139,14 +139,14 @@ const FullWidthSection = () => {
               company: "GR2 Engineering",
               location: "Mumbai, Houston, Bogota",
               date: "Posted 3 months ago",
-              link: "/components/JobDescriptions/Electrical", // Corrected the path to follow convention
+              link: "/job-description?id=1", // Corrected the path to follow convention
             },
             {
               title: "Mechanical Engineering - Technical Professional",
               company: "GR2 Engineering",
               location: "Mumbai, Houston, Bogota",
               date: "Posted 3 months ago",
-              link: "/job/mechanical-engineering",
+              link: "/job-description?id=2",
             },
           ].map((job, index, jobs) => (
             <div
