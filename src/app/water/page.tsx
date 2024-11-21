@@ -61,8 +61,13 @@ const WaterPage = () => {
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="absolute top-0 left-0 w-full z-10">
           <div className="container mx-auto pt-10 px-10">
-            <Breadcrumb subpageName="What We Do" pageName="Water" description="" />
+            <Breadcrumb
+              subpageName="What We Do"
+              pageName="Water"
+              description=""
+            />
           </div>
+
         </div>
       </div>
 

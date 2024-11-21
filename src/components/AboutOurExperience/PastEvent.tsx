@@ -57,7 +57,7 @@ const PastEvents = () => {
       </div>
 
       <div className="container">
-        <div className="w-10/12 mx-auto border-b">
+        <div className="w-10/12 mx-auto">
           <div className="px-4">
             <div className="mb-9 pt-9">
               <h3 className="mb-3 text-2xl font-bold text-SkyBlue dark:text-white sm:text-3xl lg:text-2xl xl:text-2xl">
@@ -68,15 +68,15 @@ const PastEvents = () => {
               </h3>
               <div className="marquee-container" ref={marqueeRef}>
                 <div className="marquee-content mt-4 relative mx-auto mb-12 max-w-[500px] text-center lg:m-0" data-wow-delay=".15s">
-                  <Image
+                  {/* <Image
                     src="/images/addedImg/adipeclogo.png"
                     alt="Upcoming Event"
                     height={300}
                     width={320}
                     className="drop-shadow-three dark:hidden dark:drop-shadow-none object-contain"
-                  />
+                  /> */}
                   <p className="mt-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                    4-7 November 2024, Abu Dhabi, UAE
+                  Please visit this section later for updated information
                   </p>
                 </div>
               </div>
@@ -232,6 +232,7 @@ const PastEvents = () => {
 
                 {/* <ul className="list-disc pl-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed"> */}
                 <div>
+                  <List text="ADIPEC Event - Abu Dhabi, UAE - 4-7 November 2024, "/>
                   <List text="Oil and Gas 2023 – Kuala Lumpur – September 2023"/>
                   <List text="Gastech Event – Singapore – September 2023"/>
                   <List text="GPA Midstream Convention – San Antonio, TX – September 2022"/>

@@ -6,11 +6,13 @@ const Breadcrumb = ({
   pageName,
   description,
   img,
+  color,
 }: {
   subpageName: string;
   pageName: string;
   description?: string;
   img?: string;
+  color?: string;
 }) => {
   return (
     <>
@@ -26,28 +28,30 @@ const Breadcrumb = ({
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 md:w-8/12 lg:w-7/12">
               <div className="mb-8 max-w-[720px] md:mb-0 lg:mb-12">
-                <h1 className="mb-5 text-4xl font-bold text-white pb-5 px-5 dark:text-white sm:text-4xl">
-                  {pageName.toUpperCase()}
-                </h1>
-                <ul className="flex items-center px-5">
-                  <li className="flex items-center">
-                    <Link
-                      href="/"
-                      className="pr-1 text-base font-medium text-body-color hover:text-primary"
-                    >
-                      {subpageName.toUpperCase()}
-                    </Link>
-                    <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
-                  </li>
-                  <li className="text-base font-medium text-white ">
+                <div className={`breadcrumb-container ${color || ''}`}>
+                <h1 className={`mb-5 text-4xl font-bold pb-5 px-5 ${color ? color : 'text-white'} sm:text-4xl`}>
                     {pageName.toUpperCase()}
-                  </li>
-                </ul>
+                  </h1>
+                  <ul className="flex items-center px-5">
+                    <li className="flex items-center">
+                      <Link
+                        href="/"
+                        className={`pr-1 text-base font-medium ${color ? color : 'text-white'} hover:text-LightBlue`}
+                      >
+                        {subpageName.toUpperCase()}
+                      </Link>
+                      <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
+                    </li>
+                    <li className={`text-base font-medium ${color ? color : 'text-white'}`}>
+                      {pageName.toUpperCase()}
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div className="w-full px-4 md:w-4/12 lg:w-5/12">
               <div className="text-end">
-                
+
               </div>
             </div>
           </div>
