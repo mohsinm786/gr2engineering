@@ -108,11 +108,11 @@ const WaterPage = () => {
                   ))}
                 </div>
 
-                <div className="w-full flex justify-center mt-10">
+                {/* <div className="w-full flex justify-center mt-10">
                   <Link href="#" className="inline-block shadow-btn hover:shadow-btn-hover rounded-sm bg-SkyBlue px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90">
                     Download the PDF
                   </Link>
-                </div>
+                </div> */}
 
                 <p className="mb-10 mt-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                   GR2-Aquamatch is a global <b className="text-SkyBlue">industrial and residential water solution company</b> established in 1989.

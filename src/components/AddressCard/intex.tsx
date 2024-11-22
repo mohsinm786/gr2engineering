@@ -14,9 +14,9 @@ const CardComponent = ({ id }) => {
         <Image
           src={addressInfo.image} // Make sure `image` is a valid path in your data
           alt={addressInfo.city}
-          layout="fill" // Ensures the image fills the container
+          fill // Ensures the image fills the container
           objectFit="cover" // Ensures the image covers the area without distortion
-          className="rounded-t-lg" // Optional: styling for rounded corners at the top
+          className="rounded-t-lg object-cover" // Optional: styling for rounded corners at the top
           priority={id === 1} // Load the first image with higher priority if needed
         />
       </div>

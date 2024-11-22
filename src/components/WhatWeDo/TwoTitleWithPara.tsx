@@ -156,7 +156,7 @@ const FullWidthSection = () => {
             >
               <div className="flex items-start space-x-4">
                 <img
-                  src="/images/logo/company.png" // Corrected slashes for URL consistency
+                  src="/images/addedImg/gr2-round-logo.png" // Corrected slashes for URL consistency
                   alt="Company Logo"
                   className="w-12 h-12 rounded-md object-cover"
                 />

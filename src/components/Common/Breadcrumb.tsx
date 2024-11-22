@@ -26,10 +26,10 @@ const Breadcrumb = ({
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 md:w-8/12 lg:w-7/12">
-              <div className="mb-8 max-w-[720px] md:mb-0 lg:mb-12">
+            <div className="w-full px-4">
+              <div className="mb-8 md:mb-0 lg:mb-12">
                 <div className={`breadcrumb-container ${color || ''}`}>
-                <h1 className={`mb-5 text-4xl font-bold pb-5 px-5 ${color ? color : 'text-white'} sm:text-4xl`}>
+                <h1 className={`mb-5 text-4xl font-bold pb-5 px-5 ${color ? color : 'text-white'} sm:text-4xl whitespace-nowrap`}>
                     {pageName.toUpperCase()}
                   </h1>
                   <ul className="flex items-center px-5">
@@ -49,11 +49,11 @@ const Breadcrumb = ({
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 md:w-4/12 lg:w-5/12">
+            {/* <div className="w-full px-4 md:w-4/12 lg:w-5/12">
               <div className="text-end">
 
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

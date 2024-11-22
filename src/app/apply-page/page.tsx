@@ -10,18 +10,43 @@ const ApplyPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     linkedin: '',
     coverLetter: '',
-    resume: null,
+    resume: null as File | null,
     jobTitle: '',
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Client-side validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex validation
+    if (!emailRegex.test(formData.email)) {
+      setSubmissionStatus("Invalid email format. Please enter a valid email.");
+      setStatusType("error");
+      return;
+    }
+
+    if (formData.phone && !/^\d+$/.test(formData.phone)) {
+      setSubmissionStatus("Phone number should only contain digits.");
+      setStatusType("error");
+      return;
+    }
+
+    if (formData.resume) {
+      const fileExtension = formData.resume.name.split('.').pop()?.toLowerCase();
+      if (!['pdf', 'doc', 'docx'].includes(fileExtension || '')) {
+        setSubmissionStatus("Invalid file type. Only PDF and DOC files are allowed.");
+        setStatusType("error");
+        return;
+      }
+    }
+
     const formDataToSend = new FormData();
     formDataToSend.append('name', formData.name);
     formDataToSend.append('email', formData.email);
+    formDataToSend.append('phone', formData.phone);
     formDataToSend.append('linkedin', formData.linkedin);
     formDataToSend.append('coverLetter', formData.coverLetter);
     formDataToSend.append('jobTitle', formData.jobTitle);
@@ -38,9 +63,12 @@ const ApplyPage = () => {
       if (response.ok) {
         setSubmissionStatus("Application submitted successfully!");
         setStatusType("success");
+
+        // Properly reset the form
         setFormData({
           name: '',
           email: '',
+          phone: '',
           linkedin: '',
           coverLetter: '',
           resume: null,
@@ -115,6 +143,29 @@ const ApplyPage = () => {
           />
         </div>
 
+        {/* Phone Number */}
+        <div className="mb-8">
+          <label
+            htmlFor="phone"
+            className="mb-3 block text-sm font-medium text-dark dark:text-white"
+          >
+            Phone Number
+          </label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={(e) =>
+              setFormData({ ...formData, phone: e.target.value })
+            }
+            placeholder="Enter your phone number"
+            pattern="\d*"
+            className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+            required
+          />
+        </div>
+
         {/* LinkedIn Profile */}
         <div className="mb-8">
           <label
@@ -170,15 +221,29 @@ const ApplyPage = () => {
             type="file"
             id="resume"
             name="resume"
-            onChange={(e) =>
-              setFormData({
-                ...formData,
-                resume: e.target.files ? e.target.files[0] : null,
-              })
-            }
+            onChange={(e) => {
+              const file = e.target.files ? e.target.files[0] : null;
+              if (file) {
+                // Check file size (10 MB = 10 * 1024 * 1024 bytes)
+                if (file.size > 10 * 1024 * 1024) {
+                  alert("File size exceeds the 10 MB limit. Please upload a smaller file.");
+                  e.target.value = ''; // Reset file input
+                  setFormData({ ...formData, resume: null }); // Clear file data
+                } else {
+                  setFormData({
+                    ...formData,
+                    resume: file,
+                  });
+                }
+              }
+            }}
             className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+            accept=".pdf,.doc,.docx"
             required
           />
+          <p className="text-xs text-gray-500 mt-2">
+            Accepted file types: PDF, DOC, DOCX. Max size: 10 MB.
+          </p>
         </div>
 
         {/* Job Title Dropdown */}
@@ -209,16 +274,18 @@ const ApplyPage = () => {
         </div>
 
         {/* Submit Button and Status Message */}
-        <div className="flex items-center space-x-4">
-          <FancyButton text="Send Application" path="#" type="submit" />
+        <div className="flex items-center">
+          <div className="flex justify-center">
+            <FancyButton text="Send Application" path="#" type="submit" />
+          </div>
           {submissionStatus && (
-            <span
-              className={`text-sm font-medium ${
-                statusType === 'success' ? 'text-green-500' : 'text-red-500'
-              }`}
+            <div
+              className={`ml-4 px-4 py-2 text-sm font-medium rounded-lg text-white 
+                  ${statusType === "success" ? "bg-green-500" : "bg-red-500"}`}
+              style={{ backgroundColor: statusType === "success" ? '#10B981' : '#EF4444' }}
             >
               {submissionStatus}
-            </span>
+            </div>
           )}
         </div>
       </form>

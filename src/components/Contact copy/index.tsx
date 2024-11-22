@@ -9,35 +9,48 @@ import Script from 'next/script';
 const ModularForm = () => {
   const [submissionStatus, setSubmissionStatus] = useState<string | null>(null); // To manage submission status
   const [statusType, setStatusType] = useState<"success" | "error" | null>(null);
+  const [fileError, setFileError] = useState<string | null>(null); // To manage file errors
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // const formData = {
-    //   clientName: (e.target as any).clientName.value,
-    //   location: (e.target as any).fieldLocation.value,
-    //   customerName: (e.target as any).contactName.value,
-    //   customerEmail: (e.target as any).contactEmail.value,
-    //   customerPhone: (e.target as any).contactPhone.value,
-    //   source: (e.target as any).gasFieldSource.value,
-    //   comments: (e.target as any).comments.value,
-    //   file: (e.target as any).file.value,
-    // };
+    // Get the file input element
+    const fileInput = (e.target as any).file;
+    const file = fileInput.files[0];
 
+    // Validate file size and type
+    if (file) {
+      const validTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
+      const maxSizeMB = 25;
+
+      if (!validTypes.includes(file.type)) {
+        setFileError("Only PDF, DOC, and DOCX files are allowed.");
+        return;
+      } else if (file.size > maxSizeMB * 1024 * 1024) {
+        setFileError(`File size should not exceed ${maxSizeMB}MB.`);
+        return;
+      }
+    }
+
+    setFileError(null); // Clear previous errors if any
+
+    // Create FormData for submission
     const formData = new FormData();
-    formData.append("clientName", (e.target as any).clientName.value)
-    formData.append("location", (e.target as any).fieldLocation.value)
-    formData.append("customerName", (e.target as any).contactName.value)
-    formData.append("customerEmail", (e.target as any).contactEmail.value)
-    formData.append("customerPhone", (e.target as any).contactPhone.value)
-    formData.append("source", (e.target as any).gasFieldSource.value)
-    formData.append("comments", (e.target as any).comments.value)
-    formData.append("file", (e.target as any).file.value)
+    formData.append("clientName", (e.target as any).clientName.value);
+    formData.append("location", (e.target as any).fieldLocation.value);
+    formData.append("customerName", (e.target as any).contactName.value);
+    formData.append("customerEmail", (e.target as any).contactEmail.value);
+    formData.append("customerPhone", (e.target as any).contactPhone.value);
+    formData.append("source", (e.target as any).gasFieldSource.value);
+    formData.append("comments", (e.target as any).comments.value);
+
+    if (file) {
+      formData.append("file", file);
+    }
 
     try {
       const response = await fetch("http://localhost:5241/Modular", {
         method: "POST",
-
         body: formData,
       });
 
@@ -60,7 +73,7 @@ const ModularForm = () => {
     <section id="modular-form" className="overflow-hidden">
       {/* Success or Failure Message */}
       {submissionStatus && (
-        <div className="bg-green-500 text-white p-4 text-center">
+        <div className={`p-4 text-center ${statusType === "success" ? "bg-green-500" : "bg-red-500"} text-white`}>
           {submissionStatus}
         </div>
       )}
@@ -73,7 +86,7 @@ const ModularForm = () => {
       {/* Contact Form Section */}
       <div className="container">
         <div className="w-10/12 mx-auto">
-          <div className="-mx-4 flex flex-wrap pt-10">
+          <div className="-mx-4 flex flex-wrap pt-10 pb-10">
             {/* Left: Contact Form */}
             <div className="w-full px-4">
               <div className="mb-12 rounded-lg bg-blue-50 px-8 py-11 shadow-lg dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
@@ -176,7 +189,7 @@ const ModularForm = () => {
                           type="text"
                           name="contactPhone"
                           placeholder="Enter Customer Contact Phone"
-                          pattern="\d*" // Ensures only numbers are allowed
+                          pattern="\d{10}" // Ensures exactly 10 digits
                           maxLength={10} // Optional: Limits input length to 10 digits
                           required
                           className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
@@ -236,8 +249,17 @@ const ModularForm = () => {
                         <input
                           type="file"
                           name="file"
+                          accept=".pdf,.doc,.docx"
                           className="border-stroke w-full rounded-lg border bg-white px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-gray-700 dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                         />
+                        <small className="block mt-2 text-sm text-gray-600 dark:text-gray-400">
+                          Accepted file types: PDF, DOC, DOCX. Max size: 25 MB.
+                        </small>
+                        {fileError && (
+                          <small className="text-xs text-red-500">
+                            {fileError}
+                          </small>
+                        )}
                       </div>
                     </div>
 

@@ -244,7 +244,7 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-4 bg-lightgray">
             <p className="text-white text-center text-base  dark:text-white">
-              <b> Copyright © 2021 GR2 Engineering Inc.</b>
+              <b> Copyright © 2024 GR2 Engineering Inc.</b>
             </p>
           </div>
         </div>

@@ -80,22 +80,22 @@ const CsrEvents = () => {
                   className="drop-shadow-three object-contain"
                 />
               </SwiperSlide>
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <Image
                   src="/images/CSRImg/4.jpeg"
                   alt="Past Event 4"
                   fill
                   className="drop-shadow-three object-contain"
                 />
-              </SwiperSlide>
-              <SwiperSlide>
+              </SwiperSlide> */}
+              {/* <SwiperSlide>
                 <Image
                   src="/images/CSRImg/5.jpeg"
                   alt="Past Event 5"
                   fill
                   className="drop-shadow-three object-contain"
                 />
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <Image
                   src="/images/CSRImg/6.jpeg"
@@ -120,22 +120,22 @@ const CsrEvents = () => {
                   className="drop-shadow-three object-contain"
                 />
               </SwiperSlide>
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <Image
                   src="/images/CSRImg/9.jpeg"
                   alt="Past Event 9"
                   fill
                   className="drop-shadow-three object-contain"
                 />
-              </SwiperSlide>
-              <SwiperSlide>
+              </SwiperSlide> */}
+              {/* <SwiperSlide>
                 <Image
                   src="/images/CSRImg/10.jpeg"
                   alt="Past Event 10"
                   fill
                   className="drop-shadow-three object-contain"
                 />
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <Image
                   src="/images/CSRImg/11.jpeg"
@@ -144,22 +144,22 @@ const CsrEvents = () => {
                   className="drop-shadow-three object-contain"
                 />
               </SwiperSlide>
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <Image
                   src="/images/CSRImg/12.jpeg"
                   alt="Past Event 12"
                   fill
                   className="drop-shadow-three object-contain"
                 />
-              </SwiperSlide>
-              <SwiperSlide>
+              </SwiperSlide> */}
+              {/* <SwiperSlide>
                 <Image
                   src="/images/CSRImg/13.jpeg"
                   alt="Past Event 13"
                   fill
                   className="drop-shadow-three object-contain"
                 />
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <Image
                   src="/images/CSRImg/14.jpeg"
