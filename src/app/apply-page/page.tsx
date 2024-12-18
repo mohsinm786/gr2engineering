@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FancyButton from '@/components/Button/FancyButton';
+import Script from 'next/script';
 
 const ApplyPage = () => {
   const [submissionStatus, setSubmissionStatus] = useState<string | null>(null);
@@ -16,6 +17,11 @@ const ApplyPage = () => {
     resume: null as File | null,
     jobTitle: '',
   });
+  const [isCaptchaLoaded, setIsCaptchaLoaded] = useState(false); // Store reCAPTCHA token
+
+  useEffect(() => {
+    setIsCaptchaLoaded(true); // Set state to true after component mounts
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -86,7 +92,15 @@ const ApplyPage = () => {
   };
 
   return (
+
+
+
     <section className="container p-10 w-10/12">
+      <Script
+        src="https://www.google.com/recaptcha/api.js"
+        strategy="afterInteractive" // Ensures the script loads only after interactivity
+      />
+
       <h1 className="text-3xl font-bold mb-6 text-SkyBlue dark:text-white mt-20">
         APPLY FOR A JOB
       </h1>
@@ -272,6 +286,17 @@ const ApplyPage = () => {
             <option value="Civil Engineering">Civil Engineering</option>
           </select>
         </div>
+
+        {/* reCAPTCHA Widget */}
+        {isCaptchaLoaded && (
+          <div className="w-full px-4 mb-6">
+            <div
+              className="g-recaptcha mx-auto"
+              data-sitekey="6Lf1QIYqAAAAAGcnflhQvf7kZKeCppU2ONsqZsUc"
+              style={{ transformOrigin: "center" }}
+            ></div>
+          </div>
+        )}
 
         {/* Submit Button and Status Message */}
         <div className="flex items-center">

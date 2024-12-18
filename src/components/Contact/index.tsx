@@ -1,6 +1,6 @@
 "use client"; // Ensure this file is treated as a client component
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Address from "./Address";
 import MapComponent from "./MapComponent";
@@ -11,28 +11,26 @@ import Script from 'next/script';
 const Contact = () => {
   const [submissionStatus, setSubmissionStatus] = useState<string | null>(null); // To manage submission status
   const [statusType, setStatusType] = useState<"success" | "error" | null>(null);
+  const [isCaptchaLoaded, setIsCaptchaLoaded] = useState(false); // To track if the captcha is loaded
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // const formData = {
-    //   name: (e.target as any).name.value,
-    //   email: (e.target as any).email.value,
-    //   message: (e.target as any).message.value,
-    // };
-
-    const formData = new FormData();
-    formData.append("name", (e.target as any).name.value);
-    formData.append("email", (e.target as any).email.value);
-    formData.append("message", (e.target as any).message.value);
-
+    const formData = {
+      name: (e.target as any).name.value,
+      email: (e.target as any).email.value,
+      message: (e.target as any).message.value,
+    };
+    
     try {
       const response = await fetch("http://localhost:5241/Contact", {
         method: "POST",
-
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-
+    
       if (response.ok) {
         setSubmissionStatus("Message sent successfully!"); // Show success message
         setStatusType("success");
@@ -48,17 +46,16 @@ const Contact = () => {
     }
   };
 
+  // Ensure reCAPTCHA is only rendered on client-side
+  useEffect(() => {
+    setIsCaptchaLoaded(true); // Set state to true after component mounts
+  }, []);
+
   return (
     <section id="contact" className="overflow-hidden">
-      {/* Success or Failure Message */}
-      {/* {submissionStatus && (
-        <div className="bg-green-500 text-white p-4 text-center">
-          {submissionStatus}
-        </div>
-      )} */}
       <Script
         src="https://www.google.com/recaptcha/api.js"
-        strategy="lazyOnload"
+        strategy="afterInteractive" // Ensures the script loads only after interactivity
       />
 
       {/* Full-width Banner */}
@@ -147,13 +144,15 @@ const Contact = () => {
                     </div>
 
                     {/* reCAPTCHA Widget */}
-                    <div className="w-full px-4 mb-6">
-                      <div
-                        className="g-recaptcha mx-auto"
-                        data-sitekey="6Lf1QIYqAAAAAGcnflhQvf7kZKeCppU2ONsqZsUc"
-                        style={{transformOrigin: "center" }}
-                      ></div>
-                    </div>
+                    {isCaptchaLoaded && (
+                      <div className="w-full px-4 mb-6">
+                        <div
+                          className="g-recaptcha mx-auto"
+                          data-sitekey="6Lf1QIYqAAAAAGcnflhQvf7kZKeCppU2ONsqZsUc"
+                          style={{ transformOrigin: "center" }}
+                        ></div>
+                      </div>
+                    )}
 
                     {/* Submit Button with Message */}
                     <div className="flex justify-between items-center">

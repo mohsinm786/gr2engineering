@@ -1,6 +1,6 @@
 "use client"; // Ensure this file is treated as a client component
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import CardComponent from "../AddressCard/intex";
 import FancyButton from "@/components/Button/FancyButton";
@@ -10,6 +10,12 @@ const ModularForm = () => {
   const [submissionStatus, setSubmissionStatus] = useState<string | null>(null); // To manage submission status
   const [statusType, setStatusType] = useState<"success" | "error" | null>(null);
   const [fileError, setFileError] = useState<string | null>(null); // To manage file errors
+  const [isRecaptchaLoaded, setIsRecaptchaLoaded] = useState(false);
+
+  useEffect(() => {
+    // This will be triggered when the component mounts on the client side
+    setIsRecaptchaLoaded(true);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -265,11 +271,13 @@ const ModularForm = () => {
 
                     {/* reCAPTCHA Widget */}
                     <div className="w-full px-4 mb-6">
-                      <div
-                        className="g-recaptcha mx-auto"
-                        data-sitekey="6Lf1QIYqAAAAAGcnflhQvf7kZKeCppU2ONsqZsUc"
-                        style={{ transformOrigin: "center" }}
-                      ></div>
+                      {isRecaptchaLoaded && (
+                        <div
+                          className="g-recaptcha mx-auto"
+                          data-sitekey="6Lf1QIYqAAAAAGcnflhQvf7kZKeCppU2ONsqZsUc"
+                          style={{ transformOrigin: "center" }}
+                        ></div>
+                      )}
                     </div>
 
                     {/* Submit Button with Message */}
