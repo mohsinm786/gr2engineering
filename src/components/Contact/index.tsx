@@ -2,16 +2,19 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Address from "./Address";
-import MapComponent from "./MapComponent";
+import Script from "next/script";
 import CardComponent from "../AddressCard/intex";
 import FancyButton from "@/components/Button/FancyButton";
-import Script from 'next/script';
 
 const Contact = () => {
-  const [submissionStatus, setSubmissionStatus] = useState<string | null>(null); // To manage submission status
+  const [submissionStatus, setSubmissionStatus] = useState<string | null>(null);
   const [statusType, setStatusType] = useState<"success" | "error" | null>(null);
-  const [isCaptchaLoaded, setIsCaptchaLoaded] = useState(false); // To track if the captcha is loaded
+  const [isCaptchaLoaded, setIsCaptchaLoaded] = useState(false);
+
+  useEffect(() => {
+    // Check if reCAPTCHA is loaded
+    setIsCaptchaLoaded(true);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -21,20 +24,29 @@ const Contact = () => {
       email: (e.target as any).email.value,
       message: (e.target as any).message.value,
     };
-    
+
+    // Validate reCAPTCHA
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+      setSubmissionStatus("Please complete the reCAPTCHA verification.");
+      setStatusType("error");
+      return;
+    }
+
     try {
       const response = await fetch("http://localhost:5241/Contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, recaptchaResponse }),
       });
-    
+
       if (response.ok) {
-        setSubmissionStatus("Message sent successfully!"); // Show success message
+        setSubmissionStatus("Message sent successfully!");
         setStatusType("success");
-        (e.target as any).reset(); // Clear the form after submission
+        (e.target as any).reset();
+        grecaptcha.reset(); // Reset the reCAPTCHA widget
       } else {
         setSubmissionStatus("Failed to send your message. Please try again.");
         setStatusType("error");
@@ -46,19 +58,13 @@ const Contact = () => {
     }
   };
 
-  // Ensure reCAPTCHA is only rendered on client-side
-  useEffect(() => {
-    setIsCaptchaLoaded(true); // Set state to true after component mounts
-  }, []);
-
   return (
     <section id="contact" className="overflow-hidden">
       <Script
         src="https://www.google.com/recaptcha/api.js"
-        strategy="afterInteractive" // Ensures the script loads only after interactivity
+        strategy="afterInteractive"
       />
-
-      {/* Full-width Banner */}
+      {/* Banner */}
       <div className="relative w-full h-[400px] bg-gray-200 flex items-center justify-start pl-10">
         <Image
           src="/images/banner/contact-us-banner.jpg"
@@ -76,11 +82,10 @@ const Contact = () => {
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
-      {/* Contact Form Section */}
+      {/* Contact Form */}
       <div className="container">
         <div className="w-10/12 mx-auto">
           <div className="-mx-4 flex flex-wrap pt-10">
-            {/* Left: Contact Form */}
             <div className="w-full px-4">
               <div className="mb-12 rounded-lg bg-blue-50 px-8 py-11 shadow-lg dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
                 <h2 className="mb-3 text-2xl font-bold text-SkyBlue dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
@@ -154,15 +159,15 @@ const Contact = () => {
                       </div>
                     )}
 
-                    {/* Submit Button with Message */}
                     <div className="flex justify-between items-center">
                       <div className="flex justify-center">
                         <FancyButton text="Submit" path="#" type="submit" />
                       </div>
                       {submissionStatus && (
                         <div
-                          className={`ml-4 px-4 py-2 text-sm font-medium rounded-lg text-white ${statusType === "success" ? "bg-green-500" : "bg-red-500"
-                            }`}
+                          className={`ml-4 px-4 py-2 text-sm font-medium rounded-lg text-white ${
+                            statusType === "success" ? "bg-green-500" : "bg-red-500"
+                          }`}
                         >
                           {submissionStatus}
                         </div>
@@ -173,7 +178,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Right: Address Cards */}
+            {/* Address Cards */}
             <div className="w-full p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <CardComponent id={1} />

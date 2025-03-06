@@ -1,8 +1,8 @@
 "use client";
 
-import React from 'react';
-import Link from 'next/link';
-import styled from 'styled-components';
+import React from "react";
+import Link from "next/link";
+import styled from "styled-components";
 
 const StyledButton = styled.div`
   outline: none;
@@ -19,7 +19,7 @@ const StyledButton = styled.div`
   font-size: 17px;
   border-radius: 500px;
   overflow: hidden;
-  background: #11B0B8;
+  background: #11b0b8;
   color: ghostwhite;
   text-align: center;
 
@@ -55,9 +55,15 @@ interface FancyButtonProps {
   text: string;
   path: string;
   type?: "button" | "submit" | "reset"; // Add type as an optional prop
+  newTab?: boolean; // New prop to handle opening in a new tab
 }
 
-const FancyButton: React.FC<FancyButtonProps> = ({ text, path, type = "button" }) => {
+const FancyButton: React.FC<FancyButtonProps> = ({
+  text,
+  path,
+  type = "button",
+  newTab = false, // Default to false
+}) => {
   // If type is submit and path is "#" (indicating it's a form submission button), use a button element instead of Link
   if (type === "submit") {
     return (
@@ -69,7 +75,18 @@ const FancyButton: React.FC<FancyButtonProps> = ({ text, path, type = "button" }
     );
   }
 
-  // If path is provided, return a Link component (for navigation)
+  // If newTab is true, use an <a> tag instead of <Link>
+  if (newTab) {
+    return (
+      <a href={path} target="_blank" rel="noopener noreferrer">
+        <StyledButton>
+          <span>{text}</span>
+        </StyledButton>
+      </a>
+    );
+  }
+
+  // Default: Use Next.js Link for internal navigation
   return (
     <Link href={path}>
       <StyledButton>
