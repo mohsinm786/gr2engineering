@@ -1,17 +1,34 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import './Event.css';
+import { useEffect, useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "./Event.css";
 
 const PastEvents = () => {
+  const [upcomingEvent, setUpcomingEvent] = useState<any>(null);
   const marqueeRef = useRef<HTMLDivElement>(null);
 
+  // Fetch Upcoming Events data from API
+  useEffect(() => {
+    const fetchUpcomingEvents = async () => {
+      try {
+        const response = await fetch("/api/events/upcoming"); // Update API URL
+        const data = await response.json();
+        setUpcomingEvent(data);
+      } catch (error) {
+        console.error("Error fetching upcoming event data:", error);
+      }
+    };
+
+    fetchUpcomingEvents();
+  }, []);
+
+  // Marquee Effect
   useEffect(() => {
     const marquee = marqueeRef.current;
     if (marquee) {
@@ -27,10 +44,10 @@ const PastEvents = () => {
     }
   }, []);
 
+  // Bullet point component (Restored!)
   const List = ({ text }: { text: string }) => (
     <div className="mb-2 flex items-start text-lg font-medium text-body-color">
       <span className="mr-4 mt-1 flex h-[30px] w-[30px] items-center justify-center rounded-md text-SkyBlue shrink-0">
-        {/* Dot icon */}
         <span className="h-[8px] w-[8px] rounded-full bg-SkyBlue inline-block" />
       </span>
       <p className="leading-relaxed">{text}</p>
@@ -66,24 +83,40 @@ const PastEvents = () => {
               <h3 className="mb-3 text-2xl font-bold text-Green dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                 MEET US AT THESE UPCOMING EVENTS
               </h3>
+
               <div className="marquee-container" ref={marqueeRef}>
-                <div className="marquee-content mt-4 relative mx-auto mb-12 max-w-[500px] text-center lg:m-0" data-wow-delay=".15s">
-                  {/* <Image
-                    src="/images/addedImg/adipeclogo.png"
-                    alt="Upcoming Event"
-                    height={300}
-                    width={320}
-                    className="drop-shadow-three dark:hidden dark:drop-shadow-none object-contain"
-                  /> */}
-                  <p className="mt-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Please visit this section later for updated information
-                  </p>
+                <div
+                  className="marquee-content mt-4 relative mx-auto mb-12 max-w-[500px] text-center lg:m-0"
+                  data-wow-delay=".15s"
+                >
+                  {upcomingEvent?.showImage && (
+                    <Image
+                      src={upcomingEvent.imageUrl}
+                      alt="Upcoming Event"
+                      width={320}
+                      height={300}
+                      className="drop-shadow-three dark:hidden dark:drop-shadow-none object-contain"
+                    />
+                  )}
+
+                  {upcomingEvent?.showText && (
+                    <p className="mt-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                      {upcomingEvent.text}
+                    </p>
+                  )}
+
+                  {!upcomingEvent && (
+                    <p className="mt-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                      Please visit this section later for updated information
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Keeping your existing Swiper (Past Events Section) untouched */}
         <div className="w-10/12 mx-auto flex flex-wrap items-center mt-12">
           <div className="w-full px-4 lg:w-1/2">
             <Swiper
@@ -93,11 +126,9 @@ const PastEvents = () => {
                 delay: 2500,
                 disableOnInteraction: false,
               }}
-              pagination={{
-                clickable: true,
-              }}
+              pagination={{ clickable: true }}
               loop={true}
-              modules={[Autoplay, Pagination, Navigation]}  // Add modules here
+              modules={[Autoplay, Pagination, Navigation]}
               className="relative mx-auto mb-12 aspect-[25/20] max-w-[500px] text-center"
             >
               <SwiperSlide>
@@ -212,8 +243,25 @@ const PastEvents = () => {
                   className="drop-shadow-three object-contain"
                 />
               </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/addedImg/event14.jpeg"
+                  alt="Past Event 15"
+                  fill
+                  className="drop-shadow-three object-contain"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/addedImg/event15.jpeg"
+                  alt="Past Event 16"
+                  fill
+                  className="drop-shadow-three object-contain"
+                />
+              </SwiperSlide>
             </Swiper>
           </div>
+
           <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-[470px]">
               <div className="mb-9">
@@ -228,18 +276,15 @@ const PastEvents = () => {
                 </p>
                 <br />
 
-
-
-                {/* <ul className="list-disc pl-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed"> */}
+                {/* Restored Bullet Points */}
                 <div>
-                  <List text="ADIPEC Event - Abu Dhabi, UAE - 4-7 November 2024, "/>
-                  <List text="Oil and Gas 2023 – Kuala Lumpur – September 2023"/>
-                  <List text="Gastech Event – Singapore – September 2023"/>
-                  <List text="GPA Midstream Convention – San Antonio, TX – September 2022"/>
-                  <List text="Gastech Exhibition & Conference – Milan, Italy – 5-8 September 2022"/>
-                  <List text="TradeWinds 2022 – Abu Dhabi, U.A.E. – March 2022"/>
-                  </div>
-                {/* </ul> */}
+                  <List text="ADIPEC Event - Abu Dhabi, UAE - 4-7 November 2024" />
+                  <List text="Oil and Gas 2023 – Kuala Lumpur – September 2023" />
+                  <List text="Gastech Event – Singapore – September 2023" />
+                  <List text="GPA Midstream Convention – San Antonio, TX – September 2022" />
+                  <List text="Gastech Exhibition & Conference – Milan, Italy – 5-8 September 2022" />
+                  <List text="TradeWinds 2022 – Abu Dhabi, U.A.E. – March 2022" />
+                </div>
               </div>
             </div>
           </div>

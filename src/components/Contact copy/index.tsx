@@ -1,8 +1,6 @@
 "use client"; // Ensure this file is treated as a client component
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import CardComponent from "../AddressCard/intex";
 import FancyButton from "@/components/Button/FancyButton";
 import Script from 'next/script';
 
@@ -55,7 +53,8 @@ const ModularForm = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5241/Modular", {
+      // Send form data to the Express.js backend
+      const response = await fetch("/api/submit-form", {
         method: "POST",
         body: formData,
       });
